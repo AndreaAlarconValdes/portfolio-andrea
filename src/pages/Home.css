@@ -1,5 +1,5 @@
 .home-container {
-  background-image: url("/public/elefant-wallpaper.jpg"); 
+  background-image: url("/elefant-wallpaper.jpg"); 
   background-size: cover; 
   background-position: center; 
   background-attachment: fixed;
@@ -37,6 +37,7 @@
   margin: 0;
   font-family: "Limelight, cursive";
   font-size: 8vw;
+
   view-timeline: --scroll;
   animation: scale-up both ease-in-out, fade-away both linear;
   animation-timeline: --scroll;
@@ -48,6 +49,7 @@
   font-family: "Lato, sans-serif";
   font-weight: 100;
   font-size: 3vw;
+  
   animation: fade-away both linear;
   animation-timeline: --scroll;
   animation-range: exit 10% exit 100%;
