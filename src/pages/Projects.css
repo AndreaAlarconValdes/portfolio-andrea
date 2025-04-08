@@ -1,0 +1,25 @@
+@keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .projects-container {
+    height: 100vh;
+    background-color: #e0e0e0;
+  }
+  
+  .projects-container h1 {
+    margin: 0;
+    font-family: "Limelight, cursive";
+    font-size: 10vw;
+  
+    view-timeline-name: --title;
+    view-timeline-axis: block;
+  
+    animation-timeline: --title;
+    animation-name: show;
+  }
+  
