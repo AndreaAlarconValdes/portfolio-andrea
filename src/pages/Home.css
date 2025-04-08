@@ -1,0 +1,79 @@
+.home-container {
+  background-image: url("/public/elefant-wallpaper.jpg"); 
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-container {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  view-timeline: --scroll;
+  color: white;
+  flex: 3.5;
+}
+
+@keyframes scale-up {
+  to {
+    scale: 1.5;
+  }
+}
+
+@keyframes fade-away {
+  to {
+    opacity: 0;
+  }
+}
+
+.title-container h1 {
+  margin: 0;
+  font-family: "Limelight, cursive";
+  font-size: 8vw;
+  view-timeline: --scroll;
+  animation: scale-up both ease-in-out, fade-away both linear;
+  animation-timeline: --scroll;
+  animation-range: entry 0% exit 100%, exit 50% exit 90%;
+}
+
+.title-container h4 {
+  margin: 0;
+  font-family: "Lato, sans-serif";
+  font-weight: 100;
+  font-size: 3vw;
+  animation: fade-away both linear;
+  animation-timeline: --scroll;
+  animation-range: exit 10% exit 100%;
+}
+
+.social-media {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  align-items: center;
+  flex: 0.5;
+  gap: 1rem;
+  view-timeline: --scroll;
+  animation: fade-away both linear;
+  animation-timeline: --scroll;
+  animation-range: entry 50% exit 100%;
+}
+
+.social-media i {
+  cursor: pointer;
+  padding: 8px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 999px;
+}
+
+.social-media i:hover {
+  scale: 1.1;
+}
