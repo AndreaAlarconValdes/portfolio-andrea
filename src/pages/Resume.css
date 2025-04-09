@@ -1,0 +1,78 @@
+.resume-container {
+  height: 100vh;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+  line-height: 0.8;
+  margin-top: -5rem;
+  flex: 1;
+}
+
+.skills-section h1 {
+  margin: 0;
+  font-family: "Londrina Outline", sans-serif;
+  font-weight: 100;
+  font-size: 9vw;
+  color: #112f57;
+}
+
+.skills-section h2 {
+  color: #112f57;
+  font-size: 3vw;
+  font-family: "Limelight, cursive";
+  margin: 0;
+  line-height: 0;
+}
+.experience-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.experience-section h2 {
+  color: #112f57;
+  font-size: 3vw;
+  font-family: "Limelight, cursive";
+}
+
+.timeline {
+  border-left: 2px solid #112f57;
+}
+
+.timeline-content {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -11px;
+  width: 14px;
+  height: 14px;
+  background-color: #112f57;
+  border-radius: 50%;
+  border: 2px solid #112f57;
+}
+
+
+
+.timeline-content .year {
+  font-family: "Limelight, cursive";
+  width: 100px;
+}
