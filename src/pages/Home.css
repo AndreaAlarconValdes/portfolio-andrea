@@ -21,17 +21,7 @@
   flex: 3.5;
 }
 
-@keyframes scale-up {
-  to {
-    scale: 1.5;
-  }
-}
 
-@keyframes fade-away {
-  to {
-    opacity: 0;
-  }
-}
 
 .title-container h1 {
   margin: 0;
@@ -56,26 +46,6 @@
 }
 
 .social-media {
-  display: flex;
   justify-content: flex-end;
-  margin-right: 1rem;
-  align-items: center;
-  flex: 0.5;
-  gap: 1rem;
-  view-timeline: --scroll;
-  animation: fade-away both linear;
-  animation-timeline: --scroll;
-  animation-range: entry 50% exit 100%;
-}
-
-.social-media i {
-  cursor: pointer;
-  padding: 8px;
-  color: white;
-  border: 2px solid white;
-  border-radius: 999px;
-}
-
-.social-media i:hover {
-  scale: 1.1;
+  margin: 1rem;
 }

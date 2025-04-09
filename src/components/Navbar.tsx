@@ -34,6 +34,8 @@ export default function Navbar() {
   const routes = [
     { to: "/about", name: "about me" },
     { to: "/resume", name: "resume" },
+    { to: "/projects", name: "projects" },
+    { to: "/contact", name: "contact" },
   ];
 
   const handleClick = (to: string) => {

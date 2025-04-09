@@ -1,0 +1,21 @@
+.social-media {
+    display: flex;
+    gap: 1rem;
+    
+    view-timeline: --scroll;
+    animation: fade-away both linear;
+    animation-timeline: --scroll;
+    animation-range: entry 50% exit 100%;
+  }
+  
+  .social-media i {
+    cursor: pointer;
+    padding: 8px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 999px;
+  }
+  
+  .social-media i:hover {
+    scale: 1.1;
+  }
