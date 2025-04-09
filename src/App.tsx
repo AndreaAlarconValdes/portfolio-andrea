@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import { BrowserRouter as Router } from "react-router-dom";
-import Projects from "./pages/Projects";
+import Resume from "./pages/Resume";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Navbar />
       </Router>
       <About />
-      <Projects/>
+      <Resume/>
     </>
   );
 }
