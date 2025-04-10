@@ -8,7 +8,7 @@ const Home = () => {
         <h1>Hi, I'm Andrea</h1>
         <h4>FULL STACK DEVELOPER</h4>
       </div>
-     <SocialMedia/>
+     <SocialMedia color="white"/>
     </div>
   );
 };
