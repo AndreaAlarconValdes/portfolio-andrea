@@ -44,13 +44,13 @@ const Resume = () => {
   ];
 
   const languages = [
-    {language:"English",level:"Advanced"},
-    {language:"Spanish",level:"Native"},
-    {language:"Catalan",level:"Native"},
-  ]
+    { language: "English", level: "Advanced" },
+    { language: "Spanish", level: "Native" },
+    { language: "Catalan", level: "Native" },
+  ];
   return (
     <main id="resume" className="resume-container">
-      <div>
+      <div className="left-column">
         <div className="education-section">
           <h2>Education</h2>
           <ul>
@@ -81,7 +81,7 @@ const Resume = () => {
           </ul>
         </div>
       </div>
-      <div>
+      <div className="right-column">
         <div className="skills-section">
           <h1>RESUME</h1>
           <h1>RESUME</h1>
@@ -105,6 +105,15 @@ const Resume = () => {
               </li>
             ))}
           </ul>
+        </div>
+        <div className="cv-section">
+          <a
+            href="/CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="cv-button">Take a look at my CV</button>
+          </a>
         </div>
       </div>
     </main>
