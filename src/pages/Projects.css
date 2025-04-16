@@ -1,0 +1,92 @@
+.projects-page {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 3rem;
+}
+.projects-title {
+  display: flex;
+  flex-direction: column;
+}
+.projects-title h1 {
+  font-family: "Londrina Outline", sans-serif;
+  font-weight: 100;
+  font-size: 8vw;
+  color: #112f57;
+  margin: 0;
+  text-transform: uppercase;
+
+}
+
+.projects-title h2 {
+  color: #112f57;
+  font-family: "Limelight, cursive";
+  font-size: 6vw;
+  margin: 0;
+  line-height: 0;
+  margin-left: 16rem;
+}
+
+.projects-container ul {
+  gap: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-container li {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+
+}
+
+.projects-container li img {
+  transition: all 0.5s ease-in-out;
+}
+
+.projects-container li:hover  img{
+   scale: 1.1;
+}
+
+
+.projects-container li:hover  img:nth-child(2){
+    transform: scale(1.2) rotate(6deg);
+}
+
+.projects-container li div:first-child {
+  width: 40vw;
+}
+
+.projects-container li div:nth-child(2) {
+  width: 60vw;
+}
+.projects-container li img:first-child {
+  width: 280px;
+}
+.projects-container li img:nth-child(2) {
+  width: 80px;
+}
+
+.projects-container h3 {
+  position: absolute;
+  font-size: 13rem;
+  color: #e4e4e4;
+  margin: 0;
+}
+
+.projects-container h4,
+p {
+  z-index: 1;
+  position: relative;
+  text-align: justify;
+  margin: 0;
+}
+
+.projects-container h4{
+    color: #112f57;
+    font-family: "Limelight, cursive";
+    font-size: 2vw;
+    margin-bottom: 1rem;
+    
+}
