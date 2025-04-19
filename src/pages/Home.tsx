@@ -5,10 +5,17 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="title-container">
-        <h1>Hi, I'm Andrea</h1>
-        <h4>FULL STACK DEVELOPER</h4>
+        <h1 className="title">
+          <span>POR</span>
+          <span className="transparent-text">TFO</span>
+          <span>LIO</span>
+        </h1>
+        <h2>FULL STACK DEVELOPER | FRONTEND SPECIALIST</h2>
       </div>
-     <SocialMedia color="white"/>
+      <div className="subtitle-container">
+        <h3>ANDREA ALARCÓN VALDÉS</h3>
+        <SocialMedia color="white" />
+      </div>
     </div>
   );
 };
