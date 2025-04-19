@@ -3,7 +3,7 @@
   display: flex;
   gap: 1rem;
   padding: 0;
-
+margin: 0;
   view-timeline: --scroll;
   animation: fade-away both linear;
   animation-timeline: --scroll;
