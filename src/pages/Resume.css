@@ -11,17 +11,27 @@
 }
 
 .resume-container {
-  background: linear-gradient(to bottom, #f1f1f1 65%, #fafafa 25%);
+  background-color: #f4f4f4;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 2rem;
   }
+.resume-container h1{
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 900;
+  font-size: 5vw;
+  text-transform: uppercase;
+  margin: 0;
+}
 
 .resume-container h2 {
-  color: #112f57;
-  font-family: "Limelight, cursive";
+  color: #f0532c;
+  font-family: 'WindSong', sans-serif;
   font-size: 3vw;
   margin: 0;
+  transform: rotate(-10deg);
+  line-height: 0;
+
 
   view-timeline-name: --title;
   view-timeline-axis: block;
@@ -100,13 +110,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #293f5d;
-  color: white;
+  border: 2px solid #f0532c;
 }
 
-.experience-section h2 {
-  color: white;
-}
+
 
 .experience-section li {
   display: flex;
@@ -121,7 +128,7 @@
   gap: 1rem;
   margin-top: -5rem;
 }
-/* SKILLS */
+/* SKILLS 
 .skills-section {
   display: flex;
   flex-direction: column;
@@ -129,25 +136,7 @@
   line-height: 0.8;
 }
 
-.skills-section h1 {
-  margin: 0;
-  font-family: "Londrina Outline", sans-serif;
-  font-weight: 100;
-  font-size: 9vw;
-  color: #112f57;
 
-  view-timeline-name: --title;
-  view-timeline-axis: block;
-
-  animation-timeline: --title;
-  animation-name: fade-in;
-  animation-fill-mode: both;
-}
-
-.skills-section h2 {
-  margin: 0;
-  line-height: 0;
-}
 
 .skills-section ul {
   display: grid;
@@ -185,7 +174,7 @@
   color: gray;
   text-transform: uppercase;
 }
-
+*/
 /* LANGUAGES */
 .languages-section {
   display: flex;
