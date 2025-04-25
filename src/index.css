@@ -1,11 +1,15 @@
-:root {
+/* :root {
   background-color: #f6f1e4;
-}
+} */
 
 body {
   margin: 0;
 }
 
+p{
+  margin: 0;
+
+}
 /* KEYFRAMES */
 
 @keyframes scale-up {

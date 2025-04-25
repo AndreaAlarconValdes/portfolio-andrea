@@ -52,7 +52,7 @@ const Resume = () => {
     <main id="resume" className="resume-container">
       <div className="left-column">
         <div className="education-section">
-          <h2>Education</h2>
+          <h1>Education</h1>
           <ul>
             {education.map((item) => (
               <li>
@@ -66,7 +66,8 @@ const Resume = () => {
           </ul>
         </div>
         <div className="experience-section">
-          <h2>Experience</h2>
+          <h2>Work</h2>
+          <h1>Experience</h1>
           <ul>
             {experience.map((item) => (
               <li>
@@ -83,9 +84,9 @@ const Resume = () => {
       </div>
       <div className="right-column">
         <div className="skills-section">
-          <h1>RESUME</h1>
-          <h1>RESUME</h1>
-          <h2>Technical Skills</h2>
+          <h1>Resume</h1>
+          <h1>Resume</h1>
+          <h2>Skills</h2>
           <ul>
             {skills.map((skill) => (
               <li key={skill.name}>
@@ -96,7 +97,7 @@ const Resume = () => {
           </ul>
         </div>
         <div className="languages-section">
-          <h2>Languages</h2>
+          <h1>Languages</h1>
           <ul>
             {languages.map((item) => (
               <li>
