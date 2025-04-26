@@ -1,0 +1,42 @@
+.color-picker-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  right: 2%;
+  bottom: 1%;
+  gap: 1rem;
+}
+
+.color-picker {
+  background-color: rgb(111, 111, 111);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  padding: 1rem .5rem;
+  gap: 1rem;
+}
+
+.color-picker p{
+  color: white;
+}
+.color-picker input {
+  cursor: pointer;
+  border: none;
+  width: -webkit-fill-available;
+  border-radius: 3px;
+}
+.preset-colors {
+  display: grid;
+  grid-template-columns: repeat(8, 0fr); /* 8 columnas */
+}
+
+.preset-color {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

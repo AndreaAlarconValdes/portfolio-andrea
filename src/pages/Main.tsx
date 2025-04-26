@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import Box from "../components/Box";
 import EmailForm from "../components/EmailForm";
 import Folder from "../components/Folder";
 import HandwriteText from "../components/HandwriteText";
 import "./Main.css";
+import ColorPicker from "../components/ColorPicker";
 
 const Main = () => {
   const [color, setColor] = useState("#fafafa");
@@ -14,24 +15,21 @@ const Main = () => {
     { language: "Catalan", level: "Native" },
   ];
 
-  function handleColorChange(event: {
-    target: { value: React.SetStateAction<string> };
-  }) {
-    setColor(event.target.value);
-  }
-
   return (
     <div className="main-page" style={{ backgroundColor: color }}>
-      <div className="color-picker-container">
-        <HandwriteText title={`Try to personalise the background ->`} />
-        <input type="color" value={color} onChange={handleColorChange} />
-      </div>
+      <ColorPicker color={color} onColorChange={setColor} />
       <div className="project-container">
         <Folder title="Projects" />
         <HandwriteText title={`<- Click here to view all my projects`} />
       </div>
       <Box className="self-portrait" title="Photo">
-        <img src="./selfie.jpeg" alt="selfie" />
+        <div >
+          <img src="./selfie.jpeg" alt="selfie" />
+          <div className="photo-info">
+            <p>Hi, I'm Andrea</p>
+            <img src="./arrow-down.png" alt="arrow"/>
+          </div>
+        </div>
         <div className="camera-button">
           <i className="fa-solid fa-camera"></i>
         </div>
@@ -67,7 +65,7 @@ const Main = () => {
             </ul>
           </div>
         </div>
-        <HandwriteText title={`<- Hover to explore`} />
+        <HandwriteText title={`Hover to explore`} arrowDown />
       </div>
       <div className="email-container">
         <HandwriteText title={`Get in touch with me ->`} />

@@ -9,13 +9,6 @@
   align-items: center;
 }
 
-.color-picker-container{
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  right: 5%;
-}
 .project-container {
   left: 2%;
   position: absolute;
@@ -85,9 +78,11 @@
 
 .languages-container {
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 1rem;
   position: absolute;
-  top: 8%;
+  top: 5%;
   left: 45%;
 }
 
@@ -178,6 +173,29 @@
   scale: 1.1;
 } */
 
+.photo-info {
+  display: flex;
+  align-items: flex-end;
+  gap: .5rem;
+  position: absolute;
+  top: 15%;
+  left: 8%;
+  opacity: 0;
+  font-family: "Indie Flower", cursive;
+  font-size: 20px;
+  transition: 0.2s ease-in-out;
+}
+
+.self-portrait:hover .photo-info {
+  opacity: 1;
+  transform: rotate(-25deg);
+}
+
+.photo-info img {
+  height: 23px;
+  width: 23px;
+  transform: rotate(-80deg);
+}
 .separator {
   border-left: dashed 1px black;
   height: 100%;
