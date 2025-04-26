@@ -1,24 +1,30 @@
-import "./HandwriteText.css";
-
 interface HandwriteProps {
   title: string;
-  arrowDown?: boolean;
+  arrowPosition?: "left" | "right";
 }
 
-const HandwriteText = ({ title, arrowDown }: HandwriteProps) => {
+const HandwriteText = ({ title, arrowPosition }: HandwriteProps) => {
+  
+
+  
   return (
-    <div style={{ display: "flex", gap: ".5rem", alignItems: "flex-end" }}>
-      <p className="handwriting"> {title}</p>
-      {arrowDown && (
+    <div  style={{ display: "flex",  flexDirection: arrowPosition == "left" ? "row-reverse" : "row",gap: ".5rem", alignItems: "flex-end" }}>
+      <p className="handwriting"
+      style={{fontFamily:"Indie Flower, cursive"}}
+      >{title}</p>
+      {arrowPosition && (
         <img
           src="./arrow-down.png"
           alt="arrow"
           style={{
             height: "20px",
-            transform: "rotate(-80deg)",
+            transform: arrowPosition === "left"
+            ? "rotateY(180deg) rotate(-80deg)"
+            : "rotate(-80deg)",
           }}
         />
-      )}
+        )}
+  
     </div>
   );
 };

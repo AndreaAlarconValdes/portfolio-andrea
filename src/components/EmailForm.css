@@ -33,7 +33,7 @@
 .send-email-form button {
 display: flex;
 align-items: center;
-justify-content: flex-end;
+justify-content: center;
 cursor: pointer;
 background-color: transparent;
 border: none;
