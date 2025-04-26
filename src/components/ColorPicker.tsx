@@ -62,7 +62,7 @@ export default function ColorPicker({
 
   return (
     <div className="color-picker-container">
-      <HandwriteText title={`Try to personalise the background`} arrowDown />
+      <HandwriteText title={`Try to personalise the background`} arrowPosition="right" />
       <div className="color-picker">
         <p>Colors</p>
         <div className="preset-colors">

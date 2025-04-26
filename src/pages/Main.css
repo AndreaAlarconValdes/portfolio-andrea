@@ -94,6 +94,7 @@
   width: 280px;
   font-family: "Inter", sans-serif;
   z-index: 1;
+
   transition: 0.2s ease-in-out;
 }
 
@@ -176,7 +177,7 @@
 .photo-info {
   display: flex;
   align-items: flex-end;
-  gap: .5rem;
+  gap: 0.5rem;
   position: absolute;
   top: 15%;
   left: 8%;
@@ -248,4 +249,42 @@
   left: 5%;
   position: absolute;
   align-items: center;
+}
+
+.technical-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  right: 2%;
+}
+
+.technical-skills img {
+  transform: rotateY(180deg);
+}
+.technical-skills ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  padding: 0;
+}
+
+.technical-skills li {
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.technical-skills i {
+  font-size: 40px;
+}
+
+.technical-skills li p {
+  font-size: 10px;
+  color: gray;
+  text-transform: uppercase;
 }

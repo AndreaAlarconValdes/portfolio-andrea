@@ -1,6 +1,6 @@
 import Home from "./pages/Home";
 import "./index.css"
-import Skills from "./pages/Skills";
+// import Skills from "./pages/Skills";
 import Main from "./pages/Main";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <>
       <Home />
       <Main/>
-      <Skills/>
+      {/* <Skills/> */}
     </>
   );
 }

@@ -6,12 +6,17 @@
   cursor: pointer;
 }
 
+.folder-container button {
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border: none;
+  background-color: transparent;
+}
 .folder-container i {
   font-size: 50px;
   color: #4da6ff;
-  transition: 0.2s ease-in-out;
 }
-.folder-container i:hover {
+.folder-container button:hover {
   scale: 1.2;
 }
 
