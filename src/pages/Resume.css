@@ -2,18 +2,24 @@
   height: 100vh;
   background-color: #fafafa;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  font-family: "Inter", sans-serif;
+
 }
 
+.center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .languages {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   background-color: rgb(254, 254, 254);
   padding: 0.5rem 1rem;
   border-radius: 10px;
   width: 280px;
-  font-family: "Inter", sans-serif;
   transform: rotate(-3deg);
   transition: 0.2s ease-in-out;
 }
@@ -100,4 +106,53 @@
   font-size: 10px;
   color: gray;
   text-transform: uppercase;
+}
+.education-box {
+  transition: .2s ease-in-out;
+}
+
+.education-box:hover{
+  scale:1.1;
+
+}
+.education-container{
+  padding: 1.5rem;
+  font-size: 14px;
+
+}
+.education-items {
+  padding: .5rem;
+}
+.education-items h3{
+  margin: 0;
+}
+.education-items p{
+  color: gray;
+}
+
+.experience-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience-title h3{
+  margin: 0;
+}
+
+.experience-box {
+  width: 470px;
+  transition: .2s ease-in-out;
+}
+.experience-box:hover{
+  scale: 1.1;
+}
+
+.roll-description {
+  margin: .5rem 0 2rem 0;
+}
+.roll-description h4{
+  margin: 0;
+  margin-bottom: .5rem;
+
 }
