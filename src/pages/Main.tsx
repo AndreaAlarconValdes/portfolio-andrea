@@ -52,7 +52,7 @@ const Main = () => {
           </ul>
         </div>
         <div className="project-container">
-          <Folder title="Projects" handleOnClick={handleOpenModal} />
+          <Folder title="Projects" route="projects" />
           <HandwriteText title={`<- Click here to view all my projects`} />
         </div>
         <Box className="self-portrait" title="Photo">

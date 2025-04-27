@@ -1,6 +1,7 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./EmailForm.css";
+import Modal from "./Modal";
 
 const SERVICE_ID = "service_b81msna";
 const TEMPLATE_ID = "template_9wdtcgt";
@@ -10,6 +11,10 @@ const EmailForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -30,6 +35,10 @@ const EmailForm = () => {
         setName("");
         setEmail("");
         setMessage("");
+
+        handleOpenModal()
+
+       
       })
       .catch((error) => {
         console.error("error sending email", error);
@@ -37,6 +46,7 @@ const EmailForm = () => {
   };
 
   return (
+    <>
     <form onSubmit={handleSubmit} className="send-email-form">
       <div >
         <p>Name:</p>
@@ -63,6 +73,7 @@ const EmailForm = () => {
       <i className="fa-solid fa-paper-plane"></i>
       </button>
     </form>
+   </>
   );
 };
 

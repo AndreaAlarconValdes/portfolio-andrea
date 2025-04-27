@@ -1,14 +1,14 @@
 import Home from "./pages/Home";
 import "./index.css"
-// import Skills from "./pages/Skills";
 import Main from "./pages/Main";
+import Projects from "./pages/Projects";
 
 function App() {
   return (
     <>
       <Home />
       <Main/>
-      {/* <Skills/> */}
+      <Projects/>
     </>
   );
 }
