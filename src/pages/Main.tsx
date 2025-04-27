@@ -1,59 +1,46 @@
 import { useState } from "react";
 import Box from "../components/Box";
-import EmailForm from "../components/EmailForm";
 import Folder from "../components/Folder";
 import HandwriteText from "../components/HandwriteText";
 import "./Main.css";
 import ColorPicker from "../components/ColorPicker";
-import Modal from "../components/Modal";
 
 const Main = () => {
   const [color, setColor] = useState("#fafafa");
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
 
-  const languages = [
-    { language: "English", level: "Advanced" },
-    { language: "Spanish", level: "Native" },
-    { language: "Catalan", level: "Native" },
+
+
+
+  const icons = [
+    { class: "fa-solid fa-envelope", link:"mailto:alarconvaldes.a@gmail.com", color: "white", bgColor: "#4da6ff" },
+    { class: "fa-brands fa-linkedin-in" , link:"https://www.linkedin.com/in/andreaalarconvaldes/", color: "white", bgColor: "#0051a3"},
+    { class: "fa-brands fa-whatsapp" , link:"", color: "white", bgColor: "#25D366"},
+    { class: "fa-brands fa-github" , link:"https://github.com/AndreaAlarconValdes", color: "black", bgColor: "white"},
+    { class: "fa-solid fa-file" , link:"./CV.pdf", color: "white", bgColor: "black"},
   ];
 
-  const technicalSkills = [
-    { icon: "fa-brands fa-react", name: "react" },
-    { icon: "fa-brands fa-html5", name: "html5" },
-    { icon: "fa-brands fa-css3-alt", name: "css3" },
-    { icon: "fa-brands fa-js", name: "javascript" },
-    { icon: "fa-brands fa-node-js", name: "node.js" },
-    { icon: "fa-solid fa-database", name: "database" },
-    { icon: "fa-brands fa-docker", name: "docker" },
-    { icon: "fa-brands fa-git-alt", name: "git" },
-    { icon: "fa-brands fa-figma", name: "figma" },
-    { icon: "fa-brands fa-google", name: "google ads" },
-    { icon: "fa-brands fa-wordpress-simple", name: "wordpress" },
-    { icon: "fa-brands fa-shopify", name: "shopify" },
-  ];
+  const foldersRoutes = [
+    {title:"Resume",route:"resume"},
+    {title:"Projects",route:"projects"},
+    {title:"Contact",route:"contact"},
+  ]
 
   return (
-    <>
-      <div className="main-page" style={{ backgroundColor: color }}>
+    <div className="main-page" style={{ backgroundColor: color }}>
+      <div className="desktop-container" >
         <ColorPicker color={color} onColorChange={setColor} />
-        <div className="technical-skills">
-        <HandwriteText title={`My Technical Skills`} arrowPosition="left" />
-          
-          <ul>
-            {technicalSkills.map((skill) => (
-              <li key={skill.name}>
-                <i className={skill.icon}></i>
-                <p>{skill.name}</p>
+     
+        <div className="nav-container">
+          <HandwriteText title={`Click here to navigate`} arrowPosition="left" />
+        <ul>
+            {foldersRoutes.map((route) => (
+              <li key={route.title}>
+                
+                <Folder title={route.title} route={route.route} />
               </li>
             ))}
           </ul>
-        </div>
-        <div className="project-container">
-          <Folder title="Projects" route="projects" />
-          <HandwriteText title={`<- Click here to view all my projects`} />
         </div>
         <Box className="self-portrait" title="Photo">
           <div>
@@ -80,39 +67,27 @@ const Main = () => {
             the creative process.
           </p>
         </Box>
-        <div className="languages-container">
-          <div className="languages">
-            <div className="languages-title">
-              <i className="fa-solid fa-chevron-left"></i>
-              <h2>Languages</h2>
-            </div>
-            <div className="languages-content">
-              <ul>
-                {languages.map((item) => (
-                  <li>
-                    <i className="fa-solid fa-check"></i>
-                    <h3>{item.language}</h3>
-                    <p>{item.level}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <HandwriteText title={`Hover to explore`} arrowPosition="right" />
-        </div>
-        <div className="email-container">
-          <HandwriteText title={`Get in touch with me ->`} />
-          <Box className="email-box">
-            <EmailForm />
-          </Box>
-        </div>
-        <Modal open={isModalOpen} onClose={handleCloseModal}>
-          <h2 className="text-2xl font-bold mb-4">¡Hola desde el Modal!</h2>
-          <p className="mb-4">Este es el contenido del modal.</p>
-          <button onClick={handleCloseModal}>Cerrar</button>
-        </Modal>
+   
+     
       </div>
-    </>
+        <div className="social-media-container">
+      <HandwriteText title={`Reach me out!`} arrowPosition="left" />
+
+      <ul>
+      {icons.map((icon) => (
+        <li>
+          <a
+            href={icon.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className={icon.class} style={{color:icon.color, backgroundColor: icon.bgColor}}></i>
+          </a>
+        </li>
+      ))}
+    </ul>
+     </div>
+    </div>
   );
 };
 
