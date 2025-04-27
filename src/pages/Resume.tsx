@@ -1,123 +1,100 @@
+import FilterableList from "../components/FilterableList";
 import "./Resume.css";
 
 const Resume = () => {
   const skills = [
-    { icon: "fa-brands fa-react", name: "react" },
-    { icon: "fa-brands fa-html5", name: "html5" },
-    { icon: "fa-brands fa-css3-alt", name: "css3" },
-    { icon: "fa-brands fa-js", name: "javascript" },
-    { icon: "fa-brands fa-node-js", name: "node.js" },
-    { icon: "fa-solid fa-database", name: "database" },
-    { icon: "fa-brands fa-docker", name: "docker" },
-    { icon: "fa-brands fa-git-alt", name: "git" },
-    { icon: "fa-brands fa-figma", name: "figma" },
-    { icon: "fa-brands fa-google", name: "google ads" },
-    { icon: "fa-brands fa-wordpress-simple", name: "wordpress" },
-    { icon: "fa-brands fa-shopify", name: "shopify" },
+    { icon: "react", name: "react", category: "Frontend" },
+    { icon: "html", name: "html5", category: "Frontend" },
+    { icon: "css", name: "css3", category: "Frontend" },
+    { icon: "tailwind", name: "tailwind css", category: "Frontend" },
+    { icon: "js", name: "javascript", category: "Frontend" },
+    { icon: "ts", name: "typescript", category: "Frontend" },
+    { icon: "nodejs", name: "node.js", category: "Backend" },
+    { icon: "mongodb", name: "mongodb", category: "Backend" },
+    { icon: "mysql", name: "mysql", category: "Backend" },
+    { icon: "postgresql", name: "postgresql", category: "Backend" },
+    { icon: "docker", name: "docker", category: "Backend" },
+    { icon: "git", name: "git", category: "Others" },
+    { icon: "figma", name: "figma", category: "Others" },
+    { icon: "google-ads", name: "google ads", category: "Others" },
+    {
+      icon: "wordpress",
+      name: "wordpress",
+      category: "Others",
+    },
+    { icon: "shopify", name: "shopify", category: "Others" },
   ];
 
-  const education = [
-    { program: "Google Ads Certification", school: "Grow with Google" },
-    { program: "Software Engineering Bootcamp", school: "Ironhack" },
-    { program: "Science Bachelor Degree", school: "IES Bruguers" },
+  const skillsFilters = [
+    { name: "All", icon: "fa-solid fa-globe" },
+    { name: "Frontend", icon: "fa-solid fa-desktop" },
+    { name: "Backend", icon: "fa-solid fa-gear" },
+    { name: "Others", icon: "fa-solid fa-wrench" },
   ];
 
-  const experience = [
-    {
-      year: "2024 - present",
-      position: "Supervisor",
-      company: "Jump Juice Bar",
-      location: "Dublin, Ireland",
-    },
-    {
-      year: "Jan 2023 - Dec 2023",
-      position: "Full Stack Developer",
-      company: "Haddock",
-      location: "Barcelona, Spain",
-    },
-    {
-      year: "Nov 2020 - Dec 2022",
-      position: "Administrative",
-      company: "Barcelona Epidemiology Service",
-      location: "Barcelona, Spain",
-    },
-  ];
+  // const education = [
+  //   { program: "Google Ads Certification", school: "Grow with Google" },
+  //   { program: "Software Engineering Bootcamp", school: "Ironhack" },
+  //   { program: "Science Bachelor Degree", school: "IES Bruguers" },
+  // ];
+
+  // const experience = [
+  //   {
+  //     year: "2024 - present",
+  //     position: "Supervisor",
+  //     company: "Jump Juice Bar",
+  //     location: "Dublin, Ireland",
+  //   },
+  //   {
+  //     year: "Jan 2023 - Dec 2023",
+  //     position: "Full Stack Developer",
+  //     company: "Haddock",
+  //     location: "Barcelona, Spain",
+  //   },
+  //   {
+  //     year: "Nov 2020 - Dec 2022",
+  //     position: "Administrative",
+  //     company: "Barcelona Epidemiology Service",
+  //     location: "Barcelona, Spain",
+  //   },
+  // ];
 
   const languages = [
     { language: "English", level: "Advanced" },
     { language: "Spanish", level: "Native" },
     { language: "Catalan", level: "Native" },
   ];
+
+  
+  
+
+
   return (
-    <main id="resume" className="resume-container">
-      <div className="left-column">
-        <div className="education-section">
-          <h1>Education</h1>
-          <ul>
-            {education.map((item) => (
-              <li>
-                <i className="fa-solid fa-award"></i>
-                <div>
-                  <h3>{item.program}</h3>
-                  <p>{`by ${item.school}`}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
+    <div id="resume" className="resume-page">
+      <div className="languages">
+        <div className="languages-title">
+          <i className="fa-solid fa-chevron-left"></i>
+          <h2>Languages</h2>
         </div>
-        <div className="experience-section">
-          <h2>Work</h2>
-          <h1>Experience</h1>
-          <ul>
-            {experience.map((item) => (
-              <li>
-                <h4>{item.year}</h4>
-                <div>
-                  <h3>{item.position}</h3>
-                  <p>{item.company}</p>
-                  <p>{item.location}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <div className="right-column">
-        <div className="skills-section">
-          <h1>Resume</h1>
-          <h1>Resume</h1>
-          <h2>Skills</h2>
-          <ul>
-            {skills.map((skill) => (
-              <li key={skill.name}>
-                <i className={skill.icon}></i>
-                <p>{skill.name}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="languages-section">
-          <h1>Languages</h1>
+        <div className="languages-content">
           <ul>
             {languages.map((item) => (
               <li>
+                <i className="fa-solid fa-check"></i>
                 <h3>{item.language}</h3>
                 <p>{item.level}</p>
               </li>
             ))}
           </ul>
         </div>
-        <div className="cv-section">
-          <a
-            href="/CV.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="cv-button">Take a look at my CV</button>
-          </a>
-        </div>
       </div>
-    </main>
+      <FilterableList
+        items={skills}
+        itemsTitle="Skills"
+        filters={skillsFilters}
+        filterTitle="Technical Skills"
+      />
+    </div>
   );
 };
 

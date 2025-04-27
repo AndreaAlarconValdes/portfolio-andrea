@@ -1,0 +1,14 @@
+.email-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+}
+.email-box {
+    min-width: 500px;
+    min-height: 200px;
+  }
+
+  

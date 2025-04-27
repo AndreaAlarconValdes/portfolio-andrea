@@ -10,7 +10,7 @@ const HandwriteText = ({ title, arrowPosition }: HandwriteProps) => {
   return (
     <div  style={{ display: "flex",  flexDirection: arrowPosition == "left" ? "row-reverse" : "row",gap: ".5rem", alignItems: "flex-end" }}>
       <p className="handwriting"
-      style={{fontFamily:"Indie Flower, cursive"}}
+      style={{fontFamily:"Indie Flower, cursive", fontSize:"20px"}}
       >{title}</p>
       {arrowPosition && (
         <img
