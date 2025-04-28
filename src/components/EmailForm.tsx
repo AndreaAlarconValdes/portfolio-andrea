@@ -35,9 +35,7 @@ const EmailForm = () => {
         setEmail("");
         setMessage("");
 
-        handleOpenModal()
-
-       
+        handleOpenModal();
       })
       .catch((error) => {
         console.error("error sending email", error);
@@ -46,33 +44,37 @@ const EmailForm = () => {
 
   return (
     <>
-    <form onSubmit={handleSubmit} className="send-email-form">
-      <div >
-        <p>Name:</p>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </div>
-      <div >
-      <p>Email:</p>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      </div>
-      <textarea
-      placeholder="Hi Andrea, we would like to contact you..."
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      ></textarea>
-      <button type="submit">
-      <i className="fa-solid fa-paper-plane"></i>
-      </button>
-    </form>
-   </>
+      <form
+        onSubmit={handleSubmit}
+        className="send-email-form"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div>
+          <p>Name:</p>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div>
+          <p>Email:</p>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <textarea
+          placeholder="Hi Andrea, we would like to contact you..."
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        ></textarea>
+        <button type="submit">
+          <i className="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </>
   );
 };
 
