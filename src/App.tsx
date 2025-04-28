@@ -1,17 +1,19 @@
 import Home from "./pages/Home";
 import "./index.css"
-import Main from "./pages/Main";
 import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
+import { ColorProvider } from "./context/ColorContext";
+import About from "./pages/About";
 
 function App() {
+  
   return (
-    <>
+    <ColorProvider>
       <Home />
-      <Main/>
+      <About/>
       <Resume/>
       <Contact/>
-    </>
+    </ColorProvider>
   );
 }
 

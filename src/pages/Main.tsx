@@ -1,42 +1,32 @@
-import { useState } from "react";
 import Box from "../components/Box";
 import Folder from "../components/Folder";
 import HandwriteText from "../components/HandwriteText";
 import "./Main.css";
 import ColorPicker from "../components/ColorPicker";
+import { foldersRoutes, icons } from "../constants/constants";
+import { useColor } from "../context/ColorContext";
+
 
 const Main = () => {
-  const [color, setColor] = useState("#fafafa");
-
-
-
-
-
-  const icons = [
-    { class: "fa-solid fa-envelope", link:"mailto:alarconvaldes.a@gmail.com", color: "white", bgColor: "#4da6ff" },
-    { class: "fa-brands fa-linkedin-in" , link:"https://www.linkedin.com/in/andreaalarconvaldes/", color: "white", bgColor: "#0051a3"},
-    { class: "fa-brands fa-whatsapp" , link:"", color: "white", bgColor: "#25D366"},
-    { class: "fa-brands fa-github" , link:"https://github.com/AndreaAlarconValdes", color: "black", bgColor: "white"},
-    { class: "fa-solid fa-file" , link:"./CV.pdf", color: "white", bgColor: "black"},
-  ];
-
-  const foldersRoutes = [
-    {title:"Resume",route:"resume"},
-    {title:"Projects",route:"projects"},
-    {title:"Contact",route:"contact"},
-  ]
-
+  const { color, setColor } = useColor()
   return (
-    <div className="main-page" style={{ backgroundColor: color }}>
-      <div className="desktop-container" >
+    <div className="main-page" style={{ backgroundColor: color,
+      backgroundImage: `
+      linear-gradient(to right, lightgray 1px, transparent 1px),
+      linear-gradient(to bottom, lightgray 1px, transparent 1px)
+    `,
+    backgroundSize: "100px 100px", }}>
+      <div className="desktop-container">
         <ColorPicker color={color} onColorChange={setColor} />
-     
+
         <div className="nav-container">
-          <HandwriteText title={`Click here to navigate`} arrowPosition="left" />
-        <ul>
+          <HandwriteText
+            title={`Click here to navigate`}
+            arrowPosition="left"
+          />
+          <ul>
             {foldersRoutes.map((route) => (
               <li key={route.title}>
-                
                 <Folder title={route.title} route={route.route} />
               </li>
             ))}
@@ -67,26 +57,26 @@ const Main = () => {
             the creative process.
           </p>
         </Box>
-   
-     
       </div>
-        <div className="social-media-container">
-      <HandwriteText title={`Reach me out!`} arrowPosition="left" />
+      <div className="social-media-container">
+       <div className="social">
+        <HandwriteText title={`Reach me out!`} arrowPosition="left" />
 
-      <ul>
-      {icons.map((icon) => (
-        <li>
-          <a
-            href={icon.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className={icon.class} style={{color:icon.color, backgroundColor: icon.bgColor}}></i>
-          </a>
-        </li>
-      ))}
-    </ul>
-     </div>
+        <ul>
+          {icons.map((icon) => (
+            <li>
+              <a href={icon.link} target="_blank" rel="noopener noreferrer">
+                <i
+                  className={icon.class}
+                  style={{ color: icon.color, backgroundColor: icon.bgColor }}
+                ></i>
+              </a>
+            </li>
+          ))}
+        </ul>
+        </div>
+        <img className="star-img" src="./star.png" alt="star" />
+      </div>
     </div>
   );
 };

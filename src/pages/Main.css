@@ -1,10 +1,18 @@
-.main-page{
+.main-page {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around
-  
+  justify-content: space-around;
+
 }
+
+.star-img {
+  width: 150px;
+  position: absolute;
+  right: 2%;
+}
+
+
 .desktop-container {
   font-family: "Inter", sans-serif;
 
@@ -24,45 +32,15 @@
   align-items: flex-start;
   gap: 1.5rem;
 }
-.nav-container ul{
+.nav-container ul {
   list-style-type: none;
   display: flex;
   padding: 0;
   margin: 0;
   gap: 2rem;
-
 }
 
-.self-portrait {
-  position: relative;
-  transition: 0.2s ease-in-out;
-  z-index: 2;
-}
 
-.self-portrait:hover {
-  z-index: 3;
-  scale: 1.1;
-}
-
-.self-portrait img {
-  width: 330px;
-  height: 430px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.camera-button {
-  background-color: #e9e9e980;
-  padding: 0.5rem;
-  display: flex;
-  justify-content: center;
-}
-.camera-button i {
-  background-color: gray;
-  color: #e9e9e9;
-  border-radius: 50%;
-  padding: 0.4rem;
-  font-size: 14px;
-}
 
 .self-description {
   position: absolute;
@@ -90,7 +68,6 @@
 .self-description .children-content p {
   margin-top: 0.5rem;
 }
-
 
 /* .info-card {
   position: absolute;
@@ -184,34 +161,10 @@
   margin: 0;
 }
 
-
-
-
 .social-media-container {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.social-media-container ul{
-  background-color: rgba(123, 123, 123, 0.465);
-  border-radius: 28px;
-  padding: 1rem;
-    list-style-type: none;
-    margin: 0;
-    display: flex;
-    gap: 1rem;
-}
-
-.social-media-container i{
-   font-size: 40px;
-   padding: .5rem;
-  border-radius: 10px;
-transition: .2s ease-in-out;
-}
-
-.social-media-container i:hover{
-  scale: 1.1;
-}

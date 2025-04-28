@@ -1,23 +1,23 @@
 .filter-container {
   display: flex;
   background-color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
+  border: 2px solid black;
+
   font-family: "Inter", sans-serif;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
-.filter-container:hover{
-  scale:1.1
+.filter-container:hover {
+  scale: 1.1;
 }
 .filters-nav {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 1rem;
-  background-color: #e9e9e9cd;
+  background-color: #f8d1fc;
+  border-right: 2px solid black;
 }
 
 .deco-btns {
@@ -29,34 +29,31 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
+  border: 2px solid black;
 }
 .deco-btns span:nth-child(1) {
-  background-color: #ff5f56;
+  background-color: #deeb7d;
 }
 .deco-btns span:nth-child(2) {
-  background-color: #ffbd2e;
+  background-color: #f46f0f;
 }
 .deco-btns span:nth-child(3) {
-  background-color: #27c93f;
+  background-color: #dc71fb;
 }
 
 .filters-nav h4 {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  color: gray;
-  font-size: 14px;
   font-weight: 100;
 }
 .filters-nav button {
   border: none;
   cursor: pointer;
   width: -webkit-fill-available;
-  border-radius: 8px;
   padding: 0.3rem;
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  color: rgb(43, 43, 43);
 }
 
 .items-container {
@@ -70,6 +67,42 @@
   font-size: 14px;
   display: flex;
   justify-content: center;
+  background-color: #deeb7f;
   color: rgb(26, 26, 26);
   font-weight: 900;
+  border-bottom: 2px solid black;
+}
+
+.filtered-items {
+  background-color: #fdfbe6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 376px;
+}
+
+.filtered-items ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5em;
+  padding: 0;
+}
+
+.filtered-items li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filtered-items i {
+  font-size: 40px;
+}
+
+.filtered-items li h5 {
+  font-size: 10px;
+  color: gray;
+  text-transform: uppercase;
+  margin: 0;
 }

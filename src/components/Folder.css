@@ -8,17 +8,10 @@
 
 .folder-container button {
   cursor: pointer;
-  transition: 0.2s ease-in-out;
   border: none;
   background-color: transparent;
 }
-.folder-container i {
-  font-size: 60px;
-  color: #4da6ff;
-}
-.folder-container button:hover {
-  scale: 1.2;
-}
+
 
 .folder-container p {
   font-size: 14px;

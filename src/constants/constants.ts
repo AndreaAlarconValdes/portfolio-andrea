@@ -63,3 +63,28 @@ export const skills = [
 
     },
   ];
+
+  export const icons = [
+    { class: "fa-solid fa-envelope", link:"mailto:alarconvaldes.a@gmail.com", color: "white", bgColor: "#4da6ff" },
+    { class: "fa-brands fa-linkedin-in" , link:"https://www.linkedin.com/in/andreaalarconvaldes/", color: "white", bgColor: "#0051a3"},
+    { class: "fa-brands fa-whatsapp" , link:"", color: "white", bgColor: "#25D366"},
+    { class: "fa-brands fa-github" , link:"https://github.com/AndreaAlarconValdes", color: "black", bgColor: "white"},
+  ];
+
+  export const foldersRoutes = [
+    {img:"icon-folder", title:"Resume",route:"resume"},
+    {img:"icon-eye",title:"Projects",route:"projects"},
+    {img:"icon-mail", title:"Contact",route:"contact"},
+  ]
+
+  export const aboutFilters = [
+    {name:"Background"},
+    {name:"Hobbies"},
+    {name:"Personal information"},
+  ]
+
+  export const aboutItems = [
+    {description:"Lorem ipsum 1", category:"Background"},
+    {description:"Lorem ipsum 2", category:"Hobbies"},
+    {description:"Lorem ipsum 3", category:"Personal information"},
+  ]

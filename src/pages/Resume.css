@@ -1,46 +1,68 @@
 .resume-page {
   height: 100vh;
-  background-color: #fafafa;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   font-family: "Inter", sans-serif;
+  position: relative;
 
 }
-
+.page-title {
+  font-family: "Bagel Fat One", sans-serif;
+  color: #dc71fb;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 4px 4px 0px black;
+  font-size: 70px;
+  margin: 0.5rem 0;
+}
 .center-column {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 }
 .languages {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: rgb(254, 254, 254);
-  padding: 0.5rem 1rem;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
+  background-color: #fdfbe6;
+  padding: 2rem 1rem 1rem 1rem;
   border-radius: 10px;
   width: 280px;
-  transform: rotate(-3deg);
   transition: 0.2s ease-in-out;
+  border: 2px solid black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
+.languages span {
+  width: 60px;
+  height: 60px;
+  background-color: #dc71fb;
+  border: 2px solid black;
+  display: flex;
+  border-radius: 50%;
+  position: absolute;
+  left: 40%;
+  top: -35px;
+}
 .languages:hover {
   scale: 1.1;
-  transform: rotate(0deg);
 }
 
 .languages-title {
   display: flex;
-  align-items: center;
   gap: 1rem;
-  color: #ffd700;
   text-transform: uppercase;
+  background-color: #f46f0f;
+  border-radius: 50px;
+  border: 2px solid black;
+  width: fit-content;
+  margin: auto;
+  padding: 0 2rem;
 }
 .languages-title h2 {
-  font-size: 15px;
-}
-
-.languages-title i {
   font-size: 13px;
 }
 
@@ -58,101 +80,69 @@
   font-size: 13px;
   margin-bottom: 0.5rem;
   padding: 0.3rem;
-  border-bottom: 1px solid rgba(223, 223, 223, 0.848);
 }
 .languages-content i {
-  background-color: #ffd700;
-  border-radius: 999px;
-  color: white;
+  color: black;
   padding: 0.2rem;
-  font-size: 8px;
+  font-size: 14px;
 }
 .languages-content h3 {
   padding: 0;
   margin: 0;
 }
 
-
-.technical-skills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 376px;
-
-}
-
-
-.technical-skills ul {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5em;
-  padding: 0;
-}
-
-.technical-skills li {
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.technical-skills i {
-  font-size: 40px;
-}
-
-.technical-skills li p {
-  font-size: 10px;
-  color: gray;
-  text-transform: uppercase;
-}
 .education-box {
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
-.education-box:hover{
-  scale:1.1;
-
+.education-box:hover {
+  scale: 1.1;
 }
-.education-container{
+.education-container {
   padding: 1.5rem;
   font-size: 14px;
-
 }
 .education-items {
-  padding: .5rem;
+  padding: 0.5rem;
 }
-.education-items h3{
+.education-items h3 {
   margin: 0;
 }
-.education-items p{
+.education-items p {
   color: gray;
 }
 
-.experience-title{
+.experience-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.experience-title h3{
+.experience-title h3 {
   margin: 0;
 }
 
 .experience-box {
   width: 470px;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-.experience-box:hover{
+.experience-box:hover {
   scale: 1.1;
 }
 
 .roll-description {
-  margin: .5rem 0 2rem 0;
+  margin: 0.5rem 0 2rem 0;
 }
-.roll-description h4{
+.roll-description h4 {
   margin: 0;
-  margin-bottom: .5rem;
-
+  margin-bottom: 0.5rem;
 }
+.CV-folder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+}
+

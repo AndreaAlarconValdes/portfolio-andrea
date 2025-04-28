@@ -1,70 +1,51 @@
-import HandwriteText from "./HandwriteText";
 import "./ColorPicker.css";
+import Box from "./Box";
+import { useState } from "react";
 
 interface ColorPickerProps {
-  color: string;
   onColorChange: (newColor: string) => void;
+  onFilterChange: (newFilter: string) => void;
 }
 export default function ColorPicker({
-  color,
   onColorChange,
+  onFilterChange,
 }: ColorPickerProps) {
   const presetColors = [
-      "#ffffff",
-      "#e5e5e5",
-      "#cccccc",
-      "#999999",
-      "#666666",
-      "#333333",
-      "#242424",
-      "#000000",
-    "#ff0000",
-    "#ff9900",
-    "#ffff66",
-    "#00dc00",
-    "#00efef",
-    "#0000ff",
-    "#9900ff",
-    "#ed00ed",
-    "#ff6666",
-    "#ffcc66",
-    "#ffff99",
-    "#66ff66",
-    "#66ffff",
-    "#6666ff",
-    "#cc66ff",
-    "#ff66ff",
-    "#ff9999",
-    "#ffff00",
-    "#ffffcc",
-    "#99ff99",
-    "#99ffff",
-    "#9999ff",
-    "#cf92f7",
-    "#ff99ff",
-    "#ffcccc",
-    "#f9f991",
-    "#fafadd",
-    "#ccffcc",
-    "#ccffff",
-    "#ccccff",
-    "#e0b3ff",
-    "#ffccff",
+    "#EC9696",
+    "#54B9AD",
+    "#F8D059",
+    "#50C1EC",
+    "#d496ec",
+    "#a9c75d",
+    "#f8b659",
+    "#ec5850",
   ];
-
-  const handleInputChange = (e: { target: { value: string } }) => {
-    onColorChange(e.target.value);
-  };
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const handlePresetColorClick = (presetColor: string) => {
     onColorChange(presetColor);
+    onFilterChange("none");
   };
 
+  const handleFilterClick = (filter: string) => {
+    onFilterChange(filter);
+    setDropdownOpen(false);
+  };
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!isDropdownOpen); 
+  };
   return (
-    <div className="color-picker-container">
-      <HandwriteText title={`Try to personalise the background`} arrowPosition="left" />
-      <div className="color-picker">
-        <p>Colors</p>
+    <Box
+      title="Settings"
+      color="#DADAD3"
+      square
+      bgColor="#f7f6f0"
+      className="color-picker-box"
+    >
+      <div className="settings-content">
+      <div className="bg-picker">
+        <p>Change background</p>
         <div className="preset-colors">
           {presetColors.map((preset, index) => (
             <div
@@ -77,8 +58,29 @@ export default function ColorPicker({
             ></div>
           ))}
         </div>
-        <input type="color" value={color} onChange={handleInputChange} />
       </div>
-    </div>
+
+      <div className="filters">
+        <button className="filter-button" onClick={toggleDropdown}>
+          <span style={{fontSize:14, marginRight: 5}}>Filters</span> <i className="fa-solid fa-chevron-down"/>
+        </button>
+        {isDropdownOpen && (
+          <div className="dropdown-menu">
+            <button onClick={() => handleFilterClick("none")}>Normal</button>
+
+            <button onClick={() => handleFilterClick("grayscale(100%)")}>
+              Black and white
+            </button>
+            <button onClick={() => handleFilterClick("invert(100%)")}>
+              Negative
+            </button>
+            <button onClick={() => handleFilterClick("hue-rotate(180deg)")}>
+              Invert Hue
+            </button>
+          </div>
+        )}
+      </div>
+      </div>
+    </Box>
   );
 }

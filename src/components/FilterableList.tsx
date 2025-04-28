@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./FilterableList.css";
 
 export type Item = {
-  name: string;
+  name?: string;
   icon?: string;
   description?: string;
   category: string;
@@ -48,7 +48,8 @@ const FilterableList: React.FC<FilterableListProps> = ({
             onClick={() => setActiveFilter(filter.name)}
             style={{
               backgroundColor:
-                activeFilter === filter.name ? "#cecece" : "transparent",
+                activeFilter === filter.name ? "#f46f0f" : "transparent",
+              border: activeFilter === filter.name ? "2px solid black" : "none",
             }}
           >
             <i className={filter.icon}></i>
@@ -60,13 +61,19 @@ const FilterableList: React.FC<FilterableListProps> = ({
         <div className="item-title">
           <p>{itemsTitle}</p>
         </div>
-        <div className="technical-skills">
+        <div className="filtered-items">
           <ul>
             {filteredItems.map((item) => (
               <li key={item.name}>
-                <img src={`./${item.icon}.png`} alt={item.name}/>
-
-                <p>{item.name}</p>
+                {item.icon && 
+                <img src={`./${item.icon}.png`} alt={item.name} />
+                }
+                {item.name &&
+                <h5>{item.name}</h5>
+                }
+                {item.description &&
+                <p>{item.description}</p>
+                }
               </li>
             ))}
           </ul>
