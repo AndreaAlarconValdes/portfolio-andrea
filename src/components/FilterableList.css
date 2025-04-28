@@ -5,12 +5,11 @@
   border: 2px solid black;
 
   font-family: "Inter", sans-serif;
-  transition: 0.2s ease-in-out;
+  /* animation: scale-up-center 0.5s; */
+
 }
 
-.filter-container:hover {
-  scale: 1.1;
-}
+
 .filters-nav {
   display: flex;
   flex-direction: column;
@@ -35,7 +34,7 @@
   background-color: #deeb7d;
 }
 .deco-btns span:nth-child(2) {
-  background-color: #f46f0f;
+  background-color: #f78331;
 }
 .deco-btns span:nth-child(3) {
   background-color: #dc71fb;
@@ -48,7 +47,7 @@
 }
 .filters-nav button {
   border: none;
-  cursor: pointer;
+  cursor: url(./cursor-pointer.png), default;
   width: -webkit-fill-available;
   padding: 0.3rem;
   display: flex;
@@ -106,3 +105,5 @@
   text-transform: uppercase;
   margin: 0;
 }
+
+

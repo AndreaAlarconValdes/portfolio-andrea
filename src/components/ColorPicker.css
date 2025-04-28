@@ -1,6 +1,6 @@
 .color-picker-box {
   position: absolute;
-  bottom: 6%;
+  bottom: 0%;
   right: 0%;
 }
 .bg-picker {
@@ -22,7 +22,7 @@
 
   width: 25px;
   height: 25px;
-  cursor: pointer;
+  cursor: url(./cursor-pointer.png), default;
 }
 
 .settings-content {
@@ -37,7 +37,7 @@
   width: 150px;
   border: 2px solid black;
   background-color: #dadad3;
-  cursor: pointer;
+  cursor: url(./cursor-pointer.png), default;
 }
 
 .filters {
@@ -58,7 +58,7 @@
 .dropdown-menu button {
   background-color: transparent;
   border: none;
-  cursor: pointer;
+  cursor: url(./cursor-pointer.png), default;
   transition: 0.1s ease-in-out;
 }
 

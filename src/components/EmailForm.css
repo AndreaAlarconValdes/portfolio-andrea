@@ -34,7 +34,7 @@
 display: flex;
 align-items: center;
 justify-content: center;
-cursor: pointer;
+cursor: url(./cursor-pointer.png), default;
 background-color: transparent;
 border: none;
 }

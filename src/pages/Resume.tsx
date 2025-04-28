@@ -9,27 +9,19 @@ import {
   experience,
 } from "../constants/constants.ts";
 import HandwriteText from "../components/HandwriteText.tsx";
-import { useColor } from "../context/ColorContext.tsx";
 import { useState } from "react";
 
 const Resume = () => {
-  const { color } = useColor();
+  
+
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div
       id="resume"
       className="resume-page"
-      style={{
-        backgroundColor: color,
-        backgroundImage: `
-      linear-gradient(to right, lightgray 1px, transparent 1px),
-      linear-gradient(to bottom, lightgray 1px, transparent 1px)
-    `,
-        backgroundSize: "100px 100px",
-      }}
     >
       <div className="left-column">
-        <div className="CV-folder">
+      <div className="CV-folder">
           <HandwriteText title="Download my CV" arrowPosition="right" />
           <a href="./CV.pdf" target="_blank" rel="noopener noreferrer">
             <img
@@ -37,7 +29,7 @@ const Resume = () => {
               alt="Imagen con hover"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
-              style={{ width: 80,cursor:"pointer", transition: "all 0.3s ease-in-out" }}
+              style={{ width: 80,cursor:"url(./cursor-pointer.png), default", transition: "all 0.3s ease-in-out" }}
             />
           </a>
         </div>
@@ -54,6 +46,7 @@ const Resume = () => {
             ))}
           </div>
         </Box>
+     
       </div>
       <div className="center-column">
         <div className="languages">

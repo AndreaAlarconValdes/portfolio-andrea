@@ -34,7 +34,9 @@ const FilterableList: React.FC<FilterableListProps> = ({
       : items.filter((item) => item.category === activeFilter);
 
   return (
-    <div className="filter-container">
+    <div className="filter-container" 
+    onClick={(e) => e.stopPropagation()}
+    >
       <div className="filters-nav">
         <div className="deco-btns">
           <span></span>
@@ -48,7 +50,7 @@ const FilterableList: React.FC<FilterableListProps> = ({
             onClick={() => setActiveFilter(filter.name)}
             style={{
               backgroundColor:
-                activeFilter === filter.name ? "#f46f0f" : "transparent",
+                activeFilter === filter.name ? "#f78331" : "transparent",
               border: activeFilter === filter.name ? "2px solid black" : "none",
             }}
           >

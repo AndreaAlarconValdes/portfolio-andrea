@@ -1,7 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./EmailForm.css";
-import Modal from "./Modal";
 
 const SERVICE_ID = "service_b81msna";
 const TEMPLATE_ID = "template_9wdtcgt";

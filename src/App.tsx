@@ -9,10 +9,10 @@ function App() {
   
   return (
     <ColorProvider>
-      <Home />
+      {/* <Home /> */}
       <About/>
-      <Resume/>
-      <Contact/>
+      {/* <Resume/>
+      <Contact/> */}
     </ColorProvider>
   );
 }

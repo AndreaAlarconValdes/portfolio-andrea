@@ -1,6 +1,8 @@
 .box-content {
     box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
     border: 2px solid black;
+  /* animation: scale-up-center 0.5s ; */
+
 }
 
 .box-nav {
@@ -24,7 +26,7 @@
    background-color: #deeb7d;
 }
 .box-nav span:nth-child(2){
-   background-color: #f46f0f;
+   background-color: #f78331;
 
 }
 .box-nav span:nth-child(3){

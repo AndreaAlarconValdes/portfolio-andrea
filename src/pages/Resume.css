@@ -6,7 +6,6 @@
   gap: 1rem;
   font-family: "Inter", sans-serif;
   position: relative;
-
 }
 .page-title {
   font-family: "Bagel Fat One", sans-serif;
@@ -15,12 +14,16 @@
   text-shadow: 4px 4px 0px black;
   font-size: 70px;
   margin: 0.5rem 0;
+  animation: scale-up-center 0.5s;
+
 }
 .center-column {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+
+  animation: scale-up-center .2s ease-in-out forwards,fade-in 0.1s ease-in-out forwards;
 }
 .languages {
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
@@ -28,12 +31,16 @@
   padding: 2rem 1rem 1rem 1rem;
   border-radius: 10px;
   width: 280px;
-  transition: 0.2s ease-in-out;
+
   border: 2px solid black;
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  animation: scale-up-center .2s ease-in-out forwards,fade-in 0.1s ease-in-out forwards;
+  animation-delay: 0.1s;
+
+
 }
 
 .languages span {
@@ -47,15 +54,12 @@
   left: 40%;
   top: -35px;
 }
-.languages:hover {
-  scale: 1.1;
-}
 
 .languages-title {
   display: flex;
   gap: 1rem;
   text-transform: uppercase;
-  background-color: #f46f0f;
+  background-color: #f78331;
   border-radius: 50px;
   border: 2px solid black;
   width: fit-content;
@@ -91,13 +95,7 @@
   margin: 0;
 }
 
-.education-box {
-  transition: 0.2s ease-in-out;
-}
 
-.education-box:hover {
-  scale: 1.1;
-}
 .education-container {
   padding: 1.5rem;
   font-size: 14px;
@@ -124,10 +122,6 @@
 
 .experience-box {
   width: 470px;
-  transition: 0.2s ease-in-out;
-}
-.experience-box:hover {
-  scale: 1.1;
 }
 
 .roll-description {
@@ -141,8 +135,43 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  cursor: pointer;
-  position: absolute;
-  top: 5%;
+  cursor: url(./cursor-pointer.png), default;
+ 
 }
 
+
+.resume-page .left-column {
+display: flex;
+flex-direction: column;
+align-items: center;
+
+  animation: scale-up-center .2s ease-in-out forwards,fade-in 0.1s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+
+
+
+.resume-page .right-column {
+  animation: scale-up-center .2s ease-in-out forwards,fade-in 0.1s ease-in-out forwards; 
+  animation-delay: 0.3s;
+}
+
+@keyframes scale-up-center {
+  0% {
+    scale: 0.5;
+
+  }
+  100% {
+    scale: 1;
+
+  }
+}
+
+
+
+.resume-page .left-column,
+.resume-page .center-column,
+.resume-page .right-column, 
+.languages {
+  opacity: 0;
+}

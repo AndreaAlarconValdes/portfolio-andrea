@@ -3,11 +3,11 @@
   flex-direction: column;
   gap: 0.5rem;
   align-items: center;
-  cursor: pointer;
+  cursor: url(./cursor-pointer.png), default;
 }
 
 .folder-container button {
-  cursor: pointer;
+  cursor: url(./cursor-pointer.png), default;
   border: none;
   background-color: transparent;
 }

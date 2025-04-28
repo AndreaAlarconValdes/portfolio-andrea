@@ -2,16 +2,27 @@ import { useState } from "react";
 import Box from "../components/Box";
 import ColorPicker from "../components/ColorPicker";
 import Folder from "../components/Folder";
-import HandwriteText from "../components/HandwriteText";
 import { foldersRoutes, icons } from "../constants/constants";
 import { useColor } from "../context/ColorContext";
 import "./About.css";
+import Clock from "../components/Clock";
+import Resume from "./Resume";
 
 const About = () => {
   const { color, setColor } = useColor();
   const [filter, setFilter] = useState("none");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openResume = () => {
+    setIsOpen(true);
+  };
+
+  const closeResume = () => {
+    setIsOpen(false);
+  };
 
   return (
+    <>
     <div
       className="parent"
       style={{
@@ -22,26 +33,17 @@ const About = () => {
         linear-gradient(to bottom, lightgray 1px, transparent 1px)
       `,
         backgroundSize: "100px 100px",
-
       }}
     >
       <div className="div1">
-        <div className="folders-navigation">
-          <ul>
-            {foldersRoutes.map((route) => (
-              <li key={route.title}>
-                <Folder img={route.img} title={route.title} route={route.route} />
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Clock/>
         <Box className="self-portrait" title="Photo">
           <img src="./selfie.jpeg" alt="selfie" />
           <div className="camera-button">
             <i className="fa-solid fa-camera"></i>
           </div>
         </Box>
-        <ColorPicker  onColorChange={setColor} onFilterChange={setFilter}/>
+        <ColorPicker onColorChange={setColor} onFilterChange={setFilter} />
       </div>
 
       <div className="div2">
@@ -59,8 +61,20 @@ const About = () => {
           </div>
         </Box>
       </div>
-
-      <div className="div3">
+<div className="div3">
+          <ul>
+            {foldersRoutes.map((route) => (
+              <li key={route.title}>
+                <Folder
+                  img={route.img}
+                  title={route.title}
+                  handleOnClick={openResume}
+                />
+              </li>
+            ))}
+          </ul>
+</div>
+      <div className="div4">
         <ul className="contact-list">
           {icons.map((icon) => (
             <li>
@@ -75,6 +89,14 @@ const About = () => {
         </ul>
       </div>
     </div>
+     {isOpen && (
+       <>
+        {/* Fondo oscuro detrás del overlay */}
+        <div onClick={closeResume} className="overlay">
+          <Resume/>
+        </div>
+        </>)}
+       </>
   );
 };
 

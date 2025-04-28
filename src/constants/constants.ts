@@ -72,9 +72,9 @@ export const skills = [
   ];
 
   export const foldersRoutes = [
-    {img:"icon-folder", title:"Resume",route:"resume"},
-    {img:"icon-eye",title:"Projects",route:"projects"},
-    {img:"icon-mail", title:"Contact",route:"contact"},
+    {img:"icon-folder", title:"Resume"  },
+    {img:"icon-eye",title:"Projects"},
+    {img:"icon-mail", title:"Contact"},
   ]
 
   export const aboutFilters = [
