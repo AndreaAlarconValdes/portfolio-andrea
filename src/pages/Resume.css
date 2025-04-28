@@ -131,26 +131,39 @@
   margin: 0;
   margin-bottom: 0.5rem;
 }
-.CV-folder {
+.CV-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  cursor: url(./cursor-pointer.png), default;
- 
+  padding: 0.5rem 1rem;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
 }
-
+.CV-container h5 {
+  margin: 0;
+  font-size: 16px;
+}
+.CV-container p {
+  font-size: 14px;
+}
 
 .resume-page .left-column {
 display: flex;
 flex-direction: column;
 align-items: center;
+gap: 2rem;
 
   animation: scale-up-center .2s ease-in-out forwards,fade-in 0.1s ease-in-out forwards;
   animation-delay: 0.2s;
 }
 
+.left-column h1{
+  margin: 0;
+}
+.left-column .CV-box-container{
+  animation: scale-up-center .2s ease-in-out forwards,fade-in 0.1s ease-in-out forwards; 
+  animation-delay: 0.4s;
 
-
+}
 .resume-page .right-column {
   animation: scale-up-center .2s ease-in-out forwards,fade-in 0.1s ease-in-out forwards; 
   animation-delay: 0.3s;
@@ -172,6 +185,6 @@ align-items: center;
 .resume-page .left-column,
 .resume-page .center-column,
 .resume-page .right-column, 
-.languages {
+.languages, .CV-box-container {
   opacity: 0;
 }
