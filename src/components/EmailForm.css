@@ -41,13 +41,12 @@ cursor: url(./cursor-pointer.png), default;
 background-color: #b2f282;
 border-radius: 8px;
 border: 2px solid black;
+transition: 0.2s ease-in-out;
 }
-.send-email-form button i:hover {
-    scale: 1.3;
+.send-email-form button:hover {
+    scale: 0.9;
 }
 .send-email-form button i {
-    border-radius: 50%;
     padding: .5rem;
-  transition: 0.2s ease-in-out;
 
 }

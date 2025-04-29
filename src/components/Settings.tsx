@@ -1,15 +1,15 @@
-import "./ColorPicker.css";
+import "./Settings.css";
 import Box from "./Box";
 import { useState } from "react";
 
-interface ColorPickerProps {
+interface SettingsProps {
   onColorChange: (newColor: string) => void;
   onFilterChange: (newFilter: string) => void;
 }
-export default function ColorPicker({
+export default function Settings({
   onColorChange,
   onFilterChange,
-}: ColorPickerProps) {
+}: SettingsProps) {
   const presetColors = [
     "#EC9696",
     "#54B9AD",

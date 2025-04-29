@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Box from "../components/Box";
-import ColorPicker from "../components/ColorPicker";
 import { foldersRoutes, icons } from "../constants/constants";
 import { useColor } from "../context/ColorContext";
 import "./About.css";
@@ -9,6 +8,8 @@ import Resume from "./Resume";
 import Contact from "./Contact";
 import Folder from "../components/Folder";
 import Projects from "./Projects";
+import Settings from "../components/Settings";
+import Calculator from "../components/Calculator";
 
 const About = () => {
   const { color, setColor } = useColor();
@@ -16,7 +17,6 @@ const About = () => {
   const [isOpenResume, setIsOpenResume] = useState(false);
   const [isOpenContact, setIsOpenContact] = useState(false);
   const [isOpenProjects, setIsOpenProjects] = useState(false);
-
 
   const openResume = () => {
     setIsOpenResume(true);
@@ -58,43 +58,54 @@ const About = () => {
           <Clock />
           <Box className="self-portrait" title="Photo">
             <img src="./selfie.jpeg" alt="selfie" />
-            <div className="camera-button">
-              <i className="fa-solid fa-camera"></i>
-            </div>
           </Box>
-  
-          <ColorPicker onColorChange={setColor} onFilterChange={setFilter} />
+          <Calculator />
+          <Settings onColorChange={setColor} onFilterChange={setFilter} />
         </div>
 
         <div className="div2">
           <Box title="About me" color="#f8d1fc">
             <div className="about-description">
+              <h2>Andrea Alarcón Valdés</h2>
+              <h4>
+                Full-stack developer specialising in front-end development from
+                Spain, based in Dublin.
+              </h4>
               <p>
-                I'm a Full-Stack Developer with a specialization in Front-End.
-                I'm from Spain but currently living in Dublin and actively
-                seeking new opportunities. I’m passionate about creating
-                attractive and functional interfaces, always focusing on
-                intuitive user experiences. I consider myself creative,
-                organized, detail-oriented and curious, someone who enjoys the
-                creative process.
+                Passionate about creating attractive and functional interfaces,
+                always focused on delivering intuitive and user-centered
+                experiences. I enjoy the creative process, blending design and
+                development to achieve smooth and meaningful interactions.
+              </p>
+              <p>
+                I see myself as a creative, organised, detail-oriented and
+                curious person with a strong mindset for continuous learning and
+                innovation. I work closely with multidisciplinary teams -
+                designers, developers and marketing - to create digital
+                experiences that are not only visually compelling, but also
+                aligned with clear objectives. Adaptability, teamwork and
+                problem solving are key pillars of my approach.
               </p>
             </div>
           </Box>
           <Box color="#a7e6fe" className="contact-box-info">
-        <ul className="contact-info">
-          {icons.map((icon) => (
-            <li>
-              <a href={icon.link} target="_blank" rel="noopener noreferrer">
-                <i
-                  className={icon.class}
-                  style={{ color: icon.color, backgroundColor: icon.bgColor }}
-                ></i>
-              </a>
-              <p>{icon.info}</p>
-            </li>
-          ))}
-        </ul>
-      </Box>
+            <ul className="contact-info">
+              {icons.map((icon) => (
+                <li>
+                  <a href={icon.link} target="_blank" rel="noopener noreferrer">
+                    <i
+                      className={icon.class}
+                      style={{
+                        color: icon.color,
+                        backgroundColor: icon.bgColor,
+                      }}
+                    ></i>
+                  </a>
+                  <p>{icon.info}</p>
+                </li>
+              ))}
+            </ul>
+          </Box>
         </div>
         <div className="div3">
           <ul>
@@ -105,8 +116,7 @@ const About = () => {
                   title={item.title}
                   handleOnClick={() => {
                     if (item.type === "resume") openResume();
-                    else if (item.type === "projects")
-                      openProjects(); 
+                    else if (item.type === "projects") openProjects();
                     else if (item.type === "contact") openContact();
                   }}
                 />
@@ -114,7 +124,6 @@ const About = () => {
             ))}
           </ul>
         </div>
-
       </div>
       {isOpenResume && (
         <>
@@ -123,7 +132,7 @@ const About = () => {
           </div>
         </>
       )}
-{isOpenProjects && (
+      {isOpenProjects && (
         <>
           <div onClick={closeProjects} className="overlay">
             <Projects />

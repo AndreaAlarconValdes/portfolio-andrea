@@ -15,7 +15,6 @@ const Resume = () => {
   return (
     <div id="resume" className="resume-page">
       <div className="left-column">
-        <h1 className="page-title">RESUME</h1>
         <Box title="Education" className="education-box">
           <div className="education-container">
             {education.map((item) => (
@@ -56,13 +55,8 @@ const Resume = () => {
         </Box>
       </div>
       <div className="center-column">
-        <div className="languages">
-          <span></span>
-          <div className="languages-title">
-            <h2>Languages</h2>
-          </div>
-          <div className="languages-content">
-            <ul>
+        <Box color="#f49450" title="Languages" className="languages-content">
+        <ul>
               {languages.map((item) => (
                 <li>
                   <i className="fa-solid fa-check"></i>
@@ -71,8 +65,7 @@ const Resume = () => {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
+        </Box>
         <FilterableList
           items={skills}
           itemsTitle="Skills"

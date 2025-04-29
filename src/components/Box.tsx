@@ -32,9 +32,12 @@ const Box = ({
             borderTopRightRadius: square === true ? 0 : 10,
           }}
         >
+          <div className="btns-container">
           <span></span>
           <span></span>
           <span></span>
+          </div>
+          
           <p>{title}</p>
         </div>
        {children}
