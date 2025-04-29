@@ -18,7 +18,7 @@ const Folder = ({img, title,handleOnClick}: FolderProps) => {
               alt="Imagen con hover"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
-              style={{ width: 80,cursor:"url(./cursor-pointer.png), default", transition: "all 0.3s ease-in-out" }}
+              
             />
         </button>
         <p>{title}</p>

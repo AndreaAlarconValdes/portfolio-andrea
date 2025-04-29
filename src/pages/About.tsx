@@ -59,12 +59,13 @@ const About = () => {
           <Box className="self-portrait" title="Photo">
             <img src="./selfie.jpeg" alt="selfie" />
           </Box>
+          <div className="utilities-container">
           <Calculator />
           <Settings onColorChange={setColor} onFilterChange={setFilter} />
+          </div>
         </div>
-
         <div className="div2">
-          <Box title="About me" color="#f8d1fc">
+          <Box title="About me" color="#f8d1fc" className="about-box">
             <div className="about-description">
               <h2>Andrea Alarcón Valdés</h2>
               <h4>

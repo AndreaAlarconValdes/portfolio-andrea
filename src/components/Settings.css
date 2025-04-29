@@ -65,3 +65,26 @@
 .dropdown-menu button:hover {
   scale: 1.1;
 }
+@media (max-width: 1000px) {
+.color-picker-box {
+    position: relative;
+    bottom: auto;
+    right: auto;
+  }
+  .settings-content {
+  padding: .5rem;
+
+  }
+
+}
+
+@media (max-width: 800px) {
+  .settings-content {
+    padding: 15px 2px;
+  }
+.preset-color {
+  width: 20px;
+  height: 20px;
+}
+
+}

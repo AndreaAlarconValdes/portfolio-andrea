@@ -1,7 +1,7 @@
 .folder-container {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  justify-content: flex-end;
   align-items: center;
   cursor: url(./cursor-pointer.png), default;
 }
@@ -12,7 +12,18 @@
   background-color: transparent;
 }
 
-
+.folder-container img{
+  cursor: url(./cursor-pointer.png), default;
+  width: 80px;
+  transition: all 0.3s ease-in-out;
+}
 .folder-container p {
   font-size: 14px;
+}
+
+
+@media (max-width: 1250px) {
+.folder-container img{
+  width: 60px;
+}
 }
