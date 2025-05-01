@@ -35,7 +35,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: url(./cursor-pointer.png), default;
+    cursor: pointer;
     width: 14px;
     height: 14px;
     border: none;

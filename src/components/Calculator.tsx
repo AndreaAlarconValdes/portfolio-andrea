@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { evaluate } from 'mathjs';  // Importamos la función evaluate de math.js
 import './Calculator.css';
 
 const Calculator = () => {
@@ -9,7 +10,7 @@ const Calculator = () => {
       setDisplay('');
     } else if (value === '=') {
       try {
-        const result = eval(display);
+        const result = evaluate(display);  // Usamos evaluate de math.js
         setDisplay(result.toString());
       } catch {
         setDisplay('Error');

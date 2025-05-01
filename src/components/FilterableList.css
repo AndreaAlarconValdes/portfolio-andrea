@@ -46,7 +46,7 @@
 }
 .filters-nav button {
   border: none;
-  cursor: url(./cursor-pointer.png), default;
+  cursor: pointer;
   width: -webkit-fill-available;
   padding: 0.3rem;
   display: flex;

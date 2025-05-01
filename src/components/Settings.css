@@ -17,7 +17,7 @@
 
   width: 25px;
   height: 25px;
-  cursor: url(./cursor-pointer.png), default;
+  cursor: pointer;
 }
 
 .settings-content {
@@ -32,7 +32,7 @@
   width: 150px;
   border: 2px solid black;
   background-color: #dadad3;
-  cursor: url(./cursor-pointer.png), default;
+  cursor: pointer;
 }
 
 .filters {
@@ -53,7 +53,7 @@
 .dropdown-menu button {
   background-color: transparent;
   border: none;
-  cursor: url(./cursor-pointer.png), default;
+  cursor: pointer;
   transition: 0.1s ease-in-out;
 }
 
