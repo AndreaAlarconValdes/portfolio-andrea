@@ -22,9 +22,9 @@ const Folder = ({ img, title, handleOnClick }: FolderProps) => {
 
   const getImageSrc = () => {
     if (isDesktop) {
-      return isHovered ? `/${img}-hover.svg` : `/${img}.svg`;
+      return isHovered ? `./${img}-hover.svg` : `./${img}.svg`;
     } else {
-      return `/${img}-m.svg`;
+      return `./${img}-m.svg`;
     }
   };
 
