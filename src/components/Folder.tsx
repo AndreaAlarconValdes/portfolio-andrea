@@ -13,7 +13,7 @@ const Folder = ({ img, title, handleOnClick }: FolderProps) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsDesktop(window.innerWidth > 901);
+      setIsDesktop(window.innerWidth > 1251);
     };
 
     window.addEventListener("resize", handleResize);
