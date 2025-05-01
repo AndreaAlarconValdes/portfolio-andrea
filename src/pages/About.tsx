@@ -29,17 +29,17 @@ const About = () => {
     setIsOpenSettings(true);
   };
 
-  // const closeSettings = () => {
-  //   setIsOpenSettings(false);
-  // };
+  const closeSettings = () => {
+    setIsOpenSettings(false);
+  };
 
   const openCalculator = () => {
     setIsOpenCalculator(true);
   };
 
-  // const closeCalculator = () => {
-  //   setIsOpenCalculator(false);
-  // };
+  const closeCalculator = () => {
+    setIsOpenCalculator(false);
+  };
   const openResume = () => {
     setIsOpenResume(true);
   };
@@ -157,9 +157,9 @@ const About = () => {
             ))}
           </ul>
         </div>
-      {isOpenCalculator && <Calculator />}
+      {isOpenCalculator && <Calculator onClose={closeCalculator} />}
       {isOpenSettings && (
-        <Settings onColorChange={setColor} onFilterChange={setFilter} />
+        <Settings onColorChange={setColor} onFilterChange={setFilter} onClose={closeSettings}/>
       )}
       </div>
       {isOpenResume && (

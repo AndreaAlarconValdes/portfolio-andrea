@@ -1,14 +1,15 @@
 import "./Settings.css";
-import Box from "./Box";
 import { useState } from "react";
 
 interface SettingsProps {
   onColorChange: (newColor: string) => void;
   onFilterChange: (newFilter: string) => void;
+  onClose: () => void;
 }
 export default function Settings({
   onColorChange,
   onFilterChange,
+  onClose,
 }: SettingsProps) {
   const presetColors = [
     "#EC9696",
@@ -33,54 +34,53 @@ export default function Settings({
   };
 
   const toggleDropdown = () => {
-    setDropdownOpen(!isDropdownOpen); 
+    setDropdownOpen(!isDropdownOpen);
   };
   return (
-    <Box
-      title="Settings"
-      color="#DADAD3"
-      square
-      bgColor="#f7f6f0"
-      className="settings-box"
-    >
+    <div className="settings-container">
+      <div className="close-nav">
+        <button onClick={onClose}>X</button>
+        <p>Settings</p>
+      </div>
       <div className="settings-content">
-      <div className="bg-picker">
-        <p>Change background</p>
-        <div className="preset-colors">
-          {presetColors.map((preset, index) => (
-            <div
-              className="preset-color"
-              key={index}
-              onClick={() => handlePresetColorClick(preset)}
-              style={{
-                backgroundColor: preset,
-              }}
-            ></div>
-          ))}
+        <div className="bg-picker">
+          <p>Change background</p>
+          <div className="preset-colors">
+            {presetColors.map((preset, index) => (
+              <div
+                className="preset-color"
+                key={index}
+                onClick={() => handlePresetColorClick(preset)}
+                style={{
+                  backgroundColor: preset,
+                }}
+              ></div>
+            ))}
+          </div>
+        </div>
+
+        <div className="filters">
+          <button className="filter-button" onClick={toggleDropdown}>
+            <span style={{ fontSize: 14, marginRight: 5 }}>Filters</span>{" "}
+            <i className="fa-solid fa-chevron-down" />
+          </button>
+          {isDropdownOpen && (
+            <div className="dropdown-menu">
+              <button onClick={() => handleFilterClick("none")}>Normal</button>
+
+              <button onClick={() => handleFilterClick("grayscale(100%)")}>
+                Black and white
+              </button>
+              <button onClick={() => handleFilterClick("invert(100%)")}>
+                Negative
+              </button>
+              <button onClick={() => handleFilterClick("hue-rotate(180deg)")}>
+                Invert Hue
+              </button>
+            </div>
+          )}
         </div>
       </div>
-
-      <div className="filters">
-        <button className="filter-button" onClick={toggleDropdown}>
-          <span style={{fontSize:14, marginRight: 5}}>Filters</span> <i className="fa-solid fa-chevron-down"/>
-        </button>
-        {isDropdownOpen && (
-          <div className="dropdown-menu">
-            <button onClick={() => handleFilterClick("none")}>Normal</button>
-
-            <button onClick={() => handleFilterClick("grayscale(100%)")}>
-              Black and white
-            </button>
-            <button onClick={() => handleFilterClick("invert(100%)")}>
-              Negative
-            </button>
-            <button onClick={() => handleFilterClick("hue-rotate(180deg)")}>
-              Invert Hue
-            </button>
-          </div>
-        )}
-      </div>
-      </div>
-    </Box>
+    </div>
   );
 }

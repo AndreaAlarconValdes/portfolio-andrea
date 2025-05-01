@@ -7,8 +7,6 @@
   background-color: #fad844;
   border-bottom: 2px solid black;
   padding: 0.5rem 1rem;
-  color: black;
-  -webkit-color: black;
 }
 
 .menu-bar h3 {
@@ -65,7 +63,7 @@
   position: relative;
   display: flex;
   gap: 2rem;
-  padding: 1rem 2rem;
+  padding: 2rem;
   font-family: "Inter", sans-serif;
   height: 100vh;
   background-image: linear-gradient(to right, lightgray 1px, transparent 1px),
@@ -78,7 +76,7 @@
 .parent .left-column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 1rem;
 }
@@ -167,15 +165,6 @@ h4 {
 }
 
 /* MODALS  */
-.settings-box {
-  position: absolute;
-  left: 20%;
-}
-.calculator-container {
-  position: absolute;
-  right: 40%;
-  top: 20%;
-}
 .overlay {
   position: fixed;
   top: 0;
@@ -183,21 +172,18 @@ h4 {
   right: 0;
   bottom: 0;
 
-  backdrop-filter: blur(5px);
-  background-size: "100px 100px";
-  background-color: rgba(255, 255, 255, 0.061);
+
   z-index: 999;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1150px) {
   .parent {
-    padding: 0.5rem;
+    padding: 1rem;
     padding-bottom: 150px;
+    height: auto;
   }
 
-  .parent .left-column {
-    justify-content: flex-start;
-  }
+  
   .self-portrait img {
     height: 300px;
   }

@@ -34,7 +34,7 @@ const Resume = () => {
               <a href="./CV.pdf" target="_blank" rel="noopener noreferrer">
                 <img
                   src={
-                    isHovered ? "/icon-folder-hover.svg" : "/icon-folder.svg"
+                    isHovered ? "./icon-folder-hover.svg" : "./icon-folder.svg"
                   }
                   alt="Imagen con hover"
                   onMouseEnter={() => setIsHovered(true)}

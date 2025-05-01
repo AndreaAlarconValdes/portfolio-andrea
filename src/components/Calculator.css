@@ -5,8 +5,23 @@
   background-color: #f7f6f0;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
   height: fit-content;
+
+  position: absolute;
+  right: 40%;
+  top: 20%;
 }
 
+.close-calculator  {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 900;
+  margin-bottom: .5rem;
+  transition: .2s ease-in-out;
+}
+.close-calculator:hover  {
+  scale: 1.1;
+}
 .calculator-display {
   background-color: #ababa8;
   border-radius: 10px;

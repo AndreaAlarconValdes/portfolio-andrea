@@ -1,8 +1,13 @@
 import { useState } from 'react';
-import { evaluate } from 'mathjs';  // Importamos la función evaluate de math.js
+import { evaluate } from 'mathjs';  
 import './Calculator.css';
 
-const Calculator = () => {
+
+interface CalculatorProps{
+  onClose: () => void;
+
+}
+const Calculator = ({onClose}: CalculatorProps) => {
   const [display, setDisplay] = useState<string>('');
 
   const handleButtonClick = (value: string) => {
@@ -10,7 +15,7 @@ const Calculator = () => {
       setDisplay('');
     } else if (value === '=') {
       try {
-        const result = evaluate(display);  // Usamos evaluate de math.js
+        const result = evaluate(display);  
         setDisplay(result.toString());
       } catch {
         setDisplay('Error');
@@ -20,7 +25,6 @@ const Calculator = () => {
     }
   };
 
-  // Definimos los botones en orden
   const buttons: string[] = [
     '1', '2', '3', '+',
     '4', '5', '6', '-',
@@ -30,6 +34,7 @@ const Calculator = () => {
 
   return (
     <div className="calculator-container">
+        <button  className="close-calculator" onClick={onClose}>X</button>
       <div className="calculator-display">{display || '0'}</div>
       <div className="calculator-button-grid">
         {buttons.map((btn) => (
