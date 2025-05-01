@@ -1,6 +1,5 @@
 import React from "react";
 import "./Modal.css";
-import Box from "./Box";
 
 interface ModalProps {
   open: boolean;

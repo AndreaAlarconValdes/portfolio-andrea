@@ -29,17 +29,17 @@ const About = () => {
     setIsOpenSettings(true);
   };
 
-  const closeSettings = () => {
-    setIsOpenSettings(false);
-  };
+  // const closeSettings = () => {
+  //   setIsOpenSettings(false);
+  // };
 
   const openCalculator = () => {
     setIsOpenCalculator(true);
   };
 
-  const closeCalculator = () => {
-    setIsOpenCalculator(false);
-  };
+  // const closeCalculator = () => {
+  //   setIsOpenCalculator(false);
+  // };
   const openResume = () => {
     setIsOpenResume(true);
   };

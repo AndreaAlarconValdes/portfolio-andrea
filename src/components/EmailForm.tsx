@@ -10,10 +10,7 @@ const EmailForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -35,7 +32,6 @@ const EmailForm = () => {
         setEmail("");
         setMessage("");
 
-        handleOpenModal();
       })
       .catch((error) => {
         console.error("error sending email", error);
