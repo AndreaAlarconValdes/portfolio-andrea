@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.center-column {
+.resume-page .center-column {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,7 +108,7 @@
   animation-delay: 0.2s;
 }
 
-.left-column .CV-box-container {
+.resume-page .left-column .CV-box-container {
   animation: scale-up-center 0.2s ease-in-out forwards,
     fade-in 0.1s ease-in-out forwards;
   animation-delay: 0.4s;
@@ -134,4 +134,47 @@
 .languages-content,
 .CV-box-container {
   opacity: 0;
+}
+
+@media (max-width: 1250px) {
+  .resume-page {
+    flex-direction: column-reverse;
+  }
+  .resume-page .right-column {
+display: flex;}
+  .resume-page .center-column {
+    flex-direction: row-reverse;
+  }
+  .resume-page .left-column {
+    flex-direction: row;
+  }
+  .experience-box{
+    width: 90%;
+  }
+  .experience-container{
+    height: 500px;
+    overflow-y: scroll;
+  }
+
+  .education-container{
+    padding: .5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .experience-container{
+    height: 300px;
+
+  }
+  .resume-page .center-column {
+    flex-direction: column-reverse;
+  }
+  
+  
+}
+
+@media (max-width: 650px) {
+  .resume-page .left-column {
+    flex-direction: column;
+  }
 }

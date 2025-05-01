@@ -1,7 +1,4 @@
 .calculator-container {
-  position: absolute;
-  bottom: 10%;
-  left: 15%;
   padding: 15px;
   border-radius: 10px;
   border: 2px solid black;
@@ -55,17 +52,9 @@
   background-color: rgb(239, 152, 2);
 }
 
-@media (max-width: 1250px) {
-  .calculator-container {
-    bottom: 12%;
-  }
-}
+
 @media (max-width: 1000px) {
-  .calculator-container {
-    position: relative;
-    bottom: auto;
-    left: auto;
-  }
+  
 
   .calculator-container .calculator-display {
     font-size: 1.5rem;
