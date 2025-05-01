@@ -17,7 +17,29 @@ const About = () => {
   const [isOpenResume, setIsOpenResume] = useState(false);
   const [isOpenContact, setIsOpenContact] = useState(false);
   const [isOpenProjects, setIsOpenProjects] = useState(false);
+  const [isOpenSettings, setIsOpenSettings] = useState(false);
+  const [isOpenCalculator, setIsOpenCalculator] = useState(false);
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
+  const toggleDropdown = () => {
+    setDropdownOpen(!isDropdownOpen);
+  };
+
+  const openSettings = () => {
+    setIsOpenSettings(true);
+  };
+
+  const closeSettings = () => {
+    setIsOpenSettings(false);
+  };
+
+  const openCalculator = () => {
+    setIsOpenCalculator(true);
+  };
+
+  const closeCalculator = () => {
+    setIsOpenCalculator(false);
+  };
   const openResume = () => {
     setIsOpenResume(true);
   };
@@ -42,30 +64,58 @@ const About = () => {
   };
   return (
     <>
+      <div className="menu-bar">
+        <div className="menu-bar-nav">
+          <h3>Andrea Alarcón</h3>
+          <div className="nav">
+            <div className="file-dropdown">
+              <button onClick={toggleDropdown}>
+                <span>File</span>
+              </button>
+              {isDropdownOpen && (
+                <div className="dropdown-content">
+                  <button onClick={() => openResume()}>Resume</button>
+                  <button onClick={() => openProjects()}>Projects</button>
+                  <button onClick={() => openContact()}>Contact</button>
+                </div>
+              )}
+            </div>
+            <button onClick={() => openCalculator()}>Calculator</button>
+            <button onClick={() => openSettings()}>Settings</button>
+          </div>
+        </div>
+        <Clock />
+      </div>
       <div
         className="parent"
         style={{
           filter: filter,
           backgroundColor: color,
-          backgroundImage: `
-        linear-gradient(to right, lightgray 1px, transparent 1px),
-        linear-gradient(to bottom, lightgray 1px, transparent 1px)
-      `,
-          backgroundSize: "100px 100px",
         }}
       >
-        <div className="div1">
-          <Clock />
+        <div className="left-column">
           <Box className="self-portrait" title="Photo">
             <img src="./selfie.jpeg" alt="selfie" />
           </Box>
-          <div className="utilities-container">
-          <Calculator />
-          <Settings onColorChange={setColor} onFilterChange={setFilter} />
-          </div>
+          <ul className="contact-info">
+            {icons.map((icon) => (
+              <li>
+                <a href={icon.link} target="_blank" rel="noopener noreferrer">
+                  <i
+                    className={icon.class}
+                    style={{
+                      color: icon.color,
+                      backgroundColor: icon.bgColor,
+                    }}
+                  ></i>
+                </a>
+                <p>{icon.info}</p>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="div2">
-          <Box title="About me" color="#f8d1fc" className="about-box">
+        <div className="central-column">
+          <Box title="About me" color="#f8d1fc" className="about-container">
             <div className="about-description">
               <h2>Andrea Alarcón Valdés</h2>
               <h4>
@@ -89,26 +139,8 @@ const About = () => {
               </p>
             </div>
           </Box>
-          <Box color="#a7e6fe" className="contact-box-info">
-            <ul className="contact-info">
-              {icons.map((icon) => (
-                <li>
-                  <a href={icon.link} target="_blank" rel="noopener noreferrer">
-                    <i
-                      className={icon.class}
-                      style={{
-                        color: icon.color,
-                        backgroundColor: icon.bgColor,
-                      }}
-                    ></i>
-                  </a>
-                  <p>{icon.info}</p>
-                </li>
-              ))}
-            </ul>
-          </Box>
         </div>
-        <div className="div3">
+        <div className="right-column">
           <ul>
             {foldersRoutes.map((item) => (
               <li key={item.title}>
@@ -125,6 +157,10 @@ const About = () => {
             ))}
           </ul>
         </div>
+      {isOpenCalculator && <Calculator />}
+      {isOpenSettings && (
+        <Settings onColorChange={setColor} onFilterChange={setFilter} />
+      )}
       </div>
       {isOpenResume && (
         <>

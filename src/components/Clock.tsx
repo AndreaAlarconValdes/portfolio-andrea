@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Clock.css"
+
 const Clock: React.FC = () => {
   const [time, setTime] = useState<string>("");
   const [date, setDate] = useState<string>("");
@@ -14,6 +14,8 @@ const Clock: React.FC = () => {
 
     const options: Intl.DateTimeFormatOptions = { 
       weekday: 'short', 
+      day: "2-digit",
+      month: "short",
     };
     const currentDate = now.toLocaleDateString('en-EN', options);
 
@@ -28,7 +30,7 @@ const Clock: React.FC = () => {
   }, []);
 
   return (
-    <div className="clock">
+    <div style={{display: "flex", gap: "1rem"}}>
       <p>{date}</p> 
       <p>{time}</p> 
     </div>

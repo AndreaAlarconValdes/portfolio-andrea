@@ -41,7 +41,7 @@ export default function Settings({
       color="#DADAD3"
       square
       bgColor="#f7f6f0"
-      className="color-picker-box"
+      className="settings-box"
     >
       <div className="settings-content">
       <div className="bg-picker">

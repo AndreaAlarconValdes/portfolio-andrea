@@ -15,7 +15,7 @@ const Resume = () => {
   return (
     <div id="resume" className="resume-page">
       <div className="left-column">
-        <Box title="Education" className="education-box">
+        <Box title="Education">
           <div className="education-container">
             {education.map((item) => (
               <div className="education-items">
@@ -75,7 +75,7 @@ const Resume = () => {
       </div>
       <div className="right-column">
         <Box title="Work experience" className="experience-box" color="#F9D13E">
-          <div className="education-container">
+          <div className="experience-container">
             {experience.map((item) => (
               <div>
                 <div className="experience-title">
