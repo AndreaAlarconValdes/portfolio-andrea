@@ -58,7 +58,7 @@ export const experience = [
     company: "Jump Juice Bar",
     location: "Dublin, Ireland",
     description:
-      "As a supervisor, I led a team of 10, optimizing task distribution to improve operational efficiency. I reduced service times, managed stock and orders to minimize waste, and ensured product availability. I also trained staff in hygiene, food handling, and customer service, while overseeing daily cash counts with 100% accuracy. My leadership in coordinating promotions contributed to increased sales.",
+      "As a supervisor, I was responsible for leading a team, managing stock control, optimizing task distribution, reducing service times, ensuring product availability, and driving sales through effective coordination and leadership.",
   },
   {
     year: "Jan 2023 - Dec 2023",
@@ -74,7 +74,7 @@ export const experience = [
     company: "Barcelona Epidemiology Service",
     location: "Barcelona, Spain",
     description:
-      "As an administrative support at the Epidemiological Service, I managed and analyzed Covid-19 data, ensuring accuracy and compliance with health regulations. I created statistical reports and visualizations to support public health decisions, identifying key trends and insights related to virus transmission and containment measures.",
+      "As administrative support at the Epidemiological Service, I managed Covid-19 data, ensured compliance, and produced reports to inform public health decisions.",
   },
 ];
 
