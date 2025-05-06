@@ -47,9 +47,9 @@ const Main = () => {
     setIsOpenAbout(true);
   };
 
-  const closeAbout = () => {
-    setIsOpenAbout(false);
-  };
+  // const closeAbout = () => {
+  //   setIsOpenAbout(false);
+  // };
   const openResume = () => {
     setIsOpenResume(true);
   };
