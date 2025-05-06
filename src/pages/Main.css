@@ -70,11 +70,13 @@
 .desk {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .main-desk {
   flex: 0 0 80%;
+  min-height: 100vh;
+
 }
 
 .welcome-box {
@@ -153,7 +155,7 @@
   }
 
   .nav {
-    gap: 0.5rem;
+    gap: 5px;
   }
   .menu-bar-nav h3 {
     display: none;
@@ -170,8 +172,8 @@
     padding: 0 50px;
   }
   .routes-desk ul {
-    gap: 1rem;
-    transform: translateY(-1rem);
+    gap: .5rem;
+    transform: translateY(-1.3rem);
 
   }
 

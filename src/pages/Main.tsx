@@ -72,7 +72,10 @@ const Main = () => {
   // const closeProjects = () => {
   //   setIsOpenProjects(false);
   // };
-
+const closeAll =()=>{
+  closeSettings();
+  closeCalculator();
+}
   return (
     <div
       className="screen"
@@ -142,6 +145,7 @@ const Main = () => {
                     else if (item.type === "resume") openResume();
                     else if (item.type === "projects") openProjects();
                     else if (item.type === "contact") openContact();
+                    else if (item.type === "bin") closeAll();
                   }}
                 />
               </li>
