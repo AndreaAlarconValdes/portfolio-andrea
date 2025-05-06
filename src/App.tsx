@@ -1,12 +1,11 @@
-import "./index.css"
+import "./index.css";
 import { ColorProvider } from "./context/ColorContext";
-import About from "./pages/About";
+import Main from "./pages/Main";
 
 function App() {
-  
   return (
     <ColorProvider>
-      <About/>
+      <Main />
     </ColorProvider>
   );
 }

@@ -35,7 +35,6 @@ const FilterableList: React.FC<FilterableListProps> = ({
 
   return (
     <div className="filter-container" 
-    onClick={(e) => e.stopPropagation()}
     >
       <div className="filters-nav">
         <div className="deco-btns">

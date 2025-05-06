@@ -1,0 +1,53 @@
+.about-page{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.self-portrait{
+    left: 0%;
+}
+
+.self-portrait img{
+  height: 380px;
+}
+
+.about-description {
+    max-width: 500px;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.about-description h2,
+h4 {
+  margin: 0;
+}
+.about-description h4 {
+  color: rgb(40, 40, 40);
+}
+.about-description p {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+.about-page{
+  flex-direction: column;
+  overflow-y: scroll;
+
+}
+.self-portrait img{
+  height: 250px;
+}
+.about-description {
+  padding: 1rem;
+  width: auto;
+}
+}
+
+@media (max-width: 650px) {
+  .about-page{
+    padding: 2rem 1rem;
+  }
+}

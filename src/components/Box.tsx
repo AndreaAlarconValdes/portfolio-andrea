@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Box.css";
 
 interface BoxProps {
@@ -8,6 +8,7 @@ interface BoxProps {
   color?: string;
   square?: boolean;
   bgColor?: string;
+  onClose?: () => void;
 }
 
 const Box = ({
@@ -15,32 +16,39 @@ const Box = ({
   children,
   title,
   color = "#b2f282",
-  bgColor="#fdfbe6",
+  bgColor = "#fdfbe6",
   square = false,
+  onClose,
 }: BoxProps) => {
+
+
+
+ 
+
   return (
-    <div className={className}>
+    <div
+      className={className}
+    >
       <div
         className="box-content"
-        style={{ borderRadius: square === true ? 0 : 10 , backgroundColor: bgColor}}
+        style={{
+          borderRadius: square ? 0 : 10,
+          backgroundColor: bgColor,
+        }}
       >
         <div
           className="box-nav"
           style={{
             backgroundColor: color,
-            borderTopLeftRadius: square === true ? 0 : 10,
-            borderTopRightRadius: square === true ? 0 : 10,
+            borderTopLeftRadius: square ? 0 : 10,
+            borderTopRightRadius: square ? 0 : 10,
           }}
         >
-          <div className="btns-container">
-          <span></span>
-          <span></span>
-          <span></span>
-          </div>
-          
+            <button onClick={onClose}>X</button>
+           
           <p>{title}</p>
         </div>
-       {children}
+        {children}
       </div>
     </div>
   );

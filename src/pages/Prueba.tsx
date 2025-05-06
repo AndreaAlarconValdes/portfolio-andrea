@@ -2,16 +2,16 @@ import { useState } from "react";
 import Box from "../components/Box";
 import { foldersRoutes, icons } from "../constants/constants";
 import { useColor } from "../context/ColorContext";
-import "./About.css";
+import "./Prueba.css";
 import Clock from "../components/Clock";
-import Resume from "./Resume";
-import Contact from "./Contact";
+import Resume from "./Resume/Resume";
+import Contact from "./Contact/Contact";
 import Folder from "../components/Folder";
-import Projects from "./Projects";
+import Projects from "./Projects/Projects";
 import Settings from "../components/Settings";
 import Calculator from "../components/Calculator";
 
-const About = () => {
+const Prueba = () => {
   const { color, setColor } = useColor();
   const [filter, setFilter] = useState("none");
   const [isOpenResume, setIsOpenResume] = useState(false);
@@ -115,6 +115,12 @@ const About = () => {
           </ul>
         </div>
         <div className="central-column">
+          <Box color="#f49450" bgColor="#fafafa" className="welcome-box">
+            <div className="welcome-container">
+              <h1>WELCOME</h1>
+              <h2>TO MY PORTFOLIO</h2>
+            </div>
+          </Box>
           <Box title="About me" color="#f8d1fc" className="about-container">
             <div className="about-description">
               <h2>Andrea Alarcón Valdés</h2>
@@ -187,4 +193,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Prueba;

@@ -1,4 +1,4 @@
-import Box from "../components/Box"
+import Box from "../../components/Box"
 import "./Projects.css"
 const Projects = () => {
   return (

@@ -1,7 +1,6 @@
 .box-content {
     box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
     border: 2px solid black;
-  /* animation: scale-up-center 0.5s ; */
 
 }
 
@@ -15,29 +14,18 @@
 
 }
 
-.btns-container {
-    display: flex;
-    gap: .5rem;
-justify-content: flex-start;
-}
-.btns-container span{
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 2px solid black;
-}
-.btns-container span:nth-child(1){
-   background-color: #deeb7d;
-}
-.btns-container span:nth-child(2){
-   background-color: #f78331;
 
-}
-.btns-container span:nth-child(3){
-   background-color: #dc71fb;
+.box-nav button{
 
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  transition: .2s ease-in-out;
 }
 
+.box-nav button:hover{
+    scale: 1.1;
+}
 .box-nav p {
     font-weight: 900;
     margin: auto;

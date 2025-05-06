@@ -30,7 +30,7 @@ const Clock: React.FC = () => {
   }, []);
 
   return (
-    <div style={{display: "flex", gap: "1rem"}}>
+    <div style={{display: "flex", gap: ".5rem"}}>
       <p>{date}</p> 
       <p>{time}</p> 
     </div>
