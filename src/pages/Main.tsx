@@ -9,6 +9,8 @@ import About from "./About/About";
 import Resume from "./Resume/Resume";
 import Calculator from "../components/Calculator";
 import Settings from "../components/Settings";
+import Projects from "./Projects/Projects";
+import Contact from "./Contact/Contact";
 
 const Main = () => {
   const { color, setColor } = useColor();
@@ -45,31 +47,31 @@ const Main = () => {
     setIsOpenAbout(true);
   };
 
-  const closeAbout = () => {
-    setIsOpenAbout(false);
-  };
+  // const closeAbout = () => {
+  //   setIsOpenAbout(false);
+  // };
   const openResume = () => {
     setIsOpenResume(true);
   };
 
-  const closeResume = () => {
-    setIsOpenResume(false);
-  };
+  // const closeResume = () => {
+  //   setIsOpenResume(false);
+  // };
 
   const openContact = () => {
     setIsOpenContact(true);
   };
 
-  const closeContact = () => {
-    setIsOpenContact(false);
-  };
+  // const closeContact = () => {
+  //   setIsOpenContact(false);
+  // };
   const openProjects = () => {
     setIsOpenProjects(true);
   };
 
-  const closeProjects = () => {
-    setIsOpenProjects(false);
-  };
+  // const closeProjects = () => {
+  //   setIsOpenProjects(false);
+  // };
 
   return (
     <div
@@ -116,7 +118,9 @@ const Main = () => {
             />
           )}
           {isOpenAbout && <About />}
-          {/* {isOpenResume && <Resume />} */}
+          {isOpenResume && <Resume />}
+          {isOpenProjects && <Projects/>}
+          {isOpenContact && <Contact/>}
         </div>
         <div className="routes-desk">
           <ul>

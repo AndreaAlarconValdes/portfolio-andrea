@@ -1,10 +1,10 @@
 import Box from "../../components/Box.tsx";
-import FilterableList from "../../components/FilterableList.tsx";
+// import FilterableList from "../../components/FilterableList.tsx";
 import "./Resume.css";
 import {
   education,
-  skills,
-  skillsFilters,
+  // skills,
+  // skillsFilters,
   languages,
   experience,
 } from "../../constants/constants.ts";
