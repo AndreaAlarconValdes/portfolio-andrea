@@ -25,13 +25,6 @@ const Folder = ({ img, title, sound, handleOnClick }: FolderProps) => {
     return () => window.removeEventListener("resize", handleResize);
   }, [sound]); 
 
-  const getImageSrc = () => {
-    if (isDesktop) {
-      return isHovered ? `./${img}-hover.svg` : `./${img}.svg`;
-    } else {
-      return `./${img}-m.svg`;
-    }
-  };
 
   const handleMouseEnter = () => {
     if (isDesktop) {
@@ -53,7 +46,7 @@ const Folder = ({ img, title, sound, handleOnClick }: FolderProps) => {
     <div className="folder-container">
       <button onClick={handleOnClick}>
         <img
-          src={getImageSrc()}
+          src={ isHovered ? `./${img}-hover.svg` : `./${img}.svg`}
           alt={`${title} image`}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}

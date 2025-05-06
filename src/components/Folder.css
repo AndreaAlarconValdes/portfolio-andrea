@@ -22,13 +22,15 @@
 }
 
 
-@media (max-width: 1150px) {
+@media (max-width:900px) {
 .folder-container img{
-  width: 40px;
-}
-.folder-container p {
-  font-size: 12px;
-
+  width: 60px;
 }
 }
 
+
+@media (max-width:650px) {
+  .folder-container img{
+    width: 40px;
+  }
+  }

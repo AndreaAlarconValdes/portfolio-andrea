@@ -47,9 +47,9 @@ const Main = () => {
     setIsOpenAbout(true);
   };
 
-  // const closeAbout = () => {
-  //   setIsOpenAbout(false);
-  // };
+  const closeAbout = () => {
+    setIsOpenAbout(false);
+  };
   const openResume = () => {
     setIsOpenResume(true);
   };
@@ -106,8 +106,15 @@ const Main = () => {
       </div>
       <div className="desk">
         <div className="main-desk">
-          <Box color="#0000ee" className="welcome-box">
-            <img src="./portfolio.png" />
+          <Box color="#fad844" className="welcome-box">
+            <video
+              autoPlay
+              playsInline
+              muted
+              id="background-video"
+            >
+              <source src="./portfolio.mp4" type="video/mp4" />
+            </video>
           </Box>
           {isOpenCalculator && <Calculator onClose={closeCalculator} />}
           {isOpenSettings && (
@@ -117,10 +124,10 @@ const Main = () => {
               onClose={closeSettings}
             />
           )}
-          {isOpenAbout && <About />}
+          {isOpenAbout && <About/>}
           {isOpenResume && <Resume />}
-          {isOpenProjects && <Projects/>}
-          {isOpenContact && <Contact/>}
+          {isOpenProjects && <Projects />}
+          {isOpenContact && <Contact />}
         </div>
         <div className="routes-desk">
           <ul>
@@ -128,7 +135,7 @@ const Main = () => {
               <li key={item.title}>
                 <Folder
                   img={item.img}
-                  title={item.title}
+                  title=""
                   sound={item.sound}
                   handleOnClick={() => {
                     if (item.type === "about") openAbout();
