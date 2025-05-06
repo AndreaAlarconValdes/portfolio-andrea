@@ -1,12 +1,12 @@
-/* :root {
-  background-image: 
-  linear-gradient(to right, lightgray 1px, transparent 1px),
+:root {
+  background-image: linear-gradient(to right, lightgray 1px, transparent 1px),
   linear-gradient(to bottom, lightgray 1px, transparent 1px);
 background-size: 100px 100px;
-} */
+}
 
 body {
   margin: 0;
+  
 }
 
 button {

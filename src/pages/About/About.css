@@ -4,9 +4,7 @@
   align-items: center;
   gap: 2rem;
 }
-.self-portrait{
-    left: 0%;
-}
+
 
 .self-portrait img{
   height: 380px;
@@ -35,6 +33,7 @@ h4 {
 .about-page{
   flex-direction: column;
   overflow-y: scroll;
+  gap: 1rem;
 
 }
 .self-portrait img{
