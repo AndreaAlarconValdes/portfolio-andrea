@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import "./Folder.css";
 
 interface FolderProps {
-  img: string; // solo el nombre base, ej: "icon-mail"
+  img: string; 
   title: string;
-  sound: string; // nuevo: para identificar el tipo y sonido
+  sound: string; 
   handleOnClick: () => void;
 }
 
@@ -23,7 +23,7 @@ const Folder = ({ img, title, sound, handleOnClick }: FolderProps) => {
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [sound]); // importante: recarga si cambia el sound
+  }, [sound]); 
 
   const getImageSrc = () => {
     if (isDesktop) {

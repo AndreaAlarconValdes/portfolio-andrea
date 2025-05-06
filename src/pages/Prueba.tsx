@@ -151,6 +151,7 @@ const Prueba = () => {
             {foldersRoutes.map((item) => (
               <li key={item.title}>
                 <Folder
+                sound={item.sound}
                   img={item.img}
                   title={item.title}
                   handleOnClick={() => {
