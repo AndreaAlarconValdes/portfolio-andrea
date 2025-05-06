@@ -45,7 +45,7 @@ const Resume = () => {
           </div>
         </div>
       </Box>
-
+<div className="bottom-column">
         <Box title="Education">
           <div className="education-container">
             {education.map((item) => (
@@ -69,6 +69,7 @@ const Resume = () => {
             ))}
           </ul>
         </Box>
+        </div>
       </div>
       <div>
       <FilterableList

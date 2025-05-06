@@ -1,16 +1,20 @@
 .resume-page {
   position: absolute;
+  top: 10%;
   display: flex;
   align-items: center;
   gap: 1rem;
+  padding: 1rem;
+
 }
 
 .resume-page .left-column {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
-  padding: 1rem;
 }
+
 .CV-container {
   display: flex;
   padding: 0.5rem 1rem;
@@ -62,6 +66,10 @@
   padding: 0;
   margin: 0;
 }
+
+/* .experience-box{
+  max-width: 480px;
+} */
 .experience-title {
   display: flex;
   justify-content: space-between;
@@ -75,7 +83,6 @@
   margin: 0;
 }
 
-
 .roll-description {
   margin: 0.5rem 0 2rem 0;
 }
@@ -85,15 +92,16 @@
 }
 
 @media (max-width: 1150px) {
-.resume-page {
-flex-direction: column;}
-.resume-page .left-column{
-  flex-direction: row;
-}
+  .resume-page {
+    flex-direction: column;
+    top: 5%;
+    gap: .5rem;
+    padding-bottom: 100px;
+  }
+  .resume-page .bottom-column {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
 }
 
-@media (max-width: 900px) {
-}
-
-@media (max-width: 650px) {
-}

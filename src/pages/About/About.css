@@ -3,6 +3,8 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+  top: 20%;
+    left: 10%;
 }
 
 
@@ -29,11 +31,17 @@ h4 {
   margin-top: 0.5rem;
 }
 
+@media (max-width: 1150px) {
+.about-page{
+  left: 5%;
+}
+}
+
 @media (max-width: 900px) {
 .about-page{
-  flex-direction: column;
-  overflow-y: scroll;
-  gap: 1rem;
+  
+top: 40%;
+left: 2%;
 
 }
 .self-portrait img{
@@ -47,6 +55,11 @@ h4 {
 
 @media (max-width: 650px) {
   .about-page{
+    flex-direction: column;
+  overflow-y: scroll;
+  gap: 1rem;
     padding: 2rem 1rem;
+    top: 5%;
+left: 0%;
   }
 }
