@@ -105,3 +105,17 @@
   }
 }
 
+@media (max-width: 900px) {
+  .resume-page .bottom-column {
+    flex-direction: column;
+    gap: .5rem;
+
+  }
+/* .languages-content ul {
+  padding: 0.5rem;
+}
+
+.education-container {
+  padding: .5rem;
+} */
+}
