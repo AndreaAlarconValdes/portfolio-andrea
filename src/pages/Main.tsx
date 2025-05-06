@@ -129,6 +129,7 @@ const Main = () => {
                 <Folder
                   img={item.img}
                   title={item.title}
+                  sound={item.sound}
                   handleOnClick={() => {
                     if (item.type === "about") openAbout();
                     else if (item.type === "resume") openResume();

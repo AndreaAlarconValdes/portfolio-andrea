@@ -135,7 +135,9 @@ background-size: 100px 100px;
  
 }
 @media (max-width: 650px) {
- 
+.menu-bar-nav {
+  gap: .5rem;
+}
     .welcome-box{
       left: 5%;
     }

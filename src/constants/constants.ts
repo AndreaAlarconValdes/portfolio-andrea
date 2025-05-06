@@ -110,10 +110,10 @@ export const icons = [
 ];
 
 export const foldersRoutes = [
-  { img: "icon-about", title: "About", type: "about" },
-  { img: "icon-resume", title: "Resume", type: "resume" },
-  { img: "icon-projects", title: "Projects", type: "projects" },
-  { img: "icon-contact", title: "Contact", type: "contact" },
+  { img: "icon-about", title: "About", type: "about", sound: "hm.mp3" },
+  { img: "icon-resume", title: "Resume", type: "resume" , sound: "paper.mp3"},
+  { img: "icon-projects", title: "Projects", type: "projects" , sound: "photos.wav"},
+  { img: "icon-contact", title: "Contact", type: "contact", sound: "mail.wav" },
 ];
 
 export const aboutFilters = [

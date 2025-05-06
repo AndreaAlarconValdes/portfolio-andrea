@@ -1,23 +1,75 @@
 .contact-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+position: absolute;
+top: 20%;
+left: 20%;
+display: flex;
+align-items: center;
+gap: 2rem;
 }
 
 .email-box {
   min-width: 500px;
   min-height: 200px;
-  animation: scale-up-center 0.2s ease-in-out forwards,
-    fade-in 0.1s ease-in-out forwards;
+
 }
 
-.email-box {
-  opacity: 0;
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  margin: 0;
+  list-style-type: none;
 }
 
-@media (max-width: 600px) {
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-info i {
+  cursor: pointer;
+  font-size: 25px;
+  padding: 0.2rem;
+  border-radius: 8px;
+  border: 2px solid black;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease-in-out;
+}
+
+.contact-info i:hover {
+  scale: 1.1;
+}
+
+.contact-info p {
+  background-color: white;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 4px 15px;
+  font-size: 16px;
+}
+
+
+@media (max-width: 1150px) {
+.contact-page {
+  left: 8%;
+}
+}
+
+@media (max-width: 900px) {
+.contact-page {
+  flex-direction: column;
+  top: 10%;
+  left: 20%;
+}
+}
+@media (max-width: 650px) {
+.contact-page {
+  left: 5%;
+}
   .email-box {
-    min-width: 350px;
+    min-width: 380px;
     min-height: 200px;}
 }

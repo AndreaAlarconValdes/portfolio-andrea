@@ -4,6 +4,8 @@
   border: 2px solid black;
   position: absolute;
   left: 20%;
+  top: 10%;
+  z-index: 998;
 }
 
 .close-nav{
@@ -37,7 +39,7 @@
 }
 .preset-colors {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 8 columnas */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 2px;
 }
 
@@ -90,22 +92,4 @@
 .dropdown-menu button:hover {
   scale: 1.1;
 }
-@media (max-width: 1000px) {
 
-  .settings-content {
-  padding: .5rem;
-
-  }
-
-}
-
-@media (max-width: 800px) {
-  .settings-content {
-    padding: 15px 2px;
-  }
-.preset-color {
-  width: 20px;
-  height: 20px;
-}
-
-}
