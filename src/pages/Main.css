@@ -92,8 +92,7 @@
 /* ROUTES */
 .routes-desk {
   padding: 0px 150px;
-  background-image: url("/portfolio-andrea/public/icon-table.svg");
-background-color: red;
+  background-image: url("icon-table.svg");
   /* background-image: url(./icon-table.svg); */
   background-size: cover;
   background-position: center;
