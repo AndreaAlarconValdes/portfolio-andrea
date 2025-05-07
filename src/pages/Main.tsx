@@ -5,19 +5,15 @@ import Clock from "../components/Clock";
 import Folder from "../components/Folder";
 import { foldersRoutes } from "../constants/constants";
 import Box from "../components/Box";
-import About from "./About/About";
 import Resume from "./Resume/Resume";
 import Calculator from "../components/Calculator";
 import Settings from "../components/Settings";
 import Projects from "./Projects/Projects";
 import Contact from "./Contact/Contact";
-import { useIsMobile } from "../hooks/useIsMobile";
-import AboutMobile from "./About/AboutMobile";
+import About from "./About/About";
 
 const Main = () => {
   const { color, setColor } = useColor();
-  const mobile = useIsMobile();
-
   const [filter, setFilter] = useState("none");
   const [isOpenResume, setIsOpenResume] = useState(false);
   const [isOpenAbout, setIsOpenAbout] = useState(false);
@@ -76,10 +72,10 @@ const Main = () => {
   // const closeProjects = () => {
   //   setIsOpenProjects(false);
   // };
-const closeAll =()=>{
-  closeSettings();
-  closeCalculator();
-}
+  const closeAll = () => {
+    closeSettings();
+    closeCalculator();
+  };
   return (
     <div
       className="screen"
@@ -114,12 +110,7 @@ const closeAll =()=>{
       <div className="desk">
         <div className="main-desk">
           <Box className="welcome-box">
-            <video
-              autoPlay
-              playsInline
-              muted
-              id="background-video"
-            >
+            <video autoPlay playsInline muted id="background-video">
               <source src="./portfolio.mp4" type="video/mp4" />
             </video>
           </Box>
@@ -131,7 +122,7 @@ const closeAll =()=>{
               onClose={closeSettings}
             />
           )}
-         {isOpenAbout && <AboutMobile  onClose={closeAbout}/>}
+          {isOpenAbout && <About onClose={closeAbout} />}
           {isOpenResume && <Resume />}
           {isOpenProjects && <Projects />}
           {isOpenContact && <Contact />}
