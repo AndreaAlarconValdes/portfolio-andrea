@@ -11,9 +11,13 @@ import Calculator from "../components/Calculator";
 import Settings from "../components/Settings";
 import Projects from "./Projects/Projects";
 import Contact from "./Contact/Contact";
+import { useIsMobile } from "../hooks/useIsMobile";
+import AboutMobile from "./About/AboutMobile";
 
 const Main = () => {
   const { color, setColor } = useColor();
+  const mobile = useIsMobile();
+
   const [filter, setFilter] = useState("none");
   const [isOpenResume, setIsOpenResume] = useState(false);
   const [isOpenAbout, setIsOpenAbout] = useState(false);
@@ -47,9 +51,9 @@ const Main = () => {
     setIsOpenAbout(true);
   };
 
-  // const closeAbout = () => {
-  //   setIsOpenAbout(false);
-  // };
+  const closeAbout = () => {
+    setIsOpenAbout(false);
+  };
   const openResume = () => {
     setIsOpenResume(true);
   };
@@ -109,7 +113,7 @@ const closeAll =()=>{
       </div>
       <div className="desk">
         <div className="main-desk">
-          <Box color="#fad844" className="welcome-box">
+          <Box className="welcome-box">
             <video
               autoPlay
               playsInline
@@ -127,7 +131,7 @@ const closeAll =()=>{
               onClose={closeSettings}
             />
           )}
-          {isOpenAbout && <About/>}
+         {isOpenAbout && (mobile ? <AboutMobile  onClose={closeAbout}/> : <About />)}
           {isOpenResume && <Resume />}
           {isOpenProjects && <Projects />}
           {isOpenContact && <Contact />}
