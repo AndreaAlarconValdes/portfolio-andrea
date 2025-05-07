@@ -131,7 +131,7 @@ const closeAll =()=>{
               onClose={closeSettings}
             />
           )}
-         {isOpenAbout && (mobile ? <AboutMobile  onClose={closeAbout}/> : <About />)}
+         {isOpenAbout && <AboutMobile  onClose={closeAbout}/>}
           {isOpenResume && <Resume />}
           {isOpenProjects && <Projects />}
           {isOpenContact && <Contact />}

@@ -8,8 +8,11 @@ const AboutMobile = ({onClose}:AboutMobileProps) => {
    
     <Box onClose={onClose} className="about-mobile-page">
       <div className="about-mobile-description">
+        <div>
         <img src="./selfie.jpeg" alt="selfie" />
           <h2>Andrea Alarcón Valdés</h2>
+
+          </div>
         <div>
           <h4>
             Full-stack developer specialising in front-end development from
