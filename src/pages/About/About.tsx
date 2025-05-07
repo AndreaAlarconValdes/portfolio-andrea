@@ -7,7 +7,7 @@ const About = () => {
       <Box className="self-portrait" title="Photo"   >
             <img src="./selfie.jpeg" alt="selfie" />
           </Box>
-          <Box title="About me" color="#f8d1fc" className="about-container" >
+          <Box title="About me"  className="about-container" >
             <div className="about-description">
               <h2>Andrea Alarcón Valdés</h2>
               <h4>

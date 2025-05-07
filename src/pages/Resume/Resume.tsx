@@ -17,8 +17,6 @@ const Resume = () => {
       <div className="left-column">
       <Box
         square
-        color="#dadad3"
-        bgColor="#f7f6f0"
         className="CV-box-container"
       >
         <div className="CV-container">
@@ -58,7 +56,7 @@ const Resume = () => {
             ))}
           </div>
         </Box>
-        <Box color="#f49450" title="Languages" className="languages-content">
+        <Box  title="Languages" className="languages-content">
           <ul>
             {languages.map((item) => (
               <li>
@@ -80,7 +78,7 @@ const Resume = () => {
       />
       </div>
       <div>
-      <Box title="Work experience" className="experience-box" color="#F9D13E">
+      <Box title="Work experience" className="experience-box" >
         <div className="experience-container">
           {experience.map((item) => (
             <div>

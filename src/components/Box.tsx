@@ -5,9 +5,7 @@ interface BoxProps {
   className?: string;
   title?: string;
   children?: React.ReactNode;
-  color?: string;
   square?: boolean;
-  bgColor?: string;
   onClose?: () => void;
 }
 
@@ -15,37 +13,32 @@ const Box = ({
   className,
   children,
   title,
-  color = "#b2f282",
-  bgColor = "#fdfbe6",
   square = false,
   onClose,
 }: BoxProps) => {
-
-
-
- 
-
   return (
-    <div
-      className={className}
-    >
+    <div className={className}>
       <div
         className="box-content"
         style={{
           borderRadius: square ? 0 : 10,
-          backgroundColor: bgColor,
+          backgroundColor: "#fafafa",
         }}
       >
         <div
           className="box-nav"
           style={{
-            backgroundColor: color,
+            backgroundColor: "#dadad3",
             borderTopLeftRadius: square ? 0 : 10,
             borderTopRightRadius: square ? 0 : 10,
           }}
         >
-            <button onClick={onClose}>X</button>
-           
+          <div className="box-nav-btns">
+            <button onClick={onClose}></button>
+            <button onClick={onClose}></button>
+            <button onClick={onClose}></button>
+          </div>
+
           <p>{title}</p>
         </div>
         {children}

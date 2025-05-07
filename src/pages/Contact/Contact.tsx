@@ -6,7 +6,7 @@ import "./Contact.css";
 const Contact = () => {
   return (
     <div className="contact-page">
-      <Box bgColor="#fafafa" title="Contacts">
+      <Box  title="Contacts">
                <ul className="contact-info">
             {icons.map((icon) => (
               <li>
@@ -24,7 +24,7 @@ const Contact = () => {
             ))}
           </ul>
           </Box>
-      <Box className="email-box" bgColor="#fafafa" color="#F9D13E">
+      <Box className="email-box"  >
         <EmailForm />
       </Box>
       </div>
