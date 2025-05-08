@@ -1,20 +1,13 @@
-.resume-page {
-  position: absolute;
-  top: 10%;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-
+.resume-mobile-page{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    animation: scale-up-center .2s ease-in-out;
 }
-
-.resume-page .left-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
 .CV-container {
   display: flex;
   padding: 0.5rem 1rem;
@@ -23,99 +16,53 @@
   justify-content: center;
   font-size: 14px;
 }
-.CV-container h5 {
+
+.CV-container-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CV-container-text h5 {
   margin: 0;
   font-size: 16px;
 }
 
-.education-container {
-  padding: 0.5rem 1rem;
-  font-size: 14px;
-}
-.education-items {
-  padding: 0.5rem;
-}
-.education-items h3 {
-  margin: 0;
-}
-.education-items p {
-  color: gray;
-}
-
-.languages-content ul {
-  list-style-type: none;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem 4rem 1rem 1rem;
-}
-
-.languages-content li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  font-size: 13px;
-}
-.languages-content i {
-  color: black;
-  padding: 0.2rem;
-  font-size: 14px;
-}
-.languages-content h3 {
-  padding: 0;
-  margin: 0;
-}
-
-/* .experience-box{
-  max-width: 480px;
-} */
-.experience-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.experience-container {
-  padding: 0.5rem 1rem;
-}
-.experience-title h3 {
-  margin: 0;
-}
-
-.roll-description {
-  margin: 0.5rem 0 2rem 0;
-}
-.roll-description h4 {
-  margin: 0;
-  margin-bottom: 0.5rem;
-}
-
-@media (max-width: 1150px) {
-  .resume-page {
-    flex-direction: column;
-    top: 5%;
-    gap: .5rem;
-    padding-bottom: 100px;
+.filtered-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em;
+    padding: 0;
+    margin: 0;
   }
-  .resume-page .bottom-column {
+  
+  .filtered-items li {
     display: flex;
     align-items: center;
-    gap: 2rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .resume-page .bottom-column {
+    justify-content: center;
     flex-direction: column;
-    gap: .5rem;
+    gap: 0.5rem;
+  }
+  
+  .filtered-items li h5 {
+    font-size: 10px;
+    color: gray;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+@media (max-width: 650px) {
+.resume-mobile-page{
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 60px;
+
+
+
+}
+  .filtered-items {
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5em;
 
   }
-/* .languages-content ul {
-  padding: 0.5rem;
-}
-
-.education-container {
-  padding: .5rem;
-} */
 }

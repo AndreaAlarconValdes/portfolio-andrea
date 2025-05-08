@@ -1,17 +1,13 @@
 .contact-page {
-position: absolute;
-top: 20%;
-left: 20%;
+position: relative;
 display: flex;
 align-items: center;
-gap: 2rem;
+justify-content: center;
+height: 100vh;
+animation: scale-up-center .2s ease-in-out;
 }
 
-.email-box {
-  min-width: 500px;
-  min-height: 200px;
 
-}
 
 .contact-info {
   display: flex;
@@ -52,24 +48,14 @@ gap: 2rem;
 }
 
 
-@media (max-width: 1150px) {
-.contact-page {
-  left: 8%;
-}
-}
 
-@media (max-width: 900px) {
-.contact-page {
-  flex-direction: column;
-  top: 10%;
-  left: 20%;
-}
-}
+
+
 @media (max-width: 650px) {
 .contact-page {
-  left: 5%;
+  left: 0;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
 }
-  .email-box {
-    min-width: 380px;
-    min-height: 200px;}
+
 }

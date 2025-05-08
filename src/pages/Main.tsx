@@ -5,12 +5,12 @@ import Clock from "../components/Clock";
 import Folder from "../components/Folder";
 import { foldersRoutes } from "../constants/constants";
 import Box from "../components/Box";
-import Resume from "./Resume/Resume";
 import Calculator from "../components/Calculator";
 import Settings from "../components/Settings";
 import Projects from "./Projects/Projects";
 import Contact from "./Contact/Contact";
 import About from "./About/About";
+import Resume from "./Resume/Resume";
 
 const Main = () => {
   const { color, setColor } = useColor();
@@ -54,27 +54,33 @@ const Main = () => {
     setIsOpenResume(true);
   };
 
-  // const closeResume = () => {
-  //   setIsOpenResume(false);
-  // };
+  const closeResume = () => {
+    setIsOpenResume(false);
+  };
 
   const openContact = () => {
     setIsOpenContact(true);
   };
 
-  // const closeContact = () => {
-  //   setIsOpenContact(false);
-  // };
+  const closeContact = () => {
+    setIsOpenContact(false);
+  };
   const openProjects = () => {
     setIsOpenProjects(true);
   };
 
-  // const closeProjects = () => {
-  //   setIsOpenProjects(false);
-  // };
+  const closeProjects = () => {
+    setIsOpenProjects(false);
+  };
+
+
   const closeAll = () => {
     closeSettings();
     closeCalculator();
+    closeAbout();
+    closeResume();
+    closeContact();
+    closeProjects();
   };
   return (
     <div
@@ -88,19 +94,6 @@ const Main = () => {
         <div className="menu-bar-nav">
           <h3>Andrea Alarcón</h3>
           <div className="nav">
-            <div className="file-dropdown">
-              <button onClick={toggleDropdown}>
-                <span>File</span>
-              </button>
-              {isDropdownOpen && (
-                <div className="dropdown-content">
-                  <button onClick={() => openAbout()}>About</button>
-                  <button onClick={() => openResume()}>Resume</button>
-                  <button onClick={() => openProjects()}>Projects</button>
-                  <button onClick={() => openContact()}>Contact</button>
-                </div>
-              )}
-            </div>
             <button onClick={() => openCalculator()}>Calculator</button>
             <button onClick={() => openSettings()}>Settings</button>
           </div>
@@ -122,10 +115,10 @@ const Main = () => {
               onClose={closeSettings}
             />
           )}
-          {isOpenAbout && <About onClose={closeAbout} />}
-          {isOpenResume && <Resume />}
-          {isOpenProjects && <Projects />}
-          {isOpenContact && <Contact />}
+          {isOpenAbout && <About onClose={() => closeAbout()} />}
+          {isOpenResume && <Resume onClose={() => closeResume()} />}
+          {isOpenProjects && <Projects onClose={()=>{closeProjects()}}/>}
+          {isOpenContact && <Contact onClose={()=>{closeContact()}}/>}
         </div>
         <div className="routes-desk">
           <ul>
@@ -133,7 +126,7 @@ const Main = () => {
               <li key={item.title}>
                 <Folder
                   img={item.img}
-                  title=""
+                  title={item.title}
                   sound={item.sound}
                   handleOnClick={() => {
                     if (item.type === "about") openAbout();

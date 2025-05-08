@@ -1,6 +1,6 @@
 :root {
-  background-image: linear-gradient(to right, #EC9696 1px, transparent 1px),
-  linear-gradient(to bottom, #EC9696 1px, transparent 1px);
+  background-image: linear-gradient(to right, lightgray 1px, transparent 1px),
+  linear-gradient(to bottom, lightgray 1px, transparent 1px);
 background-size: 100px 100px;
 }
 

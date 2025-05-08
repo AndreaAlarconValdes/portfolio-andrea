@@ -1,12 +1,15 @@
 import Box from "../../components/Box";
-import EmailForm from "../../components/EmailForm";
 import { icons } from "../../constants/constants";
 import "./Contact.css";
 
-const Contact = () => {
+interface ContantProps {
+  onClose: () => void;
+}
+
+const Contact = ({onClose}: ContantProps) => {
   return (
     <div className="contact-page">
-      <Box  title="Contacts">
+      <Box  title="Contacts" onClose={onClose}>
                <ul className="contact-info">
             {icons.map((icon) => (
               <li>
@@ -24,9 +27,7 @@ const Contact = () => {
             ))}
           </ul>
           </Box>
-      <Box className="email-box"  >
-        <EmailForm />
-      </Box>
+     
       </div>
   );
 };

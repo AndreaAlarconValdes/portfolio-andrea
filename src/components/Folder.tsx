@@ -10,7 +10,7 @@ interface FolderProps {
 
 const Folder = ({ img, title, sound, handleOnClick }: FolderProps) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 901);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 900);
 
   const hoverSoundRef = useRef<HTMLAudioElement | null>(null);
 
@@ -18,7 +18,7 @@ const Folder = ({ img, title, sound, handleOnClick }: FolderProps) => {
     hoverSoundRef.current = new Audio(`./audio/${sound}`);
 
     const handleResize = () => {
-      setIsDesktop(window.innerWidth > 1151);
+      setIsDesktop(window.innerWidth > 900);
     };
 
     window.addEventListener("resize", handleResize);
@@ -46,7 +46,11 @@ const Folder = ({ img, title, sound, handleOnClick }: FolderProps) => {
     <div className="folder-container">
       <button onClick={handleOnClick}>
         <img
-          src={ isHovered ? `./${img}-hover.svg` : `./${img}.svg`}
+          src={ 
+            isDesktop
+            ? (isHovered ? `./${img}-hover.png` : `./${img}.png`)
+            : `./${img}-m.png`
+          }
           alt={`${title} image`}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}

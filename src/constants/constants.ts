@@ -114,7 +114,7 @@ export const foldersRoutes = [
   { img: "icon-resume", title: "Resume", type: "resume" , sound: "paper.mp3"},
   { img: "icon-projects", title: "Projects", type: "projects" , sound: "photos.wav"},
   { img: "icon-contact", title: "Contact", type: "contact", sound: "mail.wav" },
-  { img: "icon-bin", title: "Bin", type: "bin", sound: "bin.wav" },
+  { img: "icon-bin", title: "Clean", type: "bin", sound: "bin.wav" },
 ];
 
 export const aboutFilters = [

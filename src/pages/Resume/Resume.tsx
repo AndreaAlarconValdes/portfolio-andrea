@@ -1,34 +1,26 @@
-import Box from "../../components/Box.tsx";
-import FilterableList from "../../components/FilterableList.tsx";
-import "./Resume.css";
+import { useState } from "react";
+import Box from "../../components/Box";
+import { FilterPanel } from "../../components/FilterPanel";
 import {
   education,
-  skills,
-  skillsFilters,
-  languages,
   experience,
-} from "../../constants/constants.ts";
-import { useState } from "react";
-
-const Resume = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  languages,
+  skills,
+} from "../../constants/constants";
+import "./Resume.css";
+interface ResumeProps {
+  onClose: () => void;
+}
+const Resume = ({ onClose }: ResumeProps) => {
   return (
-    <div className="resume-page">
-      <div className="left-column">
-      <Box
-        square
-        className="CV-box-container"
-      >
+    <div className="resume-mobile-page">
+      <Box square>
         <div className="CV-container">
           <div>
             <a href="./CV.pdf" target="_blank" rel="noopener noreferrer">
               <img
-                src={
-                  isHovered ? "./icon-resume-hover.svg" : "./icon-resume.svg"
-                }
+                src="./icon-resume-hover.png"
                 alt="Imagen con hover"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
                 style={{
                   width: 70,
                   cursor: "url(./cursor-pointer.png), default",
@@ -37,66 +29,75 @@ const Resume = () => {
               />
             </a>
           </div>
-          <div>
+          <div className="CV-container-text">
             <h5>Take a look at my CV</h5>
             <p>Click on the folder to download it</p>
           </div>
         </div>
       </Box>
-<div className="bottom-column">
-        <Box title="Education">
-          <div className="education-container">
-            {education.map((item) => (
-              <div className="education-items">
-                <h3>{item.program}</h3>
-                <p>
-                  {item.school}, {item.year}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Box>
-        <Box  title="Languages" className="languages-content">
-          <ul>
-            {languages.map((item) => (
-              <li>
-                <i className="fa-solid fa-check"></i>
-                <h3>{item.language}</h3>
-                <p>{item.level}</p>
-              </li>
-            ))}
-          </ul>
-        </Box>
-        </div>
-      </div>
-      <div>
-      <FilterableList
-        items={skills}
-        itemsTitle="Skills"
-        filters={skillsFilters}
-        filterTitle="Technical Skills"
-      />
-      </div>
-      <div>
-      <Box title="Work experience" className="experience-box" >
-        <div className="experience-container">
-          {experience.map((item) => (
-            <div>
-              <div className="experience-title">
-                <h3>{item.company}</h3>
-                <p>
-                  {item.location} | {item.year}
-                </p>
-              </div>
-              <div className="roll-description">
-                <h4>{item.position}</h4>
-                <p>{item.description}</p>
-              </div>
+      <FilterPanel
+        onClose={onClose}
+        filters={[
+          { id: "skills", label: "Skills" },
+          { id: "languages", label: "Languages" },
+          { id: "education", label: "Education" },
+          { id: "experience", label: "Experience" },
+        ]}
+        contentMap={{
+          skills: (
+            <ul className="filtered-items">
+              {skills.map((item) => (
+                <li key={item.name}>
+                  <img src={`./${item.icon}.png`} alt={item.name} />
+                  <h5>{item.name}</h5>
+                </li>
+              ))}
+            </ul>
+          ),
+          languages: (
+            <ul>
+              {languages.map((item) => (
+                <li>
+                  <img src="star.png" width={25} />
+                  <h3>{item.language}</h3>
+                  <p>{item.level}</p>
+                </li>
+              ))}
+            </ul>
+          ),
+          education: (
+            <div className="education-container">
+              {education.map((item) => (
+                <div className="education-items">
+                  <h3>{item.program}</h3>
+                  <p>
+                    {item.school}, {item.year}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </Box>
-      </div>
+          ),
+          experience: (
+            <div className="experience-container">
+              {experience.map((item) => (
+                <div>
+                  <div className="experience-title">
+                    <h3>{item.company}</h3>
+                    <p>
+                      {item.location} | {item.year}
+                    </p>
+                  </div>
+                  <div className="roll-description">
+                    <h4>{item.position}</h4>
+                    <p>{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ),
+        }}
+        defaultFilterId="skills"
+      />
     </div>
   );
 };

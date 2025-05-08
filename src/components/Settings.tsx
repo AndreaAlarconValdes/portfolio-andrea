@@ -12,6 +12,7 @@ export default function Settings({
   onClose,
 }: SettingsProps) {
   const presetColors = [
+    "#f0aeae",
     "#54B9AD",
     "#F8D059",
     "#50C1EC",
@@ -19,7 +20,6 @@ export default function Settings({
     "#a9c75d",
     "#f8b659",
     "#ec5850",
-    "#FAFAFA",
 
   ];
   const [isDropdownOpen, setDropdownOpen] = useState(false);

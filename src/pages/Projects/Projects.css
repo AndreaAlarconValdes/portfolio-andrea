@@ -1,4 +1,8 @@
 .projects-container-page{
-    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
+    animation: scale-up-center .2s ease-in-out;
 }
