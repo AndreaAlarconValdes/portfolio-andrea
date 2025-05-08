@@ -8,25 +8,6 @@
     height: 100vh;
     animation: scale-up-center .2s ease-in-out;
 }
-.CV-container {
-  display: flex;
-  padding: 0.5rem 1rem;
-  gap: 0.5rem;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-}
-
-.CV-container-text{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.CV-container-text h5 {
-  margin: 0;
-  font-size: 16px;
-}
 
 .filtered-items {
     display: grid;

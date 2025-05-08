@@ -1,12 +1,10 @@
-
-
 body {
   margin: 0;
   filter: var(--bg-filter);
   background-color: var(--bg-color);
   background-image: linear-gradient(to right, lightgray 1px, transparent 1px),
-  linear-gradient(to bottom, lightgray 1px, transparent 1px);
-  background-size: 100px 100px; 
+    linear-gradient(to bottom, lightgray 1px, transparent 1px);
+  background-size: 100px 100px;
 }
 
 button {
@@ -18,7 +16,7 @@ p {
   margin: 0;
 }
 
-.general-page{
+.general-page {
   position: absolute;
   top: 0;
   left: 0;
@@ -27,18 +25,20 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: scale-up-center .2s ease-in-out;
+  animation: scale-up-center 0.2s ease-in-out;
+}
+@media (max-width: 900px) {
+  .general-page {
+    padding: 0 10px;
+  }
 }
 
 @media (max-width: 650px) {
-.general-page{
-  padding: 50px 0px 150px 0px;
-
-  
-}}
+  .general-page {
+    padding: 50px 0px 150px 0px;
+  }
+}
 /* KEYFRAMES */
-
-
 
 /* @keyframes fade-in {
   from {

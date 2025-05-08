@@ -7,6 +7,7 @@ interface BoxProps {
   children?: React.ReactNode;
   square?: boolean;
   onClose?: () => void;
+  style?: React.CSSProperties;
 }
 
 const Box = ({
@@ -15,9 +16,10 @@ const Box = ({
   title,
   square = false,
   onClose,
+  style
 }: BoxProps) => {
   return (
-    <div className={className}>
+    <div className={className} style={style}>
       <div
         className="box-content"
         style={{

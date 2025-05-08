@@ -12,7 +12,7 @@ import Contact from "./Contact/Contact";
 import About from "./About/About";
 import Resume from "./Resume/Resume";
 
-type WindowName = "about" | "resume" | "projects" | "contact" | "settings" | "calculator";
+type WindowName = "about" | "resume" | "projects" | "contact" | "settings" | "cv" |"calculator";
 
 const Main = () => {
   const { color, setColor, filter, setFilter } = useColor();
@@ -21,6 +21,7 @@ const Main = () => {
   const [isOpenContact, setIsOpenContact] = useState(false);
   const [isOpenProjects, setIsOpenProjects] = useState(false);
   const [isOpenSettings, setIsOpenSettings] = useState(false);
+  const [isOpenCV, setIsOpenCV] = useState(false);
   const [isOpenCalculator, setIsOpenCalculator] = useState(false);
 
   // 👉 Estado para zIndex
@@ -30,6 +31,7 @@ const Main = () => {
     projects: 1,
     contact: 1,
     settings: 1,
+    cv: 1,
     calculator: 1,
   });
   const [currentMaxZ, setCurrentMaxZ] = useState(1);
@@ -55,6 +57,15 @@ const Main = () => {
 
   const closeSettings = () => {
     setIsOpenSettings(false);
+  };
+
+  const openCV = () => {
+    setIsOpenCV(true);
+    bringToFront("cv");
+  };
+
+  const closeCV = () => {
+    setIsOpenCV(false);
   };
 
   const openCalculator = () => {
@@ -109,6 +120,7 @@ const Main = () => {
     closeResume();
     closeContact();
     closeProjects();
+    closeCV();
   };
 
   return (
@@ -123,8 +135,9 @@ const Main = () => {
         <div className="menu-bar-nav">
           <h3>Andrea Alarcón</h3>
           <div className="nav">
-            <button onClick={openCalculator}>Calculator</button>
             <button onClick={openSettings}>Settings</button>
+            <button onClick={openCV}>CV</button>
+            <button onClick={openCalculator}>Calculator</button>
           </div>
         </div>
         <Clock />
@@ -136,6 +149,27 @@ const Main = () => {
               <source src="./portfolio.mp4" type="video/mp4" />
             </video>
           </Box>
+          {isOpenCV && <Box square onClose={closeCV} className="CV-box" style={{ zIndex: zIndexes.cv }}>
+        <div className="CV-container">
+          <div>
+            <a href="./CV.pdf" target="_blank" rel="noopener noreferrer">
+              <img
+                src="./icon-resume-hover.png"
+                alt="Imagen con hover"
+                style={{
+                  width: 70,
+                  cursor: "url(./cursor-pointer.png), default",
+                  transition: "all 0.3s ease-in-out",
+                }}
+              />
+            </a>
+          </div>
+          <div className="CV-container-text">
+            <h5>Take a look at my CV</h5>
+            <p>Click on the folder to download it</p>
+          </div>
+        </div>
+      </Box>}
           {isOpenCalculator && <Calculator onClose={closeCalculator} style={{ zIndex: zIndexes.calculator }} />}
           {isOpenSettings && <Settings onColorChange={setColor} onFilterChange={setFilter} onClose={closeSettings} style={{ zIndex: zIndexes.settings }} />}
           {isOpenAbout && <About onClose={closeAbout} style={{ zIndex: zIndexes.about }} />}

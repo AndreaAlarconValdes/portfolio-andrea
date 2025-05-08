@@ -1,4 +1,3 @@
-// import Box from "../../components/Box";
 import { FilterPanel } from "../../components/FilterPanel";
 import {
   education,
@@ -15,27 +14,6 @@ interface ResumeProps {
 const Resume = ({ onClose,style }: ResumeProps) => {
   return (
     <div className="general-page" style={style}>
-      {/* <Box square>
-        <div className="CV-container">
-          <div>
-            <a href="./CV.pdf" target="_blank" rel="noopener noreferrer">
-              <img
-                src="./icon-resume-hover.png"
-                alt="Imagen con hover"
-                style={{
-                  width: 70,
-                  cursor: "url(./cursor-pointer.png), default",
-                  transition: "all 0.3s ease-in-out",
-                }}
-              />
-            </a>
-          </div>
-          <div className="CV-container-text">
-            <h5>Take a look at my CV</h5>
-            <p>Click on the folder to download it</p>
-          </div>
-        </div>
-      </Box> */}
       <FilterPanel
         onClose={onClose}
         filters={[
