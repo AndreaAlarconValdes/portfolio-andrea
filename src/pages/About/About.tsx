@@ -2,11 +2,12 @@ import Box from "../../components/Box";
 import "./About.css";
 interface AboutProps {
   onClose: () => void;
+  style?: React.CSSProperties;
 }
-const About = ({onClose}:AboutProps) => {
+const About = ({onClose, style}:AboutProps) => {
   return (
-   
-    <Box onClose={onClose} className="about-page">
+   <div className="general-page" style={style}>
+    <Box onClose={onClose}   className="about-box">
       <div className="about-description">
         <div>
         <img src="./selfie.jpeg" alt="selfie" />
@@ -36,6 +37,7 @@ const About = ({onClose}:AboutProps) => {
         </div>
       </div>
       </Box>
+      </div>
   );
 };
 

@@ -4,11 +4,13 @@ import "./Contact.css";
 
 interface ContantProps {
   onClose: () => void;
+  style?: React.CSSProperties;
+
 }
 
-const Contact = ({onClose}: ContantProps) => {
+const Contact = ({onClose,style}: ContantProps) => {
   return (
-    <div className="contact-page">
+    <div className="general-page" style={style}>
       <Box  title="Contacts" onClose={onClose}>
                <ul className="contact-info">
             {icons.map((icon) => (

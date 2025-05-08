@@ -1,5 +1,4 @@
-import { useState } from "react";
-import Box from "../../components/Box";
+// import Box from "../../components/Box";
 import { FilterPanel } from "../../components/FilterPanel";
 import {
   education,
@@ -10,11 +9,13 @@ import {
 import "./Resume.css";
 interface ResumeProps {
   onClose: () => void;
+  style?: React.CSSProperties;
+
 }
-const Resume = ({ onClose }: ResumeProps) => {
+const Resume = ({ onClose,style }: ResumeProps) => {
   return (
-    <div className="resume-mobile-page">
-      <Box square>
+    <div className="general-page" style={style}>
+      {/* <Box square>
         <div className="CV-container">
           <div>
             <a href="./CV.pdf" target="_blank" rel="noopener noreferrer">
@@ -34,7 +35,7 @@ const Resume = ({ onClose }: ResumeProps) => {
             <p>Click on the folder to download it</p>
           </div>
         </div>
-      </Box>
+      </Box> */}
       <FilterPanel
         onClose={onClose}
         filters={[

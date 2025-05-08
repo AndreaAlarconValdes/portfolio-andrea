@@ -5,11 +5,14 @@ interface SettingsProps {
   onColorChange: (newColor: string) => void;
   onFilterChange: (newFilter: string) => void;
   onClose: () => void;
+  style?: React.CSSProperties;
+
 }
 export default function Settings({
   onColorChange,
   onFilterChange,
   onClose,
+  style,
 }: SettingsProps) {
   const presetColors = [
     "#f0aeae",
@@ -38,7 +41,7 @@ export default function Settings({
     setDropdownOpen(!isDropdownOpen);
   };
   return (
-    <div className="settings-container">
+    <div className="settings-container" style={style}>
       <div className="close-nav">
         <button onClick={onClose}>X</button>
         <p>Settings</p>

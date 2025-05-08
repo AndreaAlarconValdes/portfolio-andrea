@@ -3,11 +3,14 @@ import "./Projects.css"
 
 interface ProjectsProps {
   onClose: () => void;
+  
+  style?: React.CSSProperties;
+
 }
 
-const Projects = ({onClose}: ProjectsProps) => {
+const Projects = ({onClose,style}: ProjectsProps) => {
   return (
-    <div id='projects' className="projects-page">
+    <div className="general-page" style={style}>
       <Box className="projects-container-page" onClose={onClose}>
         <h1>Projects</h1>
       </Box>

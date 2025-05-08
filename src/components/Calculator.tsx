@@ -5,9 +5,11 @@ import './Calculator.css';
 
 interface CalculatorProps{
   onClose: () => void;
+  style?: React.CSSProperties;
+
 
 }
-const Calculator = ({onClose}: CalculatorProps) => {
+const Calculator = ({onClose, style}: CalculatorProps) => {
   const [display, setDisplay] = useState<string>('');
 
   const handleButtonClick = (value: string) => {
@@ -33,7 +35,7 @@ const Calculator = ({onClose}: CalculatorProps) => {
   ];
 
   return (
-    <div className="calculator-container">
+    <div className="calculator-container" style={style}>
         <button  className="close-calculator" onClick={onClose}>X</button>
       <div className="calculator-display">{display || '0'}</div>
       <div className="calculator-button-grid">

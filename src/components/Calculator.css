@@ -70,12 +70,12 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 650px) {
   
 
   .calculator-container .calculator-display {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    margin-bottom: 5px;
   }
 
   .calculator-container .calculator-button-grid {
@@ -83,6 +83,6 @@
   }
 
   .calculator-container .calculator-button {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
