@@ -46,9 +46,9 @@ export const education = [
   },
 ];
 export const languages = [
-  { language: "English", level: "Advanced" },
-  { language: "Spanish", level: "Native" },
-  { language: "Catalan", level: "Native" },
+  { language: "english", level: "Advanced" },
+  { language: "spanish", level: "Native" },
+  { language: "catalan", level: "Native" },
 ];
 
 export const experience = [

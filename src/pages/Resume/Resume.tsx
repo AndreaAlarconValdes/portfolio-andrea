@@ -24,7 +24,7 @@ const Resume = ({ onClose,style }: ResumeProps) => {
         ]}
         contentMap={{
           skills: (
-            <ul className="filtered-items">
+            <ul className="skills-items">
               {skills.map((item) => (
                 <li key={item.name}>
                   <img src={`./${item.icon}.png`} alt={item.name} />
@@ -34,15 +34,17 @@ const Resume = ({ onClose,style }: ResumeProps) => {
             </ul>
           ),
           languages: (
+            <div className="languages-items">
             <ul>
               {languages.map((item) => (
                 <li>
-                  <img src="star.png" width={25} />
+                  <img src={`./${item.language}.png`} width={55} />
                   <h3>{item.language}</h3>
                   <p>{item.level}</p>
                 </li>
               ))}
             </ul>
+            </div>
           ),
           education: (
             <div className="education-container">

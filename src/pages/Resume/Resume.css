@@ -1,15 +1,5 @@
-.resume-mobile-page{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    animation: scale-up-center .2s ease-in-out;
-}
-
-.filtered-items {
+/* SKILLS  */
+.skills-items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5em;
@@ -17,7 +7,7 @@
     margin: 0;
   }
   
-  .filtered-items li {
+  .skills-items li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,25 +15,52 @@
     gap: 0.5rem;
   }
   
-  .filtered-items li h5 {
+  .skills-items li h5 {
     font-size: 10px;
     color: gray;
     text-transform: uppercase;
     margin: 0;
   }
 
-@media (max-width: 650px) {
-.resume-mobile-page{
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 60px;
-
-
-
+  /* LANGUAGES  */
+  .languages-items{
+    display: flex;
+    flex-direction: column;
+   
+  }
+.languages-items ul{
+  list-style-type: none;
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
 }
-  .filtered-items {
+.languages-items li{
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.languages-items h3{
+  text-transform: capitalize;
+  margin: 0;
+}
+
+
+
+  /* EDUCATION  */
+
+
+  /* WORK EXPERIENCE  */
+
+@media (max-width: 650px) {
+  .skills-items {
     grid-template-columns: repeat(3, 1fr);
     gap: .5em;
 
   }
+
+.languages-items li{
+  gap: .5rem;
+}
 }
