@@ -10,7 +10,7 @@ interface ProjectsProps {
 
 const Projects = ({onClose,style}: ProjectsProps) => {
   return (
-    <div className="general-page" style={style}>
+    <div className="general-page" style={style} onClick={onClose}>
       <Box className="projects-container-page" onClose={onClose}>
         <h1>Projects</h1>
       </Box>

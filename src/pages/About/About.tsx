@@ -6,7 +6,7 @@ interface AboutProps {
 }
 const About = ({onClose, style}:AboutProps) => {
   return (
-   <div className="general-page" style={style}>
+   <div className="general-page" style={style} onClick={onClose}>
     <Box onClose={onClose}   className="about-box">
       <div className="about-description">
         <div>

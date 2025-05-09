@@ -10,7 +10,7 @@ interface ContantProps {
 
 const Contact = ({onClose,style}: ContantProps) => {
   return (
-    <div className="general-page" style={style}>
+    <div className="general-page" style={style} onClick={onClose}>
       <Box  title="Contacts" onClose={onClose}>
                <ul className="contact-info">
             {icons.map((icon) => (

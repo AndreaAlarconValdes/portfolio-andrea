@@ -13,7 +13,7 @@ interface ResumeProps {
 }
 const Resume = ({ onClose,style }: ResumeProps) => {
   return (
-    <div className="general-page" style={style}>
+    <div className="general-page" style={style} onClick={onClose}>
       <FilterPanel
         onClose={onClose}
         filters={[

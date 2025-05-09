@@ -36,9 +36,9 @@ const Box = ({
           }}
         >
           <div className="box-nav-btns">
-            <button onClick={onClose}></button>
-            <button onClick={onClose}></button>
-            <button onClick={onClose}></button>
+            <button onClick={onClose}>
+            <i className="fa-solid fa-xmark"></i>
+            </button>
           </div>
 
           <p>{title}</p>

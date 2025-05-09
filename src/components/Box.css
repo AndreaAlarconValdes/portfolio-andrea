@@ -22,16 +22,25 @@
 
   cursor: pointer;
   border: none;
-  border: 2px solid black;
-  border-radius:50% ;
-  padding: 7px;
-  background-color: rgb(237, 237, 237);
-  transition: .2s ease-in-out;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.box-nav button:hover{
-    scale: 1.1;
+
+
+.box-nav-btns i{
+    font-size: 10px;
+    padding: 4px 6px;
+  border: 2px solid black;
+  border-radius:50% ;
+  background-color: rgb(237, 237, 237);
+
+
+
 }
+
 .box-nav p {
     font-weight: 900;
     margin: auto;
