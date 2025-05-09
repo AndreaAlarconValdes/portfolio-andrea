@@ -8,7 +8,7 @@ interface BoxProps {
   square?: boolean;
   onClose?: () => void;
   style?: React.CSSProperties;
-  showCloseBtn?: boolean
+  showCloseBtn?: boolean;
 }
 
 const Box = ({
@@ -18,19 +18,19 @@ const Box = ({
   square = false,
   onClose,
   style,
-  showCloseBtn =true,
+  showCloseBtn = true,
 }: BoxProps) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const dragging = useRef(false);
   const offset = useRef({ x: 0, y: 0 });
 
   const handleMouseDown = (e: React.MouseEvent) => {
+    e.stopPropagation();
     dragging.current = true;
     offset.current = {
       x: e.clientX - position.x,
       y: e.clientY - position.y,
     };
-
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseup", handleMouseUp);
   };
@@ -49,6 +49,33 @@ const Box = ({
     window.removeEventListener("mouseup", handleMouseUp);
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    e.stopPropagation();
+    dragging.current = true;
+    const touch = e.touches[0];
+    offset.current = {
+      x: touch.clientX - position.x,
+      y: touch.clientY - position.y,
+    };
+    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("touchend", handleTouchEnd);
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    if (!dragging.current) return;
+    const touch = e.touches[0];
+    setPosition({
+      x: touch.clientX - offset.current.x,
+      y: touch.clientY - offset.current.y,
+    });
+  };
+
+  const handleTouchEnd = () => {
+    dragging.current = false;
+    window.removeEventListener("touchmove", handleTouchMove);
+    window.removeEventListener("touchend", handleTouchEnd);
+  };
+
   return (
     <div
       className={className}
@@ -56,12 +83,10 @@ const Box = ({
         ...style,
         position: "absolute",
         transform: `translate(${position.x}px, ${position.y}px)`,
-        cursor: "grab"
+        cursor: "grab",
       }}
-      onMouseDown={(e) => {
-        e.stopPropagation(); // evita que el drag dispare onClose
-        handleMouseDown(e);
-      }}
+      onMouseDown={handleMouseDown}
+      onTouchStart={handleTouchStart}
       onClick={(e) => e.stopPropagation()}
     >
       <div
@@ -80,12 +105,11 @@ const Box = ({
           }}
         >
           {showCloseBtn && (
-
-          <div className="box-nav-btns">
-            <button onClick={onClose}>
-              <i className="fa-solid fa-xmark"></i>
-            </button>
-          </div>
+            <div className="box-nav-btns">
+              <button onClick={onClose}>
+                <i className="fa-solid fa-xmark"></i>
+              </button>
+            </div>
           )}
 
           <p>{title}</p>
