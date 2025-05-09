@@ -144,7 +144,7 @@ const Main = () => {
       </div>
       <div className="desk">
         <div className="main-desk">
-          <Box className="welcome-box">
+          <Box className="welcome-box" showCloseBtn={false}>
             <video autoPlay playsInline muted id="background-video">
               <source src="./portfolio.mp4" type="video/mp4" />
             </video>
