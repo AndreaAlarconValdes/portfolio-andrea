@@ -38,10 +38,10 @@ const Projects = ({ onClose, style }: ProjectsProps) => {
                   more robust development experience.
                 </p>
                 <div className="projects-links-container">
-                  <a target="_blank" rel="noopener noreferrer" href="">
+                  <a target="_blank" rel="noopener noreferrer" href="https://andreaalarconvaldes.github.io/notes-app/">
                     Live preview
                   </a>
-                  <a target="_blank" rel="noopener noreferrer" href="">
+                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/AndreaAlarconValdes/notes-app">
                     View code
                   </a>
                 </div>
@@ -76,7 +76,6 @@ const Projects = ({ onClose, style }: ProjectsProps) => {
                     rel="noopener noreferrer"
                     href="https://github.com/AndreaAlarconValdes/daily-task-manager"
                   >
-                    {" "}
                     View code
                   </a>
                 </div>

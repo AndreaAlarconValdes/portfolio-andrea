@@ -1,5 +1,5 @@
 import Box from "../../components/Box";
-import { icons } from "../../constants/constants";
+import { contacts } from "../../constants/constants";
 import "./Contact.css";
 
 interface ContantProps {
@@ -13,18 +13,18 @@ const Contact = ({onClose,style}: ContantProps) => {
     <div className="general-page" style={style} onClick={onClose}>
       <Box  title="Contacts" onClose={onClose}>
                <ul className="contact-info">
-            {icons.map((icon) => (
+            {contacts.map((item) => (
               <li>
-                <a href={icon.link} target="_blank" rel="noopener noreferrer">
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
                   <i
-                    className={icon.class}
+                    className={item.class}
                     style={{
-                      color: icon.color,
-                      backgroundColor: icon.bgColor,
+                      color: item.color,
+                      backgroundColor: item.bgColor,
                     }}
                   ></i>
+                <p>{item.info}</p>
                 </a>
-                <p>{icon.info}</p>
               </li>
             ))}
           </ul>

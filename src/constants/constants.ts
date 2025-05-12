@@ -78,7 +78,14 @@ export const experience = [
   },
 ];
 
-export const icons = [
+export const contacts = [
+  {
+    info: "@AndreaAlarconValdes",
+    class: "fa-brands fa-github",
+    link: "https://github.com/AndreaAlarconValdes",
+    color: "black",
+    bgColor: "white",
+  },
   {
     info: "alarconvaldes.a@gmail.com",
     class: "fa-solid fa-envelope",
@@ -100,13 +107,7 @@ export const icons = [
     color: "white",
     bgColor: "#25D366",
   },
-  {
-    info: "@AndreaAlarconValdes",
-    class: "fa-brands fa-github",
-    link: "https://github.com/AndreaAlarconValdes",
-    color: "black",
-    bgColor: "white",
-  },
+
 ];
 
 export const foldersRoutes = [

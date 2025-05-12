@@ -24,7 +24,6 @@ const Main = () => {
   const [isOpenCV, setIsOpenCV] = useState(false);
   const [isOpenCalculator, setIsOpenCalculator] = useState(false);
 
-  // 👉 Estado para zIndex
   const [zIndexes, setZIndexes] = useState<Record<WindowName, number>>({
     about: 1,
     resume: 1,
@@ -36,7 +35,6 @@ const Main = () => {
   });
   const [currentMaxZ, setCurrentMaxZ] = useState(1);
 
-  // 👉 función para traer al frente
   const bringToFront = (windowName: WindowName) => {
     setCurrentMaxZ((prev) => prev + 1);
     setZIndexes((prev) => ({
