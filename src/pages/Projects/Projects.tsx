@@ -16,17 +16,12 @@ const Projects = ({ onClose, style }: ProjectsProps) => {
           { id: "project1", label: "Project 01" },
           { id: "project2", label: "Project 02" },
           { id: "project3", label: "Project 03" },
+          { id: "project4", label: "Project 04" },
         ]}
         contentMap={{
           project1: (
             <div>
-              <img
-                src="./notes-project.png"
-                style={{
-                  maskImage: "linear-gradient(#fafafa 80%, transparent)",
-                  border: "none",
-                }}
-              />
+              <img src="./notes-project.png" />
               <div className="projects-info-container">
                 <h1>All in order, all in notes</h1>
                 <p>
@@ -38,10 +33,18 @@ const Projects = ({ onClose, style }: ProjectsProps) => {
                   more robust development experience.
                 </p>
                 <div className="projects-links-container">
-                  <a target="_blank" rel="noopener noreferrer" href="https://andreaalarconvaldes.github.io/notes-app/">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://andreaalarconvaldes.github.io/notes-app/"
+                  >
                     Live preview
                   </a>
-                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/AndreaAlarconValdes/notes-app">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/AndreaAlarconValdes/notes-app"
+                  >
                     View code
                   </a>
                 </div>
@@ -49,6 +52,38 @@ const Projects = ({ onClose, style }: ProjectsProps) => {
             </div>
           ),
           project2: (
+            <div>
+              <img src="./wedding-project.png" />
+              <div className="projects-info-container">
+                <h1>Wedding Website</h1>
+                <p>
+                  This is a React-based wedding website, created to provide
+                  guests with all the important details about the big day —
+                  including the date, location, dress code, RSVP,
+                  recommendations, and more. The site is designed to be clean,
+                  modern, and fully responsive, ensuring a smooth experience on
+                  any device.
+                </p>
+                <div className="projects-links-container">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://andreaalarconvaldes.github.io/wedding/"
+                  >
+                    Live preview
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/AndreaAlarconValdes/wedding"
+                  >
+                    View code
+                  </a>
+                </div>
+              </div>
+            </div>
+          ),
+          project3: (
             <div>
               <img src="./to-do-project.png" />
               <div className="projects-info-container">
@@ -82,25 +117,31 @@ const Projects = ({ onClose, style }: ProjectsProps) => {
               </div>
             </div>
           ),
-          project3: (
+          project4: (
             <div>
-              <img
-                src="./portfolio-project.png"
-                style={{
-                  maskImage: "linear-gradient(#fafafa 80%, transparent)",
-                  border: "none",
-                }}
-              />
+              <img src="./portfolio-project.png" />
               <div className="projects-info-container">
                 <h1>Personal portfolio</h1>
                 <p>
-                This is my personal portfolio built with React, TypeScript, and Vite, showcasing my projects, skills, and experience as a Full-Stack developer focused on Front-end. The application is fast, modern, and fully responsive, designed to provide a smooth and clean user experience across all devices.
+                  This is my personal portfolio built with React, TypeScript,
+                  and Vite, showcasing my projects, skills, and experience as a
+                  Full-Stack developer focused on Front-end. The application is
+                  fast, modern, and fully responsive, designed to provide a
+                  smooth and clean user experience across all devices.
                 </p>
                 <div className="projects-links-container">
-                  <a target="_blank" rel="noopener noreferrer" href="https://andreaalarconvaldes.github.io/portfolio-andrea/">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://andreaalarconvaldes.github.io/portfolio-andrea/"
+                  >
                     Live preview
                   </a>
-                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/AndreaAlarconValdes/portfolio-andrea">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/AndreaAlarconValdes/portfolio-andrea"
+                  >
                     View code
                   </a>
                 </div>

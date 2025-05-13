@@ -87,18 +87,18 @@ export const contacts = [
     bgColor: "white",
   },
   {
-    info: "alarconvaldes.a@gmail.com",
-    class: "fa-solid fa-envelope",
-    link: "mailto:alarconvaldes.a@gmail.com",
-    color: "white",
-    bgColor: "#4da6ff",
-  },
-  {
     info: "@andreaalarconvaldes",
     class: "fa-brands fa-linkedin-in",
     link: "https://www.linkedin.com/in/andreaalarconvaldes/",
     color: "white",
     bgColor: "#0051a3",
+  },
+  {
+    info: "alarconvaldes.a@gmail.com",
+    class: "fa-solid fa-envelope",
+    link: "mailto:alarconvaldes.a@gmail.com",
+    color: "white",
+    bgColor: "#4da6ff",
   },
   {
     info: "+353 87 217 3094",

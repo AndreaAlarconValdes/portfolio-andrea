@@ -50,8 +50,41 @@
 
   /* EDUCATION  */
 
-
+  .education-items{
+    padding: 1rem;
+    border-bottom: 1px solid rgb(202, 202, 202);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .education-items h3{
+    margin: 0;
+  }
   /* WORK EXPERIENCE  */
+
+  .experience-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+
+  }
+
+  .experience-title h3{
+    margin: 0;
+  }
+  .roll-description {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    border-bottom: 1px solid rgb(202, 202, 202);
+    padding: 1rem ;
+
+
+  }
+  .roll-description h4{
+    margin: 0;
+  }
 
 @media (max-width: 650px) {
   .skills-items {
@@ -59,7 +92,16 @@
     gap: .5em;
 
   }
+  .experience-title{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+  }
 
+  .roll-description {
+    padding: 1rem .5rem;
+
+  }
 .languages-items li{
   gap: .5rem;
 }

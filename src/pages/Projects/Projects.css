@@ -4,7 +4,6 @@
 padding: 0;
 }
 .projects img {
-    border-bottom: 2px solid black;
     width: -webkit-fill-available;
 }
 
