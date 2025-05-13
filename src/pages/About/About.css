@@ -4,8 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  animation: scale-up-center .2s ease-in-out;
-
+  animation: scale-up-center 0.2s ease-in-out;
 }
 
 .about-description img {
@@ -43,28 +42,32 @@
   margin: 0;
   margin-top: -40px;
   font-size: 22px;
-  animation: scale-up-center .2s both;
-  animation-delay: .5s;
+  animation: scale-up-center 0.2s both;
+  animation-delay: 0.5s;
   opacity: 0;
 }
 
+@media (max-width: 900px) {
+  .about-description img {
+    width: 250px;
+  }
+  .about-description h2 {
+    font-size: 18px;
+  }
+
+  .about-description div {
+    max-width: 400px;
+  }
+}
 @media (max-width: 650px) {
-  .about-box{
+  .about-description img {
+    width: 300px;
+  }
+  .about-box {
     margin: 0 5px;
   }
   .about-description {
     flex-direction: column;
-    padding: .5rem;
-  }
-}
-
-@keyframes scale-up-center {
-    0%{
-        scale: 0.5;
-    }
-
-  100% {
-    scale: 1;
-    opacity: 1;
+    padding: 0.5rem;
   }
 }

@@ -20,7 +20,7 @@ const Contact = ({onClose,style}: ContantProps) => {
                     className={item.class}
                     style={{
                       color: item.color,
-                      backgroundColor: item.bgColor,
+                      background: item.bgColor,
                     }}
                   ></i>
                 <p>{item.info}</p>

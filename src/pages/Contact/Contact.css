@@ -11,7 +11,7 @@ animation: scale-up-center .2s ease-in-out;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
   margin: 0;
   list-style-type: none;
 }

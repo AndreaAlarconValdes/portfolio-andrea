@@ -104,16 +104,30 @@ export const contacts = [
     info: "+353 87 217 3094",
     class: "fa-brands fa-whatsapp",
     link: "",
-    color: "white",
-    bgColor: "#25D366",
+    color: "black",
+    bgColor:
+      "linear-gradient(to right, #169b62 0%, #169b62 33.33%, #ffffff 33.33%, #ffffff 66.66%, #ff883e 66.66%, #ff883e 100%)",
   },
 
+  {
+    info: "+34 644 403 445",
+    class: "fa-brands fa-whatsapp",
+    link: "",
+    color: "black",
+    bgColor:
+      "linear-gradient(to bottom, #aa151b 0%, #aa151b 25%, #f1bf00 25%, #f1bf00 75%, #aa151b 75%, #aa151b 100%)",
+  },
 ];
 
 export const foldersRoutes = [
   { img: "icon-about", title: "About", type: "about", sound: "hm.mp3" },
-  { img: "icon-resume", title: "Resume", type: "resume" , sound: "paper.mp3"},
-  { img: "icon-projects", title: "Projects", type: "projects" , sound: "photos.wav"},
+  { img: "icon-resume", title: "Resume", type: "resume", sound: "paper.mp3" },
+  {
+    img: "icon-projects",
+    title: "Projects",
+    type: "projects",
+    sound: "photos.wav",
+  },
   { img: "icon-contact", title: "Contact", type: "contact", sound: "mail.wav" },
   { img: "icon-bin", title: "Clean", type: "bin", sound: "bin.wav" },
 ];

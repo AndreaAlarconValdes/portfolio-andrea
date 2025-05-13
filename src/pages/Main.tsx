@@ -125,7 +125,6 @@ const Main = () => {
     <div
       className="screen"
       style={{
-        filter: filter,
         backgroundColor: color,
       }}
     >
