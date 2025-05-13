@@ -1,54 +1,49 @@
-# React + TypeScript + Vite
+# PORTFOLIO
+*This is my personal portfolio built using [React](https://reactjs.org/) and [TypeScript](https://www.typescriptlang.org/). It showcases my projects, experience, and skills as a developer.*
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="/public/portfolio-project.png" alt="Image"/>
 
-Currently, two official plugins are available:
+[Click here to go to the project's website.](https://andreaalarconvaldes.github.io/portfolio-andrea/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧠 Concept
 
-## Expanding the ESLint configuration
+The idea behind this portfolio is to make the user feel like they are navigating through a personal computer. You can:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🗂️ Open folders to explore projects and content
+- 🖱️ Drag and move windows anywhere on the screen
+- ❌ Close windows like on a real desktop
+- 🎨 Change the desktop background color
+- 🎛️ Apply visual screen filters (e.g. grayscale, negative, etc.)
+- 🧹 Reset the layout or customize your workspace freely
+
+This concept blends creativity with functionality, providing a unique and playful way to explore my work and personality.
+
+## Steps to run the project on your machine
+
+### Prerequisites:
+
+Make sure you have **Node.js** and **npm** installed on your system. You can check if you already have them installed by running the following commands in the terminal:
+
+
+```bash
+node -v
+npm -v
+```
+## 1. Clone the repository
 
 ```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+git clone https://github.com/AndreaAlarconValdes/portfolio-andrea.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 2. Install dependencies
 
 ```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+cd  portfolio-andrea 
+npm install
+```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 3. Start the development server
+
+```js
+npm run dev
 ```
