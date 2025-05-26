@@ -18,9 +18,9 @@ const Resume = ({ onClose,style }: ResumeProps) => {
         onClose={onClose}
         filters={[
           { id: "skills", label: "Skills" },
-          { id: "languages", label: "Languages" },
-          { id: "education", label: "Education" },
           { id: "experience", label: "Experience" },
+          { id: "education", label: "Education" },
+          { id: "languages", label: "Languages" },
         ]}
         contentMap={{
           skills: (
@@ -37,7 +37,7 @@ const Resume = ({ onClose,style }: ResumeProps) => {
             <div className="languages-items">
             <ul>
               {languages.map((item) => (
-                <li>
+                <li key={item.language}>
                   <img src={`./${item.language}.png`} width={55} />
                   <h3>{item.language}</h3>
                   <p>{item.level}</p>
@@ -49,7 +49,7 @@ const Resume = ({ onClose,style }: ResumeProps) => {
           education: (
             <div className="education-container">
               {education.map((item) => (
-                <div className="education-items">
+                <div className="education-items" key={item.program}>
                   <h3>{item.program}</h3>
                   <p>
                     {item.school}, {item.year}
@@ -61,7 +61,7 @@ const Resume = ({ onClose,style }: ResumeProps) => {
           experience: (
             <div className="experience-container">
               {experience.map((item) => (
-                <div>
+                <div key={item.company}>
                   <div className="experience-title">
                     <h3>{item.company}</h3>
                     <p>

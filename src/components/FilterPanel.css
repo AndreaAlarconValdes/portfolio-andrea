@@ -23,9 +23,20 @@
     padding: 1rem;
     overflow-y: scroll;
 }
-@media (max-width: 650px) {
+@media (max-width: 900px) {
+
+    .filter-panel-container{
+        flex-direction: column;
+    }
 .all-filters{
     padding: 5px;
+    flex-direction: row;
+    justify-content: center;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid black;
+
+
 
 }
     .all-filters div{
@@ -34,7 +45,7 @@
 
     }
 .filters-content-map{
-    width: 250px;
+    width: fit-content;
     height: 450px;
 
     padding: 1rem .5rem;

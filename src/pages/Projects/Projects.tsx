@@ -13,10 +13,10 @@ const Projects = ({ onClose, style }: ProjectsProps) => {
       <FilterPanel
         onClose={onClose}
         filters={[
-          { id: "project1", label: "Project 01" },
-          { id: "project2", label: "Project 02" },
-          { id: "project3", label: "Project 03" },
-          { id: "project4", label: "Project 04" },
+          { id: "project1", label: "Project 1" },
+          { id: "project2", label: "Project 2" },
+          { id: "project3", label: "Project 3" },
+          { id: "project4", label: "Project 4" },
         ]}
         contentMap={{
           project1: (

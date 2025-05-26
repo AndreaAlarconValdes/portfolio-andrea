@@ -12,7 +12,14 @@ import Contact from "./Contact/Contact";
 import About from "./About/About";
 import Resume from "./Resume/Resume";
 
-type WindowName = "about" | "resume" | "projects" | "contact" | "settings" | "cv" |"calculator";
+type WindowName =
+  | "about"
+  | "resume"
+  | "projects"
+  | "contact"
+  | "settings"
+  | "cv"
+  | "calculator";
 
 const Main = () => {
   const { color, setColor, filter, setFilter } = useColor();
@@ -141,38 +148,74 @@ const Main = () => {
       </div>
       <div className="desk">
         <div className="main-desk">
-          <Box className="welcome-box" showCloseBtn={false}>
+          <div className="welcome-box">
+            <img src="./deco.png" alt="deco" />
+            <img src="./deco.png" alt="deco" />
             <video autoPlay playsInline muted id="background-video">
               <source src="./portfolio.mp4" type="video/mp4" />
             </video>
-          </Box>
-          {isOpenCV && <Box square onClose={closeCV} className="CV-box" style={{ zIndex: zIndexes.cv }}>
-        <div className="CV-container">
-          <div>
-            <a href="./CV.pdf" target="_blank" rel="noopener noreferrer">
-              <img
-                src="./icon-resume-hover.png"
-                alt="Imagen con hover"
-                style={{
-                  width: 70,
-                  cursor: "url(./cursor-pointer.png), default",
-                  transition: "all 0.3s ease-in-out",
-                }}
-              />
-            </a>
           </div>
-          <div className="CV-container-text">
-            <h5>Take a look at my CV</h5>
-            <p>Click on the folder to download it</p>
-          </div>
-        </div>
-      </Box>}
-          {isOpenCalculator && <Calculator onClose={closeCalculator} style={{ zIndex: zIndexes.calculator }} />}
-          {isOpenSettings && <Settings onColorChange={setColor} onFilterChange={setFilter} onClose={closeSettings} style={{ zIndex: zIndexes.settings }} />}
-          {isOpenAbout && <About onClose={closeAbout} style={{ zIndex: zIndexes.about }} />}
-          {isOpenResume && <Resume onClose={closeResume} style={{ zIndex: zIndexes.resume }} />}
-          {isOpenProjects && <Projects onClose={closeProjects} style={{ zIndex: zIndexes.projects }} />}
-          {isOpenContact && <Contact onClose={closeContact} style={{ zIndex: zIndexes.contact }} />}
+
+          {isOpenCV && (
+            <Box
+              square
+              onClose={closeCV}
+              className="CV-box"
+              style={{ zIndex: zIndexes.cv }}
+            >
+              <div className="CV-container">
+                <div>
+                  <a href="./CV.pdf" target="_blank" rel="noopener noreferrer">
+                    <img
+                      src="./icon-resume-hover.png"
+                      alt="Imagen con hover"
+                      style={{
+                        width: 70,
+                        cursor: "url(./cursor-pointer.png), default",
+                        transition: "all 0.3s ease-in-out",
+                      }}
+                    />
+                  </a>
+                </div>
+                <div className="CV-container-text">
+                  <h5>Take a look at my CV</h5>
+                  <p>Click on the folder to download it</p>
+                </div>
+              </div>
+            </Box>
+          )}
+          {isOpenCalculator && (
+            <Calculator
+              onClose={closeCalculator}
+              style={{ zIndex: zIndexes.calculator }}
+            />
+          )}
+          {isOpenSettings && (
+            <Settings
+              onColorChange={setColor}
+              onFilterChange={setFilter}
+              onClose={closeSettings}
+              style={{ zIndex: zIndexes.settings }}
+            />
+          )}
+          {isOpenAbout && (
+            <About onClose={closeAbout} style={{ zIndex: zIndexes.about }} />
+          )}
+          {isOpenResume && (
+            <Resume onClose={closeResume} style={{ zIndex: zIndexes.resume }} />
+          )}
+          {isOpenProjects && (
+            <Projects
+              onClose={closeProjects}
+              style={{ zIndex: zIndexes.projects }}
+            />
+          )}
+          {isOpenContact && (
+            <Contact
+              onClose={closeContact}
+              style={{ zIndex: zIndexes.contact }}
+            />
+          )}
         </div>
         <div className="routes-desk">
           <ul>
