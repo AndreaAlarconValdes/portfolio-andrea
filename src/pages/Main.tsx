@@ -150,7 +150,7 @@ const Main = () => {
         <div className="main-desk">
           <div className="welcome-box">
             <img src="./deco.png" alt="deco" />
-            <img src="./deco.png" alt="deco" />
+            <img src="./deco(1).png" alt="deco" />
             <video autoPlay playsInline muted id="background-video">
               <source src="./portfolio.mp4" type="video/mp4" />
             </video>
