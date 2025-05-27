@@ -11,6 +11,8 @@ import Projects from "./Projects/Projects";
 import Contact from "./Contact/Contact";
 import About from "./About/About";
 import Resume from "./Resume/Resume";
+import { driver } from "driver.js";
+import "driver.js/dist/driver.css";
 
 type WindowName =
   | "about"
@@ -22,6 +24,131 @@ type WindowName =
   | "calculator";
 
 const Main = () => {
+  // const driverObj = driver({
+  //   showProgress: true,
+  
+  //   steps: [
+  //     {
+  //       popover: {
+  //         title: "How It Works",
+  //         description:
+  //           "Take a quick interactive tour to learn how to navigate this portfolio.",
+  //       },
+  //     },
+  //     {
+  //       element: "#routes ul:nth-child(1)",
+  //       popover: {
+  //         title: "Start Exploring",
+  //         description:
+  //           "Navigate the site to discover what I’ve built, how I work, and what I offer.",
+  //         side: "left",
+  //         align: "center",
+  //       },
+  //     },
+  //     {
+  //       element: "#routes li:nth-child(5)",
+  //       popover: {
+  //         title: "Close All Tabs",
+  //         description: "Click here to close all open tabs at once.",
+  //         side: "left",
+  //         align: "center",
+  //       },
+  //     },
+  //     {
+  //       element: "#settings",
+  //       popover: {
+  //         title: "Appearance",
+  //         description:
+  //           "Use the settings panel to personalize the look of the site. Play with color modes and visual filters to personalize your experience.",
+  //         side: "bottom",
+  //         align: "start",
+  //       },
+  //     },
+  //     {
+  //       element: "#cv",
+  //       popover: {
+  //         title: "Get My CV",
+  //         description: "Get a PDF version of my Curriculum Vitae.",
+  //         side: "bottom",
+  //         align: "start",
+  //       },
+  //     },
+  //     {
+  //       popover: {
+  //         title: "You're All Set!",
+  //         description:
+  //           "Thanks for taking the tour. Feel free to explore the site at your own pace.",
+  //       },
+  //     },
+  //   ],
+  // });
+
+  
+  // driverObj.drive();
+
+  useEffect(() => {
+    const hasSeenTour = localStorage.getItem('hasSeenTour');
+
+    if (!hasSeenTour) {
+      const driverObj = driver({
+        showProgress: true,
+        steps: [
+          {
+            popover: {
+              title: 'How It Works',
+              description: 'Take a quick interactive tour to learn how to navigate this portfolio.',
+            },
+          },
+          {
+            element: '#routes ul',
+            popover: {
+              title: 'Start Exploring',
+              description: 'Navigate the site to discover what I’ve built, how I work, and what I offer.',
+              side: 'left',
+              align: 'center',
+            },
+          },
+          {
+            element: '#routes li:nth-child(5)',
+            popover: {
+              title: 'Close All Tabs',
+              description: 'Click here to close all open tabs at once.',
+              side: 'left',
+              align: 'center',
+            },
+          },
+          {
+            element: '#settings',
+            popover: {
+              title: 'Appearance',
+              description: 'Use the settings panel to personalize the look of the site. Play with color modes and visual filters to personalize your experience.',
+              side: 'bottom',
+              align: 'start',
+            },
+          },
+          {
+            element: '#cv',
+            popover: {
+              title: 'Get My CV',
+              description: 'Get a PDF version of my Curriculum Vitae.',
+              side: 'bottom',
+              align: 'start',
+            },
+          },
+          {
+            popover: {
+              title: "You're All Set!",
+              description: 'Thanks for taking the tour. Feel free to explore the site at your own pace.',
+            },
+          },
+        ],
+      });
+
+      driverObj.drive();
+    } 
+  }, []);
+  
+
   const { color, setColor, filter, setFilter } = useColor();
   const [isOpenResume, setIsOpenResume] = useState(false);
   const [isOpenAbout, setIsOpenAbout] = useState(false);
@@ -139,8 +266,12 @@ const Main = () => {
         <div className="menu-bar-nav">
           <h3>Andrea Alarcón</h3>
           <div className="nav">
-            <button onClick={openSettings}>Settings</button>
-            <button onClick={openCV}>CV</button>
+            <button onClick={openSettings} id="settings">
+              Settings
+            </button>
+            <button onClick={openCV} id="cv">
+              CV
+            </button>
             <button onClick={openCalculator}>Calculator</button>
           </div>
         </div>
@@ -217,7 +348,7 @@ const Main = () => {
             />
           )}
         </div>
-        <div className="routes-desk">
+        <div className="routes-desk" id="routes">
           <ul>
             {foldersRoutes.map((item) => (
               <li key={item.title}>

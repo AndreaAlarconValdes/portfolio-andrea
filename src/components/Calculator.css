@@ -70,7 +70,9 @@
 
 
 @media (max-width: 650px) {
-  
+.calculator-container {
+  max-width: 150px;
+}
 
   .calculator-container .calculator-display {
     font-size: 1rem;

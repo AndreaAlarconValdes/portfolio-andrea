@@ -27,11 +27,12 @@ p {
   justify-content: center;
   animation: scale-up-center 0.2s ease-in-out;
 }
-/* @media (max-width: 900px) {
-  .general-page {
-    padding: 0 10px;
-  }
-} */
+
+a {
+  color: black;
+  -webkit-color: black;
+  text-decoration: none;
+}
 
 @media (max-width: 650px) {
   .about{

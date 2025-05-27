@@ -17,8 +17,6 @@ animation: scale-up-center .2s ease-in-out;
 }
 
 .contact-info a {
-  color: black;
-  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 1rem;
