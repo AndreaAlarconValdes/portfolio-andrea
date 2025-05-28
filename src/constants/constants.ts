@@ -120,26 +120,20 @@ export const contacts = [
 ];
 
 export const foldersRoutes = [
-  { img: "icon-about", title: "About", type: "about", sound: "hm.mp3" },
-  { img: "icon-resume", title: "Resume", type: "resume", sound: "paper.mp3" },
+  { img: "icon-about", title: "About", type: "about" },
+  { img: "icon-resume", title: "Resume", type: "resume" },
   {
     img: "icon-projects",
     title: "Projects",
     type: "projects",
-    sound: "photos.wav",
   },
-  { img: "icon-contact", title: "Contact", type: "contact", sound: "mail.wav" },
-  { img: "icon-bin", title: "Clean", type: "bin", sound: "bin.wav" },
+  { img: "icon-contact", title: "Contact", type: "contact" },
+  { img: "icon-bin", title: "Clean", type: "bin" },
 ];
 
-export const aboutFilters = [
-  { name: "Background" },
-  { name: "Hobbies" },
-  { name: "Personal information" },
-];
-
-export const aboutItems = [
-  { description: "Lorem ipsum 1", category: "Background" },
-  { description: "Lorem ipsum 2", category: "Hobbies" },
-  { description: "Lorem ipsum 3", category: "Personal information" },
+export const deskFolders = [
+  { className: "resumepdf-icon", img: "paper", title: "Resume.pdf", sound: "", link: "./CV.pdf" },
+  { className: "folder-01", img: "folder", title: "Project 01 (Ecommerce)", sound: "paper.mps", link: "https://github.com/AndreaAlarconValdes/shopping-app" },
+  { className: "folder-02", img: "folder", title: "Project 02 (NotesApp)", sound: "paper.mps", link: "https://github.com/AndreaAlarconValdes/notes-app" },
+  { className: "folder-03", img: "folder", title: "Project 03 (Portfolio)", sound: "paper.mps", link: "https://github.com/AndreaAlarconValdes/portfolio-andrea" },
 ];

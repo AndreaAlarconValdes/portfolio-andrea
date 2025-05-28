@@ -1,0 +1,56 @@
+
+.desk-folders img{
+    cursor: pointer;
+    width: 60px;
+    filter: drop-shadow(3px 3px 0px rgba(69, 69, 69, 0.4));
+  
+    transition: all 0.2s ease-in-out;
+}
+
+.desk-folders img:hover{
+    scale: 1.1;
+}
+.resumepdf-icon, .folder-01, .folder-02, .folder-03{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+  font-size: 14px;
+
+}
+.resumepdf-icon {
+    top: 10%;
+    right: 5%;
+  }
+  .folder-01 {
+    top: 30%;
+    right: 15%;
+  }
+  
+  .folder-02 {
+    bottom: 40%;
+    right: 3%;
+  }
+
+  .folder-03 {
+    bottom: 15%;
+    right: 10%;
+  }
+
+@media (max-width: 800px) {
+    .resumepdf-icon {
+        top: 30%;
+      }
+      .folder-01 {
+        top: 58%;
+       right: 25%;
+        transform: translateX(-25%);
+      }
+      
+      .folder-02 {
+        bottom: 18%;
+        right: 55%;
+      }
+}

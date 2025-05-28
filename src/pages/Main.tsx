@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useColor } from "../context/ColorContext";
 import "./Main.css";
 import Clock from "../components/Clock";
-import Folder from "../components/Folder";
 import { foldersRoutes } from "../constants/constants";
 import Box from "../components/Box";
 import Calculator from "../components/Calculator";
@@ -12,6 +11,7 @@ import Contact from "./Contact/Contact";
 import About from "./About/About";
 import Resume from "./Resume/Resume";
 import DeskFolders from "../components/DeskFolders";
+import Note from "../components/Note";
 
 type WindowName =
   | "about"
@@ -31,7 +31,7 @@ const Main = () => {
   const [isOpenSettings, setIsOpenSettings] = useState(false);
   const [isOpenCV, setIsOpenCV] = useState(false);
   const [isOpenCalculator, setIsOpenCalculator] = useState(false);
-
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const [zIndexes, setZIndexes] = useState<Record<WindowName, number>>({
     about: 1,
@@ -130,7 +130,6 @@ const Main = () => {
     closeCV();
   };
 
-
   return (
     <div
       className="screen"
@@ -153,7 +152,8 @@ const Main = () => {
         </div>
         <Clock />
       </div>
-      <DeskFolders/>
+      <DeskFolders />
+      <Note />
       <div className="desk">
         <div className="main-desk">
           <div className="welcome-box">
@@ -254,24 +254,32 @@ const Main = () => {
           )}
         </div>
         <div className="routes-desk" id="routes">
-          <ul>
-            {foldersRoutes.map((item) => (
-              <li key={item.title}>
-                <Folder
-                  img={item.img}
-                  title={item.title}
-                  sound={item.sound}
-                  handleOnClick={() => {
-                    if (item.type === "about") openAbout();
-                    else if (item.type === "resume") openResume();
-                    else if (item.type === "projects") openProjects();
-                    else if (item.type === "contact") openContact();
-                    else if (item.type === "bin") closeAll();
-                  }}
-                />
-              </li>
-            ))}
-          </ul>
+          {foldersRoutes.map((item, index) => (
+            <button
+            className="routes-button"
+              key={item.title}
+              onClick={() => {
+                if (item.type === "about") openAbout();
+                else if (item.type === "resume") openResume();
+                else if (item.type === "projects") openProjects();
+                else if (item.type === "contact") openContact();
+                else if (item.type === "bin") closeAll();
+              }}
+            >
+              <img
+                src={
+                  hoveredIndex === index
+                    ? `./${item.img}-hover.png`
+                    : `./${item.img}.png`
+                }
+                alt={`${item.title} image`}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              />
+              <span className="tooltip-text">{item.title}</span>
+            </button>
+
+          ))}
         </div>
       </div>
     </div>
