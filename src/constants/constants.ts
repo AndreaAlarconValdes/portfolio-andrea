@@ -21,62 +21,7 @@ export const skills = [
   { icon: "shopify", name: "shopify", category: "Others" },
 ];
 
-export const skillsFilters = [
-  { name: "All", icon: "fa-solid fa-globe" },
-  { name: "Frontend", icon: "fa-solid fa-desktop" },
-  { name: "Backend", icon: "fa-solid fa-gear" },
-  { name: "Others", icon: "fa-solid fa-wrench" },
-];
-
-export const education = [
-  {
-    program: "Google Ads Certification",
-    school: "Grow with Google",
-    year: "Currently",
-  },
-  {
-    program: "Software Engineering Bootcamp",
-    school: "Ironhack",
-    year: "Aug 2022 - Dec 2022",
-  },
-  {
-    program: "Science Bachelor Degree",
-    school: "IES Bruguers",
-    year: "2015 - 2017",
-  },
-];
-export const languages = [
-  { language: "english", level: "Advanced" },
-  { language: "spanish", level: "Native" },
-  { language: "catalan", level: "Native" },
-];
-
-export const experience = [
-  {
-    year: "2024 - present",
-    position: "Supervisor",
-    company: "Jump Juice Bar",
-    location: "Dublin, Ireland",
-    description:
-      "As a supervisor, I was responsible for leading a team, managing stock control, optimizing task distribution, reducing service times, ensuring product availability, and driving sales through effective coordination and leadership.",
-  },
-  {
-    year: "Jan 2023 - Dec 2023",
-    position: "Full Stack Developer",
-    company: "Haddock",
-    location: "Barcelona, Spain",
-    description:
-      "At a company specialising in expense management software solutions for the hospitality industry, I was part of the team responsible for developing and enhancing the web platform. I contributed to the end-to-end development, improving data management processes, implementing front-end interfaces and working closely with the UX/UI team to deliver a seamless and intuitive user experience.",
-  },
-  {
-    year: "Nov 2020 - Dec 2022",
-    position: "Administrative",
-    company: "Barcelona Epidemiology Service",
-    location: "Barcelona, Spain",
-    description:
-      "As administrative support at the Epidemiological Service, I managed Covid-19 data, ensured compliance, and produced reports to inform public health decisions.",
-  },
-];
+export const softSkills = ["Problem-solving", "Project management","Proactive", "Creative", "Critical thinking", "Adaptability", "Communication", "Teamwork", "Time management"]
 
 export const contacts = [
   {
@@ -121,19 +66,69 @@ export const contacts = [
 
 export const foldersRoutes = [
   { img: "icon-about", title: "About", type: "about" },
-  { img: "icon-resume", title: "Resume", type: "resume" },
-  {
-    img: "icon-projects",
-    title: "Projects",
-    type: "projects",
-  },
+  { img: "icon-skills", title: "Skills", type: "skills" },
   { img: "icon-contact", title: "Contact", type: "contact" },
+  { img: "message", title: "Messages", type: "message" },
+  { img: "calculator", title: "Calculator", type: "calculator" },
+  { img: "icon-settings", title: "Settings", type: "settings" },
   { img: "icon-bin", title: "Clean", type: "bin" },
 ];
 
 export const deskFolders = [
-  { className: "resumepdf-icon", img: "paper", title: "Resume.pdf", sound: "", link: "./CV.pdf" },
-  { className: "folder-01", img: "folder", title: "Project 01 (Ecommerce)", sound: "paper.mps", link: "https://github.com/AndreaAlarconValdes/shopping-app" },
-  { className: "folder-02", img: "folder", title: "Project 02 (NotesApp)", sound: "paper.mps", link: "https://github.com/AndreaAlarconValdes/notes-app" },
-  { className: "folder-03", img: "folder", title: "Project 03 (Portfolio)", sound: "paper.mps", link: "https://github.com/AndreaAlarconValdes/portfolio-andrea" },
+  {
+    className: "resumepdf-icon",
+    img: "paper",
+    title: "Resume.pdf",
+    sound: "",
+    link: "./CV.pdf",
+  },
+  {
+    className: "folder-01",
+    img: "folder",
+    title: "Project 01 (Ecommerce)",
+    sound: "paper.mps",
+    link: "https://github.com/AndreaAlarconValdes/shopping-app",
+  },
+  {
+    className: "folder-02",
+    img: "folder",
+    title: "Project 02 (NotesApp)",
+    sound: "paper.mps",
+    link: "https://github.com/AndreaAlarconValdes/notes-app",
+  },
+  {
+    className: "folder-03",
+    img: "folder",
+    title: "Project 03 (Portfolio)",
+    sound: "paper.mps",
+    link: "https://github.com/AndreaAlarconValdes/portfolio-andrea",
+  },
+];
+
+export const messages = [
+  {
+    question: "What's your main focus as a developer?",
+    answer:
+      "I'm a full-stack web developer with a strong passion for front-end development. I love creating clean, interactive, and visually compelling user experiences. Design and creativity drive my work, and I enjoy bringing ideas to life in the browser.",
+  },
+  {
+    question: "What other areas are you interested in?",
+    answer:
+      "Besides development, I'm deeply interested in design and marketing. I've self-taught tools like Figma, Photoshop, Krita, and explored platforms like Google Ads. This helps me bridge the gap between design, development, and strategy.",
+  },
+  {
+    question: "Where are you based?",
+    answer:
+      "I'm originally from Barcelona, but currently living in Dublin. This international experience helps me stay adaptable and connect with diverse teams and cultures. I speak three languages—English, Spanish, and Catalan—which allows me to communicate effectively in multilingual environments.",
+  },
+  {
+    question: "What makes you a good collaborator?",
+    answer:
+      "I’m a good collaborator because I genuinely value clear communication, empathy, and shared goals. I love bouncing around ideas with others, giving and receiving feedback, and building things as a team. I believe good collaboration is key to great user experiences.",
+  },
+  {
+    question: "What kind of projects do you enjoy the most?",
+    answer:
+      "I really enjoy projects where design, user experience, and functionality all come together. Whether it's a marketing website, an interactive dashboard, or a creative web app, I love working on things that are both useful and beautiful.",
+  },
 ];

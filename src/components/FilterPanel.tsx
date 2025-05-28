@@ -35,7 +35,7 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
                 backgroundColor:
                   activeFilter === filter.id ? "#fafafa" : "transparent",
                 border:
-                  activeFilter === filter.id ? "2px solid black" : "none",
+                  activeFilter === filter.id ? "2px solid black" : "2px solid transparent",
               }}
               onClick={() => setActiveFilter(filter.id)}
             >

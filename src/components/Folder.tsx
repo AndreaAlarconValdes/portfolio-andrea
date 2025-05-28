@@ -37,7 +37,7 @@ const Folder = ({
 
   return (
     <div className={className}>
-        <a href={to}>
+        <a href={to} target="_blank">
           <img
             src={isHovered ? `./${img}-hover.png` : `./${img}.png`}
             alt={`${title} image`}

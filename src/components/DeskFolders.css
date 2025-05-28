@@ -3,7 +3,6 @@
     cursor: pointer;
     width: 60px;
     filter: drop-shadow(3px 3px 0px rgba(69, 69, 69, 0.4));
-  
     transition: all 0.2s ease-in-out;
 }
 
@@ -40,6 +39,14 @@
   }
 
 @media (max-width: 800px) {
+.desk-folders img{
+  width: 50px;
+}
+
+.resumepdf-icon, .folder-01, .folder-02, .folder-03{
+font-size: 12px;
+
+}
     .resumepdf-icon {
         top: 30%;
       }
@@ -50,7 +57,7 @@
       }
       
       .folder-02 {
-        bottom: 18%;
+        bottom: 17%;
         right: 55%;
       }
 }

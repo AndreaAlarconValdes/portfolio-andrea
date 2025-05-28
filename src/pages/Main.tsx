@@ -9,15 +9,17 @@ import Settings from "../components/Settings";
 import Projects from "./Projects/Projects";
 import Contact from "./Contact/Contact";
 import About from "./About/About";
-import Resume from "./Resume/Resume";
+import Skills from "./Skills/Skills";
 import DeskFolders from "../components/DeskFolders";
 import Note from "../components/Note";
+import Chat from "../components/Chat";
 
 type WindowName =
   | "about"
-  | "resume"
+  | "skills"
   | "projects"
   | "contact"
+  | "message"
   | "settings"
   | "cv"
   | "calculator";
@@ -26,21 +28,22 @@ const Main = () => {
   const { color, setColor, filter, setFilter } = useColor();
   const [isOpenResume, setIsOpenResume] = useState(false);
   const [isOpenAbout, setIsOpenAbout] = useState(false);
+  const [isOpenMessage, setIsOpenMessage] = useState(false);
   const [isOpenContact, setIsOpenContact] = useState(false);
   const [isOpenProjects, setIsOpenProjects] = useState(false);
   const [isOpenSettings, setIsOpenSettings] = useState(false);
   const [isOpenCV, setIsOpenCV] = useState(false);
   const [isOpenCalculator, setIsOpenCalculator] = useState(false);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const [zIndexes, setZIndexes] = useState<Record<WindowName, number>>({
     about: 1,
-    resume: 1,
+    skills: 1,
     projects: 1,
     contact: 1,
     settings: 1,
     cv: 1,
     calculator: 1,
+    message: 1,
   });
   const [currentMaxZ, setCurrentMaxZ] = useState(1);
 
@@ -95,7 +98,7 @@ const Main = () => {
 
   const openResume = () => {
     setIsOpenResume(true);
-    bringToFront("resume");
+    bringToFront("skills");
   };
 
   const closeResume = () => {
@@ -109,6 +112,15 @@ const Main = () => {
 
   const closeContact = () => {
     setIsOpenContact(false);
+  };
+
+    const openMessage = () => {
+    setIsOpenMessage(true);
+    bringToFront("message");
+  };
+
+  const closeMessage = () => {
+    setIsOpenMessage(false);
   };
 
   const openProjects = () => {
@@ -128,6 +140,7 @@ const Main = () => {
     closeContact();
     closeProjects();
     closeCV();
+    closeMessage();
   };
 
   return (
@@ -147,7 +160,6 @@ const Main = () => {
             <button onClick={openCV} id="cv">
               Resume
             </button>
-            <button onClick={openCalculator}>Calculator</button>
           </div>
         </div>
         <Clock />
@@ -203,10 +215,10 @@ const Main = () => {
                 <div>
                   <a href="./CV.pdf" target="_blank" rel="noopener noreferrer">
                     <img
-                      src="./icon-resume-hover.png"
+                      src="./folder-hover.png"
                       alt="Imagen con hover"
                       style={{
-                        width: 70,
+                        width: 60,
                         cursor: "url(./cursor-pointer.png), default",
                         transition: "all 0.3s ease-in-out",
                       }}
@@ -238,7 +250,7 @@ const Main = () => {
             <About onClose={closeAbout} style={{ zIndex: zIndexes.about }} />
           )}
           {isOpenResume && (
-            <Resume onClose={closeResume} style={{ zIndex: zIndexes.resume }} />
+            <Skills onClose={closeResume} style={{ zIndex: zIndexes.skills }} />
           )}
           {isOpenProjects && (
             <Projects
@@ -252,33 +264,35 @@ const Main = () => {
               style={{ zIndex: zIndexes.contact }}
             />
           )}
+           {isOpenMessage && (
+            <Chat
+              onClose={closeMessage}
+              style={{ zIndex: zIndexes.message }}
+            />
+          )}
         </div>
         <div className="routes-desk" id="routes">
-          {foldersRoutes.map((item, index) => (
+          {foldersRoutes.map((item) => (
             <button
-            className="routes-button"
+              className="routes-button"
               key={item.title}
               onClick={() => {
                 if (item.type === "about") openAbout();
-                else if (item.type === "resume") openResume();
+                else if (item.type === "skills") openResume();
                 else if (item.type === "projects") openProjects();
                 else if (item.type === "contact") openContact();
+                else if (item.type === "message") openMessage();
+                else if (item.type === "calculator") openCalculator();
+                else if (item.type === "settings") openSettings();
                 else if (item.type === "bin") closeAll();
               }}
             >
               <img
-                src={
-                  hoveredIndex === index
-                    ? `./${item.img}-hover.png`
-                    : `./${item.img}.png`
-                }
+                src={`./${item.img}.png`}
                 alt={`${item.title} image`}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
               />
               <span className="tooltip-text">{item.title}</span>
             </button>
-
           ))}
         </div>
       </div>

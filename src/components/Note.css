@@ -35,6 +35,9 @@
 @media (max-width: 650px) {
 .note{
     padding: .5rem;
+    font-size: 12px;
+    top: 6%;
+
 
 }
 }
