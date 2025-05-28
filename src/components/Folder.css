@@ -4,6 +4,7 @@
   justify-content: flex-end;
   align-items: center;
   cursor: pointer;
+  gap: .5rem;
 }
 
 .folder-container button {
@@ -14,28 +15,16 @@
 
 .folder-container img{
   cursor: pointer;
-  width: 85px;
+  width: 60px;
   filter: drop-shadow(3px 3px 0px rgba(69, 69, 69, 0.4));
 
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.folder-container img:hover{
+  scale: 1.1;
 }
 .folder-container p {
-  font-family: 'Alumni Sans Pinstripe', sans-serif;
-  text-transform: uppercase;
   font-size: 14px;
 }
 
-
-@media (max-width:900px) {
-
-.folder-container img{
-  width: 60px;
-}
-}
-
-
-@media (max-width:650px) {
-  .folder-container img{
-    width: 55px;
-  }
-  }

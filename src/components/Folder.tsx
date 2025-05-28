@@ -4,11 +4,12 @@ import "./Folder.css";
 interface FolderProps {
   img: string; 
   title: string;
-  sound: string; 
+  sound?: string; 
   handleOnClick: () => void;
+  className?: string;
 }
 
-const Folder = ({ img, title, sound, handleOnClick }: FolderProps) => {
+const Folder = ({ img, title, sound, handleOnClick, className }: FolderProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 900);
 
@@ -43,6 +44,9 @@ const Folder = ({ img, title, sound, handleOnClick }: FolderProps) => {
   };
 
   return (
+    <div
+    className={className}
+    >
     <div className="folder-container">
       <button onClick={handleOnClick}>
         <img
@@ -57,6 +61,7 @@ const Folder = ({ img, title, sound, handleOnClick }: FolderProps) => {
         />
       </button>
       <p>{title}</p>
+    </div>
     </div>
   );
 };

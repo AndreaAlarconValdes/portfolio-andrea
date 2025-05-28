@@ -11,8 +11,7 @@ import Projects from "./Projects/Projects";
 import Contact from "./Contact/Contact";
 import About from "./About/About";
 import Resume from "./Resume/Resume";
-import { driver } from "driver.js";
-import "driver.js/dist/driver.css";
+import DeskFolders from "../components/DeskFolders";
 
 type WindowName =
   | "about"
@@ -24,131 +23,6 @@ type WindowName =
   | "calculator";
 
 const Main = () => {
-  // const driverObj = driver({
-  //   showProgress: true,
-  
-  //   steps: [
-  //     {
-  //       popover: {
-  //         title: "How It Works",
-  //         description:
-  //           "Take a quick interactive tour to learn how to navigate this portfolio.",
-  //       },
-  //     },
-  //     {
-  //       element: "#routes ul:nth-child(1)",
-  //       popover: {
-  //         title: "Start Exploring",
-  //         description:
-  //           "Navigate the site to discover what I’ve built, how I work, and what I offer.",
-  //         side: "left",
-  //         align: "center",
-  //       },
-  //     },
-  //     {
-  //       element: "#routes li:nth-child(5)",
-  //       popover: {
-  //         title: "Close All Tabs",
-  //         description: "Click here to close all open tabs at once.",
-  //         side: "left",
-  //         align: "center",
-  //       },
-  //     },
-  //     {
-  //       element: "#settings",
-  //       popover: {
-  //         title: "Appearance",
-  //         description:
-  //           "Use the settings panel to personalize the look of the site. Play with color modes and visual filters to personalize your experience.",
-  //         side: "bottom",
-  //         align: "start",
-  //       },
-  //     },
-  //     {
-  //       element: "#cv",
-  //       popover: {
-  //         title: "Get My CV",
-  //         description: "Get a PDF version of my Curriculum Vitae.",
-  //         side: "bottom",
-  //         align: "start",
-  //       },
-  //     },
-  //     {
-  //       popover: {
-  //         title: "You're All Set!",
-  //         description:
-  //           "Thanks for taking the tour. Feel free to explore the site at your own pace.",
-  //       },
-  //     },
-  //   ],
-  // });
-
-  
-  // driverObj.drive();
-
-  useEffect(() => {
-    const hasSeenTour = localStorage.getItem('hasSeenTour');
-
-    if (!hasSeenTour) {
-      const driverObj = driver({
-        showProgress: true,
-        steps: [
-          {
-            popover: {
-              title: 'How It Works',
-              description: 'Take a quick interactive tour to learn how to navigate this portfolio.',
-            },
-          },
-          {
-            element: '#routes ul',
-            popover: {
-              title: 'Start Exploring',
-              description: 'Navigate the site to discover what I’ve built, how I work, and what I offer.',
-              side: 'left',
-              align: 'center',
-            },
-          },
-          {
-            element: '#routes li:nth-child(5)',
-            popover: {
-              title: 'Close All Tabs',
-              description: 'Click here to close all open tabs at once.',
-              side: 'left',
-              align: 'center',
-            },
-          },
-          {
-            element: '#settings',
-            popover: {
-              title: 'Appearance',
-              description: 'Use the settings panel to personalize the look of the site. Play with color modes and visual filters to personalize your experience.',
-              side: 'bottom',
-              align: 'start',
-            },
-          },
-          {
-            element: '#cv',
-            popover: {
-              title: 'Get My CV',
-              description: 'Get a PDF version of my Curriculum Vitae.',
-              side: 'bottom',
-              align: 'start',
-            },
-          },
-          {
-            popover: {
-              title: "You're All Set!",
-              description: 'Thanks for taking the tour. Feel free to explore the site at your own pace.',
-            },
-          },
-        ],
-      });
-
-      driverObj.drive();
-    } 
-  }, []);
-  
-
   const { color, setColor, filter, setFilter } = useColor();
   const [isOpenResume, setIsOpenResume] = useState(false);
   const [isOpenAbout, setIsOpenAbout] = useState(false);
@@ -157,6 +31,7 @@ const Main = () => {
   const [isOpenSettings, setIsOpenSettings] = useState(false);
   const [isOpenCV, setIsOpenCV] = useState(false);
   const [isOpenCalculator, setIsOpenCalculator] = useState(false);
+
 
   const [zIndexes, setZIndexes] = useState<Record<WindowName, number>>({
     about: 1,
@@ -255,6 +130,7 @@ const Main = () => {
     closeCV();
   };
 
+
   return (
     <div
       className="screen"
@@ -270,21 +146,50 @@ const Main = () => {
               Settings
             </button>
             <button onClick={openCV} id="cv">
-              CV
+              Resume
             </button>
             <button onClick={openCalculator}>Calculator</button>
           </div>
         </div>
         <Clock />
       </div>
+      <DeskFolders/>
       <div className="desk">
         <div className="main-desk">
           <div className="welcome-box">
-            <img src="./deco.png" alt="deco" />
-            <img src="./deco(1).png" alt="deco" />
-            <video autoPlay playsInline muted id="background-video">
-              <source src="./portfolio.mp4" type="video/mp4" />
-            </video>
+            <div className="box-wrapper">
+              <span className="word-wrapper">
+                <span className="letter-framer">w</span>
+                <span className="letter-framer">e</span>
+                <span className="letter-framer">l</span>
+                <span className="letter-framer">c</span>
+                <span className="letter-framer">o</span>
+                <span className="letter-framer">m</span>
+                <span className="letter-framer">e</span>
+              </span>
+              <span className="word-wrapper">
+                <span className="letter-framer">t</span>
+                <span className="letter-framer">o</span>
+              </span>
+              <span className="word-wrapper">
+                <span className="letter-framer">m</span>
+                <span className="letter-framer">y</span>
+              </span>
+            </div>
+            <div>
+              <span className="word-wrapper title">
+                <span className="letter-framer">p</span>
+                <span className="letter-framer">o</span>
+                <span className="letter-framer">r</span>
+                <span className="letter-framer">t</span>
+                <span className="letter-framer">f</span>
+                <span className="letter-framer">o</span>
+                <span className="letter-framer">l</span>
+                <span className="letter-framer">i</span>
+                <span className="letter-framer">o</span>
+                <span className="letter-framer">.</span>
+              </span>
+            </div>
           </div>
 
           {isOpenCV && (
