@@ -51,13 +51,13 @@ font-size: 12px;
         top: 30%;
       }
       .folder-01 {
-        top: 58%;
+        top: 60%;
        right: 25%;
         transform: translateX(-25%);
       }
       
       .folder-02 {
-        bottom: 17%;
+        bottom: 15%;
         right: 55%;
       }
 }
