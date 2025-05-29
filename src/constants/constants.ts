@@ -108,7 +108,7 @@ export const deskFolders = [
     img: "folder",
     title: "School Projects",
     sound: "paper.mps",
-    link: "https://andreaalarconvaldes.github.io/SchoolProjects/",
+    link: "https://github.com/AndreaAlarconValdes/ironhack-labs",
   },
 ];
 
