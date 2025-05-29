@@ -103,7 +103,15 @@ export const deskFolders = [
     sound: "paper.mps",
     link: "https://github.com/AndreaAlarconValdes/portfolio-andrea",
   },
+  {
+    className: "folder-04",
+    img: "folder",
+    title: "School Projects",
+    sound: "paper.mps",
+    link: "https://andreaalarconvaldes.github.io/SchoolProjects/",
+  },
 ];
+
 
 export const messages = [
   {
