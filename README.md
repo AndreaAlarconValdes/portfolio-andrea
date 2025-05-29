@@ -1,7 +1,9 @@
 # PORTFOLIO
 *This is my personal portfolio built using [React](https://reactjs.org/) and [TypeScript](https://www.typescriptlang.org/). It showcases my projects, experience, and skills as a developer.*
 
-<img src="/public/portfolio-project.png" alt="Image"/>
+<a href="https://andreaalarconvaldes.github.io/portfolio-andrea/" target="_blank">
+<img src="/public/portfolio-mockup.png" alt=website  />
+</a>
 
 [Click here to go to the project's website.](https://andreaalarconvaldes.github.io/portfolio-andrea/)
 
