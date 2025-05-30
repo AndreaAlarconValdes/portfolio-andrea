@@ -1,24 +1,87 @@
-.about-page {
-  position: relative;
+.about-container{
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  animation: scale-up-center 0.2s ease-in-out;
+  gap: 1rem;
+  padding: 1rem;
+
+
 }
 
-.about-description img {
-  width: 300px;
-  border-radius: 10px;
-  border: 2px solid black;
+.photo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
+
+.about-contacts {
+  list-style: none;
+display: flex;
+gap: .5rem;
+margin: 0;
+padding: 0;
+}
+.about-contacts .icon-content {
+margin: 0;
+position: relative;
+}
+
+.about-contacts .icon-content a {
+position: relative;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+color: #4d4d4d;
+background-color: #fff;
+transition: all 0.3s ease-in-out;
+}
+.about-contacts .icon-content a:hover {
+box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.about-contacts .icon-content a i {
+position: relative;
+z-index: 1;
+font-size: 25px;
+}
+.about-contacts .icon-content a:hover {
+color: white;
+}
+.about-contacts .icon-content a .filled {
+position: absolute;
+top: auto;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 0;
+background-color: #000;
+transition: all 0.3s ease-in-out;
+}
+.about-contacts .icon-content a:hover .filled {
+height: 100%;
+}
+
+.about-contacts .icon-content a[data-social="linkedin"] .filled {
+background-color: #0274b3;
+}
+
+.about-contacts .icon-content a[data-social="github"] .filled {
+background-color: #24262a;
+}
+
+.about-contacts .icon-content a[data-social="email"] .filled {
+background-color: #f8b659;
+}
+
 
 .about-description {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 1rem;
 }
 .about-description div {
   display: flex;
@@ -54,6 +117,7 @@
   border: 2px solid black;
 }
 @media (max-width: 900px) {
+
   .about-description img {
     width: 250px;
   }
@@ -66,11 +130,16 @@
   }
 }
 @media (max-width: 650px) {
+  .about{
+    margin-top: 20px;
+  }
+  .about-container{
+    flex-direction: column;
+    height: 600px;
+    overflow-y: scroll;
+  }
   .about-description img {
     width: 300px;
-  }
-  .about-box {
-    margin: 0 5px;
   }
   .about-description {
     flex-direction: column;

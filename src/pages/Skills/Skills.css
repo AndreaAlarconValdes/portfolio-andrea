@@ -1,10 +1,10 @@
-/* SKILLS  */
 .skills-items {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1.5em;
-    padding: 0;
+    padding: 1rem;
     margin: 0;
+    overflow-y: scroll;
   }
   
   .skills-items li {
@@ -15,90 +15,22 @@
     gap: 0.5rem;
   }
   
-  .skills-items li h5 {
+  .skills-items li p {
     font-size: 10px;
     color: gray;
     text-transform: uppercase;
     margin: 0;
   }
 
-  /* LANGUAGES  */
-  .languages-items{
-    display: flex;
-    flex-direction: column;
-   
-  }
-.languages-items ul{
-  list-style-type: none;
-  flex-direction: column;
-  display: flex;
-  gap: 1rem;
-  padding: 0;
-}
-.languages-items li{
-  display: flex;
-  align-items: flex-end;
-  gap: 1rem;
-}
 
-.languages-items h3{
-  text-transform: capitalize;
-  margin: 0;
-}
-
-
-
-  /* EDUCATION  */
-
-  .education-items{
-    padding: 1rem;
-    border-bottom: 1px solid rgb(202, 202, 202);
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-  }
-  .education-items h3{
-    margin: 0;
-  }
-  /* WORK EXPERIENCE  */
-
-  .experience-title{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1rem;
-
-  }
-
-  .experience-title h3{
-    margin: 0;
-  }
-  .roll-description {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    border-bottom: 1px solid rgb(202, 202, 202);
-    padding: 1rem ;
+@media (max-width: 700px) {
+  .skills-items {
+    grid-template-columns: repeat(3, 1fr);
+    height: 400px;
+    gap: 1em;
+    padding: .5rem;
 
 
   }
-  .roll-description h4{
-    margin: 0;
-  }
-
-@media (max-width: 650px) {
   
-  .experience-title{
-    flex-direction: column;
-    align-items: flex-start;
-    gap: .5rem;
-  }
-
-  .roll-description {
-    padding: 1rem .5rem;
-
-  }
-.languages-items li{
-  gap: .5rem;
-}
 }

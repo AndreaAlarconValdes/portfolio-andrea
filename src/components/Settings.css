@@ -2,9 +2,6 @@
   background-color:#DADAD3 ;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
   border: 2px solid black;
-  position: absolute;
-  left: 20%;
-  top: 10%;
 }
 
 .close-nav{

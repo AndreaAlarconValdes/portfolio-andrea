@@ -3,7 +3,6 @@ import { useColor } from "../context/ColorContext";
 import "./Main.css";
 import Clock from "../components/Clock";
 import { foldersRoutes } from "../constants/constants";
-import Box from "../components/Box";
 import Calculator from "../components/Calculator";
 import Settings from "../components/Settings";
 import Projects from "./Projects/Projects";
@@ -21,7 +20,6 @@ type WindowName =
   | "contact"
   | "message"
   | "settings"
-  | "cv"
   | "calculator";
 
 const Main = () => {
@@ -32,7 +30,6 @@ const Main = () => {
   const [isOpenContact, setIsOpenContact] = useState(false);
   const [isOpenProjects, setIsOpenProjects] = useState(false);
   const [isOpenSettings, setIsOpenSettings] = useState(false);
-  const [isOpenCV, setIsOpenCV] = useState(false);
   const [isOpenCalculator, setIsOpenCalculator] = useState(false);
 
   const [zIndexes, setZIndexes] = useState<Record<WindowName, number>>({
@@ -41,7 +38,6 @@ const Main = () => {
     projects: 1,
     contact: 1,
     settings: 1,
-    cv: 1,
     calculator: 1,
     message: 1,
   });
@@ -69,15 +65,7 @@ const Main = () => {
     setIsOpenSettings(false);
   };
 
-  const openCV = () => {
-    setIsOpenCV(true);
-    bringToFront("cv");
-  };
-
-  const closeCV = () => {
-    setIsOpenCV(false);
-  };
-
+ 
   const openCalculator = () => {
     setIsOpenCalculator(true);
     bringToFront("calculator");
@@ -139,7 +127,6 @@ const Main = () => {
     closeResume();
     closeContact();
     closeProjects();
-    closeCV();
     closeMessage();
   };
 
@@ -157,9 +144,9 @@ const Main = () => {
             <button onClick={openSettings} id="settings">
               Settings
             </button>
-            <button onClick={openCV} id="cv">
+            <a href="./CV.pdf" target="_blank">
               Resume
-            </button>
+            </a>
           </div>
         </div>
         <Clock />
@@ -203,35 +190,6 @@ const Main = () => {
               </span>
             </div>
           </div>
-
-          {isOpenCV && (
-            <Box
-              square
-              onClose={closeCV}
-              className="CV-box"
-              style={{ zIndex: zIndexes.cv }}
-            >
-              <div className="CV-container">
-                <div>
-                  <a href="./CV.pdf" target="_blank" rel="noopener noreferrer">
-                    <img
-                      src="./folder-hover.png"
-                      alt="Imagen con hover"
-                      style={{
-                        width: 60,
-                        cursor: "url(./cursor-pointer.png), default",
-                        transition: "all 0.3s ease-in-out",
-                      }}
-                    />
-                  </a>
-                </div>
-                <div className="CV-container-text">
-                  <h5>Take a look at my CV</h5>
-                  <p>Click on the folder to download it</p>
-                </div>
-              </div>
-            </Box>
-          )}
           {isOpenCalculator && (
             <Calculator
               onClose={closeCalculator}

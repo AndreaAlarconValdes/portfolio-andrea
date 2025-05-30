@@ -1,27 +1,32 @@
 export const skills = [
-  { icon: "react", name: "react", category: "Frontend" },
-  { icon: "html", name: "html5", category: "Frontend" },
-  { icon: "css", name: "css3", category: "Frontend" },
-  { icon: "tailwind", name: "tailwind css", category: "Frontend" },
-  { icon: "js", name: "javascript", category: "Frontend" },
-  { icon: "ts", name: "typescript", category: "Frontend" },
-  { icon: "nodejs", name: "node.js", category: "Backend" },
-  { icon: "mongodb", name: "mongodb", category: "Backend" },
-  { icon: "mysql", name: "mysql", category: "Backend" },
-  { icon: "postgresql", name: "postgresql", category: "Backend" },
-  { icon: "docker", name: "docker", category: "Backend" },
-  { icon: "git", name: "git", category: "Others" },
-  { icon: "figma", name: "figma", category: "Others" },
-  { icon: "google-ads", name: "google ads", category: "Others" },
-  {
-    icon: "wordpress",
-    name: "wordpress",
-    category: "Others",
-  },
-  { icon: "shopify", name: "shopify", category: "Others" },
+  { icon: "react", name: "react" },
+  { icon: "vite", name: "vite" },
+  { icon: "nextjs", name: "next.js" },
+  { icon: "jest", name: "jest" },
+  { icon: "html", name: "html5" },
+  { icon: "css", name: "css3" },
+  { icon: "js", name: "javascript" },
+  { icon: "ts", name: "typescript" },
+  { icon: "nodejs", name: "node.js" },
+  { icon: "express", name: "express.js" },
+  { icon: "mongodb", name: "mongodb" },
+  { icon: "mysql", name: "mysql" },
+  { icon: "postgresql", name: "postgresql" },
+  { icon: "docker", name: "docker" },
+  { icon: "git", name: "git" },
+  { icon: "google-ads", name: "google ads" },
+  { icon: "google-ads", name: "google analytics" },
+  { icon: "google-ads", name: "google cloud" },
+  { icon: "figma", name: "figma" },
+  { icon: "tailwind", name: "tailwind css" },
+  {icon: "wordpress", name:"wordpress"},
+  { icon: "shopify", name: "shopify" },
+  { icon: "photoshop", name: "photoshop" },
+  { icon: "lightroom", name: "lightroom" },
+  { icon: "krita", name: "krita" },
+
 ];
 
-export const softSkills = ["Problem-solving", "Project management","Proactive", "Creative", "Critical thinking", "Adaptability", "Communication", "Teamwork", "Time management"]
 
 export const contacts = [
   {
@@ -79,39 +84,29 @@ export const deskFolders = [
     className: "resumepdf-icon",
     img: "paper",
     title: "Resume.pdf",
-    sound: "",
     link: "./CV.pdf",
   },
   {
     className: "folder-01",
-    img: "folder",
     title: "Project 01 (Ecommerce)",
-    sound: "paper.mps",
     link: "https://github.com/AndreaAlarconValdes/shopping-app",
   },
   {
     className: "folder-02",
-    img: "folder",
     title: "Project 02 (NotesApp)",
-    sound: "paper.mps",
     link: "https://github.com/AndreaAlarconValdes/notes-app",
   },
   {
     className: "folder-03",
-    img: "folder",
     title: "Project 03 (Portfolio)",
-    sound: "paper.mps",
     link: "https://github.com/AndreaAlarconValdes/portfolio-andrea",
   },
   {
     className: "folder-04",
-    img: "folder",
     title: "School Projects",
-    sound: "paper.mps",
     link: "https://github.com/AndreaAlarconValdes/ironhack-labs",
   },
 ];
-
 
 export const messages = [
   {

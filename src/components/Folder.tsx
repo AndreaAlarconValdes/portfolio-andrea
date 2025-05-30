@@ -1,51 +1,33 @@
-import { useState, useEffect, useRef } from "react";
+import "./Folder.css";
 
 interface FolderProps {
-  img: string;
+  img?: string;
   title: string;
-  sound?: string;
   to: string;
   className?: string;
 }
 
-const Folder = ({
-  img,
-  title,
-  sound,
-  to,
-  className,
-}: FolderProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const hoverSoundRef = useRef<HTMLAudioElement | null>(null);
-
-  useEffect(() => {
-    hoverSoundRef.current = new Audio(`./audio/${sound}`);
-  }, [sound]);
-
-  const handleMouseEnter = () => {
-      setIsHovered(true);
-      if (hoverSoundRef.current) {
-        hoverSoundRef.current.currentTime = 0;
-        hoverSoundRef.current.play();
-      }
-  };
-
-  const handleMouseLeave = () => {
-      setIsHovered(false);
-  };
+const Folder = ({ img, title, to, className }: FolderProps) => {
 
   return (
     <div className={className}>
-        <a href={to} target="_blank">
+      <a href={to} target="_blank">
+        {img ? (
           <img
-            src={isHovered ? `./${img}-hover.png` : `./${img}.png`}
+            src={`./${img}.png`}
             alt={`${title} image`}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
           />
-        </a>
-        <p>{title}</p>
+        ) : (
+          <div className="file">
+            <div className="work-5"></div>
+            <div className="work-4"></div>
+            <div className="work-3"></div>
+            <div className="work-2"></div>
+            <div className="work-1"></div>
+          </div>
+        )}
+      </a>
+      <p className="folders-name">{title}</p>
     </div>
   );
 };

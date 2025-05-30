@@ -2,7 +2,8 @@
 .desk-folders img{
     cursor: pointer;
     width: 60px;
-    filter: drop-shadow(3px 3px 0px rgba(69, 69, 69, 0.4));
+
+    filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.3));
     transition: all 0.2s ease-in-out;
 }
 
@@ -57,17 +58,21 @@ font-size: 12px;
       }
       .folder-01 {
         top: 60%;
-    right: 15%;
+        right: 29%; 
 
+      }
+
+      .folder-03 {
+        right: 5%;
       }
       
       .folder-02 {
-        bottom: 23%;
-        right: 55%;
+        bottom: 15%;
+        right: 58%;
       }
 
       .folder-04 {
-        top: 30%;
-        left: 65%;
+        bottom: 58%;
+        left: 70%;
       }
 }

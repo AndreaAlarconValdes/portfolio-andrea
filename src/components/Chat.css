@@ -24,7 +24,7 @@ width: 500px;
   
   .dropdown-container button p {
     font-size: 18px;
-background-color: black;
+background-color: rgb(76, 76, 76);
 color: white;
 border-radius: 20px;  
 padding: .5rem 1.5rem;
