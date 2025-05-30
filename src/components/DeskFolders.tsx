@@ -10,7 +10,6 @@ const DeskFolders = () => {
         className={item.className}
         img={item.img}
         title={item.title}
-        sound={item.sound}
         to={item.link}
       />
       ))}
