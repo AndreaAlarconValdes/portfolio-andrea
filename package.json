@@ -16,8 +16,7 @@
     "mathjs": "^14.4.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-ga4": "^2.1.0",
-    "react-router-dom": "^7.6.1"
+    "react-ga4": "^2.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

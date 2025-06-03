@@ -2,19 +2,13 @@ import "./index.css";
 import { ColorProvider } from "./context/ColorContext";
 import Main from "./pages/Main";
 import { useEffect } from "react";
-import { useLocation } from 'react-router-dom'; 
-import { initGA, logPageView } from "./utils/analytics";
+import {  initGA, logPageView } from "./utils/analytics";
 
 function App() {
-  const location = useLocation();
-
   useEffect(() => {
     initGA();
+    logPageView(window.location.pathname);
   }, []);
-
-  useEffect(() => {
-    logPageView(location.pathname + location.search);
-  }, [location]);
 
   return (
     <ColorProvider>
