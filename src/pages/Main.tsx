@@ -12,6 +12,7 @@ import Skills from "./Skills/Skills";
 import DeskFolders from "../components/DeskFolders";
 import Note from "../components/Note";
 import Chat from "../components/Chat";
+import ReactGA from 'react-ga4';
 
 type WindowName =
   | "about"
@@ -78,6 +79,12 @@ const Main = () => {
   const openAbout = () => {
     setIsOpenAbout(true);
     bringToFront("about");
+
+    ReactGA.event({
+      category: 'Button',
+      action: 'Click',
+      label: 'Abrir about me'
+    });
   };
 
   const closeAbout = () => {
