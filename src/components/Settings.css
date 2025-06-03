@@ -1,7 +1,7 @@
 .settings-container{
   background-color:#DADAD3 ;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
-  border: 2px solid black;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
+  border: 2px solid rgb(87, 87, 87);
 }
 
 .close-nav{
@@ -12,17 +12,9 @@
   gap: 1rem;
 }
 
-.close-nav button{
-  background-color: transparent;
-  border: none;
+.close-nav span{
   cursor: pointer;
-  font-weight: 900;
-  font-size: 14px;
-  transition: .2s ease-in-out;
-}
-
-.close-nav button:hover{
-  scale: 1.1;
+  font-size: 18px;
 }
 
 .bg-picker {

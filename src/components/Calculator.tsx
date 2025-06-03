@@ -48,9 +48,6 @@ const Calculator = ({ onClose, style }: CalculatorProps) => {
     <div className="general-page" onClick={onClose}>
       <Draggable style={{ ...style, position: "absolute" }}>
         <div className="calculator-container" style={style}>
-          <button className="close-calculator" onClick={onClose}>
-            X
-          </button>
           <div className="calculator-display">{display || "0"}</div>
           <div className="calculator-button-grid">
             {buttons.map((btn) => (

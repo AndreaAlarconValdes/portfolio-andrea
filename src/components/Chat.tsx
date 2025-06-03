@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Chat.css";
 import { messages } from "../constants/constants";
+import Draggable from "./Draggable";
 
 interface ChatProps {
   onClose: () => void;
@@ -22,6 +23,8 @@ const Chat = ({ onClose, style }: ChatProps) => {
 
   return (
     <div className="general-page" onClick={onClose} style={style}>
+      <Draggable style={{ ...style, position: "absolute" }}>
+
       <div className="dropdown-container" onClick={(e) => e.stopPropagation()}>
         {messages.map((item, index) => (
           <div key={index}>
@@ -39,6 +42,8 @@ const Chat = ({ onClose, style }: ChatProps) => {
           </div>
         ))}
       </div>
+      </Draggable>
+
     </div>
   );
 };

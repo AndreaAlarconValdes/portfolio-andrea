@@ -1,6 +1,6 @@
 .dropdown-container {
    background-color: white;
-   box-shadow: 10px 13px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
 border-radius: 20px;
 width: 500px;
    padding: 1rem;
@@ -24,7 +24,7 @@ width: 500px;
   
   .dropdown-container button p {
     font-size: 18px;
-background-color: rgb(76, 76, 76);
+background-color: rgb(111, 111, 111);
 color: white;
 border-radius: 20px;  
 padding: .5rem 1.5rem;

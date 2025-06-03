@@ -44,7 +44,9 @@ export default function Settings({
       <Draggable style={{ ...style, position: "absolute" }}>
         <div className="settings-container" style={style}>
           <div className="close-nav">
-            <button onClick={onClose}>X</button>
+            <span className="material-icons" onClick={onClose}>
+              close
+            </span>
             <p>Settings</p>
           </div>
           <div className="settings-content">

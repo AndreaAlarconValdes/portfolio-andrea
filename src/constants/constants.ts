@@ -84,11 +84,11 @@ export const deskFolders = [
     className: "resumepdf-icon",
     img: "paper",
     title: "Resume.pdf",
-    link: "./CV.pdf",
+    link: "./CV_EN.pdf",
   },
   {
     className: "folder-01",
-    title: "Project 01 (Ecommerce)",
+    title: "Project 01 (E-Commerce)",
     link: "https://github.com/AndreaAlarconValdes/shopping-app",
   },
   {

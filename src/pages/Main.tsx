@@ -144,7 +144,7 @@ const Main = () => {
             <button onClick={openSettings} id="settings">
               Settings
             </button>
-            <a href="./CV.pdf" target="_blank">
+            <a href="./CV_EN.pdf" target="_blank">
               Resume
             </a>
           </div>

@@ -1,25 +1,14 @@
 .calculator-container {
   padding: 15px;
   border-radius: 10px;
-  border: 2px solid black;
+  border: 2px solid #999999;
   background-color: #f7f6f0;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
   height: fit-content;
 
   max-width: 200px;
 }
 
-.close-calculator  {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-weight: 900;
-  margin-bottom: .5rem;
-  transition: .2s ease-in-out;
-}
-.close-calculator:hover  {
-  scale: 1.1;
-}
 .calculator-display {
   background-color: #ababa8;
   border-radius: 10px;
