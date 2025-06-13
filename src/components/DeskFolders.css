@@ -10,7 +10,7 @@
 .desk-folders img:hover{
     scale: 1.1;
 }
-.resumepdf-icon, .folder-01, .folder-02, .folder-03, .folder-04{
+.resumepdf-icon, .folder-01, .folder-02, .folder-03, .folder-04, .folder-05{
     position: absolute;
     z-index: 1;
     display: flex;
@@ -44,6 +44,12 @@
     left: 8%;
   }
 
+
+  .folder-05 {
+    top: 10%;
+    right: 25%;
+  }
+
 @media (max-width: 800px) {
 .desk-folders img{
   width: 50px;
@@ -57,13 +63,13 @@ font-size: 12px;
         top: 10%;
       }
       .folder-01 {
-        top: 60%;
-        right: 29%; 
+        top: 61%;
+        right: 20%; 
 
       }
 
       .folder-03 {
-        right: 5%;
+        right: 15%;
       }
       
       .folder-02 {
@@ -75,4 +81,9 @@ font-size: 12px;
         bottom: 58%;
         left: 70%;
       }
+
+  .folder-05 {
+    top: 61%;
+    right: 58%;
+  }
 }

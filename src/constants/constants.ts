@@ -88,23 +88,28 @@ export const deskFolders = [
   },
   {
     className: "folder-01",
-    title: "Project 01 (E-Commerce)",
+    title: "E-Commerce",
     link: "https://github.com/AndreaAlarconValdes/shopping-app",
   },
   {
     className: "folder-02",
-    title: "Project 02 (NotesApp)",
+    title: "Notes Application",
     link: "https://github.com/AndreaAlarconValdes/notes-app",
   },
   {
     className: "folder-03",
-    title: "Project 03 (Portfolio)",
+    title: "My Portfolio",
     link: "https://github.com/AndreaAlarconValdes/portfolio-andrea",
   },
   {
     className: "folder-04",
     title: "School Projects",
     link: "https://github.com/AndreaAlarconValdes/ironhack-labs",
+  },
+  {
+    className: "folder-05",
+    title: "Landing Page",
+    link: "https://github.com/AndreaAlarconValdes/landing-page-bakery",
   },
 ];
 
