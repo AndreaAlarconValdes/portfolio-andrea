@@ -1,5 +1,4 @@
 import Box from "../../components/Box";
-import PhotoCarousel from "../../components/PhotoCarousel";
 import "./About.css";
 
 interface AboutProps {
@@ -12,7 +11,8 @@ const About = ({ onClose, style }: AboutProps) => {
       <Box onClose={onClose}>
         <div className="about-container">
           <div className="photo-container">
-            <PhotoCarousel />
+          <img src="./photo(00).jpg" alt="selfie" className="selfie-img"/>
+
             <ul className="about-contacts">
               <li className="icon-content">
                 <a
