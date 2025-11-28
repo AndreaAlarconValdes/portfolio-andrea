@@ -1,3 +1,13 @@
+export const navLinks = [
+  { img: "icon-about", title: "About", route: "about" },
+  { img: "icon-skills", title: "Skills", route: "skills" },
+  { img: "icon-contact", title: "Contact", route: "contact" },
+  { img: "message", title: "Messages", route: "message" },
+  { img: "calculator", title: "Calculator", route: "calculator" },
+  { img: "icon-settings", title: "Settings", route: "settings" },
+  { img: "icon-bin", title: "Clean", route: "bin" },
+];
+
 export const skills = [
   { icon: "react", name: "react" },
   { icon: "vite", name: "vite" },
@@ -19,7 +29,7 @@ export const skills = [
   { icon: "google-ads", name: "google cloud" },
   { icon: "figma", name: "figma" },
   { icon: "tailwind", name: "tailwind css" },
-  {icon: "wordpress", name:"wordpress"},
+  { icon: "wordpress", name: "wordpress" },
   { icon: "shopify", name: "shopify" },
   { icon: "photoshop", name: "photoshop" },
   { icon: "lightroom", name: "lightroom" },
@@ -30,54 +40,31 @@ export const skills = [
 
 export const contacts = [
   {
-    info: "@AndreaAlarconValdes",
-    class: "fa-brands fa-github",
-    link: "https://github.com/AndreaAlarconValdes",
-    color: "black",
-    bgColor: "white",
-  },
-  {
-    info: "@andreaalarconvaldes",
-    class: "fa-brands fa-linkedin-in",
+    title: "LinkedIn",
+    user: "@andreaalarconvaldes",
     link: "https://www.linkedin.com/in/andreaalarconvaldes/",
-    color: "white",
-    bgColor: "#0051a3",
+    icon: "linkedin",
   },
   {
-    info: "alarconvaldes.a@gmail.com",
-    class: "fa-solid fa-envelope",
+    title: "GitHub",
+    user: "@AndreaAlarconValdes",
+    link: "https://github.com/AndreaAlarconValdes",
+    icon: "github",
+  },
+  {
+    title: "Email",
+    user: "alarconvaldes.a@gmail.com",
     link: "mailto:alarconvaldes.a@gmail.com",
-    color: "white",
-    bgColor: "#4da6ff",
+    icon: "mail",
   },
   {
-    info: "+353 87 217 3094",
-    class: "fa-brands fa-whatsapp",
+    title: "Phone",
+    user: "+34 644 403 445",
     link: "",
-    color: "black",
-    bgColor:
-      "linear-gradient(to right, #169b62 0%, #169b62 33.33%, #ffffff 33.33%, #ffffff 66.66%, #ff883e 66.66%, #ff883e 100%)",
-  },
-
-  {
-    info: "+34 644 403 445",
-    class: "fa-brands fa-whatsapp",
-    link: "",
-    color: "black",
-    bgColor:
-      "linear-gradient(to bottom, #aa151b 0%, #aa151b 25%, #f1bf00 25%, #f1bf00 75%, #aa151b 75%, #aa151b 100%)",
+    icon: "phone",
   },
 ];
 
-export const foldersRoutes = [
-  { img: "icon-about", title: "About", type: "about" },
-  { img: "icon-skills", title: "Skills", type: "skills" },
-  { img: "icon-contact", title: "Contact", type: "contact" },
-  { img: "message", title: "Messages", type: "message" },
-  { img: "calculator", title: "Calculator", type: "calculator" },
-  { img: "icon-settings", title: "Settings", type: "settings" },
-  { img: "icon-bin", title: "Clean", type: "bin" },
-];
 
 export const deskFolders = [
   {

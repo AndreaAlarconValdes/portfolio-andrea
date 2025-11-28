@@ -1,3 +1,14 @@
+:root {
+  --primary: #000000;
+  --text-secondary: #4c739a;
+  --text-muted: #94a3b8;
+  --button: #137fec;
+  --button-hover: #0f67c4;
+  --close: #ff5f57;
+  --minimize: #febb2e;
+  --maximize: #28c840;
+}
+
 body {
   margin: 0;
   filter: var(--bg-filter);
@@ -5,37 +16,25 @@ body {
   background-image: linear-gradient(to right, lightgray 1px, transparent 1px),
     linear-gradient(to bottom, lightgray 1px, transparent 1px);
   background-size: 100px 100px;
+  font-family: 'Inter', sans-serif;
 }
 
-button {
-  color: black;
-  -webkit-color: black;
-}
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p {
   margin: 0;
 }
 
-.general-page {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: scale-up-center 0.2s ease-in-out;
-}
-
 a {
-  color: black;
-  -webkit-color: black;
   text-decoration: none;
 }
 
 @media (max-width: 650px) {
-  .about{
+  .about {
     padding: 50px 0px 150px 0px;
   }
 }
@@ -44,6 +43,7 @@ a {
   0% {
     scale: 0.5;
   }
+
   100% {
     scale: 1;
     opacity: 1;
@@ -64,6 +64,7 @@ a {
   0% {
     transform: translateX(-100%) rotate(120deg);
   }
+
   20%,
   100% {
     transform: translateX(100%) rotate(120deg);
@@ -76,22 +77,27 @@ a {
     transform: translateY(-300px);
     animation-timing-function: ease-in;
   }
+
   50% {
     transform: translateY(40px);
     animation-timing-function: ease-out;
   }
+
   65% {
     transform: translateY(-40px);
     animation-timing-function: ease-in;
   }
+
   80% {
     transform: translateY(8px);
     animation-timing-function: ease-out;
   }
+
   90% {
     transform: translateY(-4px);
     animation-timing-function: ease-in;
   }
+
   100% {
     transform: translateY(0);
   }

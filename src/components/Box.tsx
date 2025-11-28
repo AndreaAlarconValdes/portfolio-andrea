@@ -1,31 +1,24 @@
 import React from "react";
-import Draggable from "./Draggable";
 import "./Box.css";
 
 interface BoxProps {
-  className?: string;
   title?: string;
   children?: React.ReactNode;
-  onClose?: () => void;
-  style?: React.CSSProperties;
 }
 
-const Box = ({ className, children, title, onClose, style }: BoxProps) => {
+const Box = ({ children, title }: BoxProps) => {
   return (
-    <Draggable
-      className={className}
-      style={{ ...style, position: "absolute" }}
-    >
-      <div className="box-container" onClick={(e) => e.stopPropagation()}>
-        <div className="box-nav">
-          <div className="box-nav-btns" onClick={onClose}>
-            <span></span><span></span><span></span>
-          </div>
-          <p>{title}</p>
+    <div className="window-frame">
+      <div className="title-bar">
+        <div className="window-buttons">
+          <span className="close"></span>
+          <span className="minimize"></span>
+          <span className="maximize"></span>
         </div>
-        <div className="box-content">{children}</div>
+        <small className="title">{title}</small>
       </div>
-    </Draggable>
+      <div className="content-area">{children}</div>
+    </div>
   );
 };
 
