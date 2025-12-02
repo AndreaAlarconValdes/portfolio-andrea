@@ -4,9 +4,10 @@ import "./Box.css";
 interface BoxProps {
   title?: string;
   children?: React.ReactNode;
+  className?: string;
 }
 
-const Box = ({ children, title }: BoxProps) => {
+const Box = ({ children, title, className }: BoxProps) => {
   return (
     <div className="window-frame">
       <div className="title-bar">
@@ -17,7 +18,7 @@ const Box = ({ children, title }: BoxProps) => {
         </div>
         <small className="title">{title}</small>
       </div>
-      <div className="content-area">{children}</div>
+      <div className={className}>{children}</div>
     </div>
   );
 };

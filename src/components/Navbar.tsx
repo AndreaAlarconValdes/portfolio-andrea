@@ -1,12 +1,12 @@
 import { navLinks } from "../constants/constants";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import "./Navbar.css"
 
 const Navbar = () => {
     return (
         <div className="navbar">
             {navLinks.map((item) => (
-                <Link key={item.title} to={item.route} smooth={true} duration={500} spy className="nav-link">
+                <Link key={item.title} to={item.route} className="nav-link">
                     <img
                         src={`./${item.img}.png`}
                         alt={`${item.title} image`}

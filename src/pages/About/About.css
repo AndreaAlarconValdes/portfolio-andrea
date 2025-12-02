@@ -1,9 +1,11 @@
-.about-page {
-  margin: 4rem;
+.about {
+  width: 100vw;
+  height: 100vh;
   display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-align-items: center;
- filter: var(--bg-filter);
-  background-color: var(--bg-color);
-
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
 }
+
+.photo-container img {
+  width: 400px;
+  }

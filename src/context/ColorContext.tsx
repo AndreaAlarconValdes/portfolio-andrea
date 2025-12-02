@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode, useEffect } from "react";
 
 interface ColorContextType {
   color: string;
@@ -12,6 +12,11 @@ const ColorContext = createContext<ColorContextType | undefined>(undefined);
 export const ColorProvider = ({ children }: { children: ReactNode }) => {
   const [color, setColor] = useState<string>("#fafafa");
   const [filter, setFilter] = useState<string>("none");
+
+   useEffect(() => {
+    document.body.style.backgroundColor = color;
+    document.body.style.filter = filter;
+  }, [color, filter]);
 
   return (
     <ColorContext.Provider value={{ color, setColor, filter, setFilter }}>

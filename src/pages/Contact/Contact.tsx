@@ -1,13 +1,12 @@
 import React from "react";
 import "./Contact.css";
-import { Element } from "react-scroll";
 import Box from "../../components/Box";
 import { contacts } from "../../constants/constants";
 
 
 const Contact: React.FC = () => {
   return (
-    <Element name="contact" className="contact-page" >
+    <div className="contact-page" >
       <Box title="Contact">
 
         {/* Left: Form Section */}
@@ -41,8 +40,6 @@ const Contact: React.FC = () => {
             </button>
           </form>
         </div>
-
-        {/* Right: Social & Other Contact */}
         <div className="social-section">
           <div className="social-header">
             <h2>Other ways to connect</h2>
@@ -50,7 +47,7 @@ const Contact: React.FC = () => {
           </div>
           <div className="social-links">
             {contacts.map((item) => (
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <a href={item.link} target="_blank" rel="noopener noreferrer" key={item.title}>
                 <div className="icon">
                   <img src={`./${item.icon}.svg`} alt="LinkedIn" className="svg-icon" />
                 </div>
@@ -65,7 +62,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </Box>
-    </Element>
+    </div>
 
   );
 };

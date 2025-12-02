@@ -1,0 +1,149 @@
+.experience {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: column;
+  max-height: 590px;
+  overflow-y: scroll;
+}
+
+.experience-sidebar {
+  padding: 10px;
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-bottom: 1px solid rgba(15, 23, 36, 0.06);
+
+}
+
+.experience-sidebar .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color .18s ease;
+  color: #374151;
+}
+
+.experience-sidebar .nav-item h4 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+.experience-sidebar .nav-item svg {
+  width: 20px;
+  height: 20px;
+}
+
+.experience-sidebar .nav-item.active {
+  background: rgba(19, 127, 236, 0.12);
+  color: var(--primary);
+}
+
+.experience-info {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 2rem;
+    max-width: 500px;
+
+}
+
+.experience-info h2 {
+  font-size: 16px;
+  color: #0b1220;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.experience-info .list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.list details {
+  padding: 10px 6px;
+  border-top: 1px solid rgba(15, 23, 36, 0.06);
+}
+
+.list details:last-of-type {
+  border-bottom: 1px solid rgba(15, 23, 36, 0.06);
+}
+
+.list summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 12px;
+  padding: 4px 0;
+  user-select: none;
+}
+
+.list summary p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f1724;
+}
+
+.list details summary svg {
+  transition: transform .2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.list details[open] summary svg {
+  transform: rotate(180deg);
+}
+
+.detail-text {
+  margin: 8px 0 0 0;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+@media (min-width: 1000px) {
+  .experience-content {
+    flex-direction: row;
+  }
+
+  .experience-sidebar {
+    border-right: 1px solid rgba(15, 23, 36, 0.06);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start
+  }
+
+  .experience-sidebar .nav-item h4 {
+    font-size: 14px;
+  }
+
+  .experience-sidebar .nav-item svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .experience-info {
+    padding: 2rem 1rem;
+  }
+
+  .experience-info h2 {
+    font-size: 18px;
+  }
+
+}

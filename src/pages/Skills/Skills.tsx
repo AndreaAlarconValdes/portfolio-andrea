@@ -1,14 +1,11 @@
 import Box from "../../components/Box";
 import { skills } from "../../constants/constants";
 import "./Skills.css";
-interface SkillsProps {
-  onClose: () => void;
-  style?: React.CSSProperties;
-}
-const Skills = ({ onClose, style }: SkillsProps) => {
+
+const Skills = () => {
   return (
-    <div className="general-page" style={style} onClick={onClose}>
-      <Box  onClose={onClose}>
+  
+      <Box  title="skills">
       <ul className="skills-items">
               {skills.map((item) => (
                 <li key={item.name}>
@@ -18,7 +15,6 @@ const Skills = ({ onClose, style }: SkillsProps) => {
               ))}
             </ul>
       </Box>
-    </div> 
   );
 };
 
