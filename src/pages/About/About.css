@@ -1,11 +1,132 @@
 .about {
   width: 100vw;
   height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.photo-container img {
-  width: 400px;
+.about-content {
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-text .name {
+  size: 22px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.profile-text .description {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.profile-links {
+  display: flex;
+  gap: 10px;
+}
+
+.link-outline {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(19, 127, 236, 0.2);
+  color: #137fec;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.link-outline:hover {
+  background: rgba(19, 127, 236, 0.3);
+}
+
+.link-primary {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #137fec;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.link-primary:hover {
+  background: #0e66c7;
+}
+
+.about-content h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.about-content p {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.about-content hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
+
+.contact-section {
+  text-align: center;
+}
+
+.contact-section p {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.contact-section a {
+  color: #137fec;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (min-width: 520px) {
+  .profile-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
+
+  .profile-links {
+    flex-direction: column;
+    width: auto;
+  }
+}

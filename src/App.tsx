@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import Skills from "./pages/Skills/Skills";
 import Navbar from "./components/Navbar";
 import MenuBar from "./components/MenuBar";
+import DeskFolders from "./components/DeskFolders";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/skills" element={<Skills />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <DeskFolders />
       <Navbar />
     </ColorProvider>
   );

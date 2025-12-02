@@ -1,9 +1,26 @@
-/* General Page Styles */
-.contact-page {
+.contact {
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 2rem;
+  justify-content: center;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 850px) {
+  .contact {
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-content {
+    flex-direction: column;
+  }
 }
 
 /* Form Section */
@@ -15,13 +32,15 @@
   padding: 2rem;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
-.form-header{
+
+.form-header {
   display: flex;
   flex-direction: column;
   gap: .5rem;
 }
+
 .form-header h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 900;
 }
 
@@ -110,11 +129,12 @@
   background: rgba(0, 0, 0, 0.05);
 }
 
-.social-header{
+.social-header {
   display: flex;
   flex-direction: column;
   gap: .5rem;
 }
+
 .social-header h2 {
   font-size: 1.5rem;
   font-weight: 700;

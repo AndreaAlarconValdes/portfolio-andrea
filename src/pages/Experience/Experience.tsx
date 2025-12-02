@@ -2,61 +2,73 @@ import "./Experience.css";
 import Box from "../../components/Box";
 import { education, experience } from "../../constants/constants";
 import { EducationIcon, ExpandIcon, WorkIcon } from "../../components/Icons";
+import { useState } from "react";
 
 const Experience = () => {
+    const [activeSection, setActiveSection] = useState("work");
 
     return (
         <div className="experience">
             <Box title="Education and Experience" className="experience-content">
                 <aside className="experience-sidebar" aria-label="Navegación">
-                    <div className="nav-item active">
+                    <div
+                        className={`nav-item ${activeSection === "work" ? "active" : ""}`}
+                        onClick={() => setActiveSection("work")}
+                    >
                         <WorkIcon />
                         <h4>Work Experience</h4>
                     </div>
-                    <div className="nav-item">
+                    <div
+                        className={`nav-item ${activeSection === "education" ? "active" : ""}`}
+                        onClick={() => setActiveSection("education")}>
                         <EducationIcon />
                         <h4>Education</h4>
                     </div>
                 </aside>
                 <main className="experience-info" role="main">
-                    <section>
-                        <h2>Work Experience</h2>
-                        <div className="list">
-                            {experience.map((item) => (
-                                <details key={item.title}>
-                                    <summary>
-                                        <div>
-                                            <p>{item.title}</p>
-                                            <small>{item.date}</small>
-                                        </div>
-                                        <ExpandIcon />
-                                    </summary>
-                                    <p className="detail-text">
-                                        {item.description}
-                                    </p>
-                                </details>
-                            ))}
-                        </div>
-                    </section>
-                    <section>
-                        <h2>Education</h2>
-                        <div className="list">
-                            {education.map((item) => (
-                                <details key={item.title}>
-                                 <summary>
-                                        <div>
-                                            <p>{item.title}</p>
-                                            <small>{item.date}</small>
-                                        </div>
-                                        <ExpandIcon />
-                                    </summary>
-                                    <p className="detail-text">
-                                        {item.description}
-                                    </p>
-                                </details>
-                            ))}
-                        </div>
-                    </section>
+
+                    {activeSection === "work" && (
+                        <section>
+                            <h2>Work Experience</h2>
+                            <div className="list">
+                                {experience.map((item) => (
+                                    <details key={item.title}>
+                                        <summary>
+                                            <div>
+                                                <p>{item.title}</p>
+                                                <small>{item.date}</small>
+                                            </div>
+                                            <ExpandIcon />
+                                        </summary>
+                                        <p className="detail-text">
+                                            {item.description}
+                                        </p>
+                                    </details>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+                    {activeSection === "education" && (
+                        <section>
+                            <h2>Education</h2>
+                            <div className="list">
+                                {education.map((item) => (
+                                    <details key={item.title}>
+                                        <summary>
+                                            <div>
+                                                <p>{item.title}</p>
+                                                <small>{item.date}</small>
+                                            </div>
+                                            <ExpandIcon />
+                                        </summary>
+                                        <p className="detail-text">
+                                            {item.description}
+                                        </p>
+                                    </details>
+                                ))}
+                            </div>
+                        </section>
+                    )}
                 </main>
             </Box>
         </div >

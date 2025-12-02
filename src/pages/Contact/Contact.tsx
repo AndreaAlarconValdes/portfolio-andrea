@@ -6,10 +6,8 @@ import { contacts } from "../../constants/constants";
 
 const Contact: React.FC = () => {
   return (
-    <div className="contact-page" >
-      <Box title="Contact">
-
-        {/* Left: Form Section */}
+    <div className="contact" >
+      <Box title="Contact" className="contact-content">
         <div className="form-section">
           <div className="form-header">
             <h1>Get in touch</h1>

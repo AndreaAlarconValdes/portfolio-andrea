@@ -6,35 +6,107 @@ export const navLinks = [
   { img: "icon-folder", title: "Projects", route: "/" },
 ];
 
-export const skills = [
-  { icon: "react", name: "react" },
-  { icon: "vite", name: "vite" },
-  { icon: "nextjs", name: "next.js" },
-  { icon: "jest", name: "jest" },
-  { icon: "html", name: "html5" },
-  { icon: "css", name: "css3" },
-  { icon: "js", name: "javascript" },
-  { icon: "ts", name: "typescript" },
-  { icon: "nodejs", name: "node.js" },
-  { icon: "express", name: "express.js" },
-  { icon: "mongodb", name: "mongodb" },
-  { icon: "mysql", name: "mysql" },
-  { icon: "postgresql", name: "postgresql" },
-  { icon: "docker", name: "docker" },
-  { icon: "git", name: "git" },
-  { icon: "google-ads", name: "google ads" },
-  { icon: "google-ads", name: "google analytics" },
-  { icon: "google-ads", name: "google cloud" },
-  { icon: "figma", name: "figma" },
-  { icon: "tailwind", name: "tailwind css" },
-  { icon: "wordpress", name: "wordpress" },
-  { icon: "shopify", name: "shopify" },
-  { icon: "photoshop", name: "photoshop" },
-  { icon: "lightroom", name: "lightroom" },
-  { icon: "krita", name: "krita" },
+export const skills = {
+  technicalSkills: {
+    languages: [
+      { icon: "html", name: "HTML5" },
+      { icon: "css", name: "CSS3" },
+      { icon: "js", name: "JavaScript" },
+      { icon: "ts", name: "TypeScript" },
+    ],
 
-];
+    runtime: [
+      { icon: "nodejs", name: "Node.js" },
+    ],
 
+    frameworks: [
+      { icon: "react", name: "React" },
+      { icon: "nextjs", name: "Next.js" },
+      { icon: "vite", name: "Vite" },
+      { icon: "express", name: "Express.js" },
+    ],
+
+    cssTools: [
+      { icon: "tailwind", name: "Tailwind CSS" },
+      { icon: "bootstrap", name: "Bootstrap" },
+    ],
+
+    databases: [
+      { icon: "mongodb", name: "MongoDB" },
+      { icon: "mysql", name: "MySQL" },
+      { icon: "postgresql", name: "PostgreSQL" },
+    ],
+
+    testing: [
+      { icon: "jest", name: "Jest" },
+    ],
+
+    cms: [
+      { icon: "wordpress", name: "WordPress" },
+      { icon: "shopify", name: "Shopify" },
+    ],
+
+    versionControl: [
+      { icon: "git", name: "Git" },
+      { icon: "github", name: "GitHub" },
+    ],
+  },
+
+
+  toolsAndPlatforms: {
+    designAndPrototyping: [
+      { icon: "figma", name: "Figma" },
+      { icon: "photoshop", name: "Photoshop" },
+      { icon: "lightroom", name: "Lightroom" },
+      { icon: "krita", name: "Krita" },
+    ],
+    development: [
+      { icon: "vscode", name: "VS Code" },
+      { icon: "postman", name: "Postman" },
+      { icon: "docker", name: "Docker" },
+    ],
+    deployAndHosting: [
+      { icon: "vercel", name: "Vercel" },
+      { icon: "google-ads", name: "Google Cloud" },
+    ],
+    analyticsAndMarketing: [
+      { icon: "google-ads", name: "Google Ads" },
+      { icon: "google-ads", name: "Google Analytics" },
+    ],
+  },
+
+softSkills: {
+    "Leadership & Teamwork": [
+      "Leading multicultural teams",
+      "Mentoring and coaching",
+      "Conflict resolution",
+      "Agile collaboration"
+    ],
+    "Communication & Collaboration": [
+      "Clear and concise communication",
+      "Cross-functional teamwork",
+      "Empathy and active listening",
+      "Customer and stakeholder focus"
+    ],
+    "Analytical & Problem-Solving": [
+      "Data-driven decision making",
+      "Troubleshooting and debugging",
+      "Critical thinking",
+      "Adaptability under pressure"
+    ],
+    "Organization & Productivity": [
+      "Project and task prioritization",
+      "Process optimization",
+      "Goal-oriented mindset",
+      "Attention to detail"
+    ],
+    "Professionalism & Growth": [
+      "Proactive and self-motivated",
+      "Continuous learning",
+      "Responsibility and reliability"
+    ]
+  },
+};
 
 export const contacts = [
   {
@@ -98,33 +170,6 @@ export const deskFolders = [
   },
 ];
 
-export const messages = [
-  {
-    question: "What's your main focus as a developer?",
-    answer:
-      "I'm a full-stack web developer with a strong passion for front-end development. I love creating clean, interactive, and visually compelling user experiences. Design and creativity drive my work, and I enjoy bringing ideas to life in the browser.",
-  },
-  {
-    question: "What other areas are you interested in?",
-    answer:
-      "Besides development, I'm deeply interested in design and marketing. I've self-taught tools like Figma, Photoshop, Krita, and explored platforms like Google Ads. This helps me bridge the gap between design, development, and strategy.",
-  },
-  {
-    question: "Where are you based?",
-    answer:
-      "I'm originally from Barcelona, but currently living in Dublin. This international experience helps me stay adaptable and connect with diverse teams and cultures. I speak three languages—English, Spanish, and Catalan—which allows me to communicate effectively in multilingual environments.",
-  },
-  {
-    question: "What makes you a good collaborator?",
-    answer:
-      "I’m a good collaborator because I genuinely value clear communication, empathy, and shared goals. I love bouncing around ideas with others, giving and receiving feedback, and building things as a team. I believe good collaboration is key to great user experiences.",
-  },
-  {
-    question: "What kind of projects do you enjoy the most?",
-    answer:
-      "I really enjoy projects where design, user experience, and functionality all come together. Whether it's a marketing website, an interactive dashboard, or a creative web app, I love working on things that are both useful and beautiful.",
-  },
-];
 
 export const experience = [
   {
