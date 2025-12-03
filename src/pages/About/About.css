@@ -8,14 +8,16 @@
 
 .about-content {
   max-width: 600px;
-  padding: 2rem;
+  max-height: 70vh;
+  padding: 1rem;
+  overflow-y: scroll;
 }
 
 .profile-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: .5rem;
 }
 
 .profile-info {
@@ -90,7 +92,6 @@
   font-size: 16px;
   color: #4b5563;
   line-height: 1.6;
-  margin-bottom: 12px;
 }
 
 .about-content hr {
@@ -118,11 +119,17 @@
 }
 
 /* Responsive */
-@media (min-width: 520px) {
+@media (min-width: 600px) {
+  .about-content {
+    padding: 2rem;
+  }
+
   .profile-section {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  gap: 1rem;
+
   }
 
   .profile-links {

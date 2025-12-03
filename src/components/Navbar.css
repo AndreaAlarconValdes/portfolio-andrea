@@ -10,7 +10,7 @@
   flex-direction: row;
   align-items: flex-end;
   gap: 1rem;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(3px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -31,17 +31,18 @@
   justify-content: center;
 
 }
+
 .nav-link img {
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
-
-  width: 50px;
-
+  width: 45px;
   border-radius: 8px;
 }
+
 .nav-link:last-child img {
   box-shadow: none;
   filter: drop-shadow(0px 0px 5px 3px rgba(0, 0, 0, 0.7));
 }
+
 .nav-link:hover {
   transform: translateY(-10px) scale(1.1);
 }
@@ -78,4 +79,12 @@
   opacity: 1;
 }
 
+@media (min-width: 600px) {
+  .navbar {
+    padding: 0.5rem 2rem;
+  }
 
+  .nav-link img {
+    width: 50px;
+  }
+}
