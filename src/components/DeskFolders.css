@@ -1,93 +1,54 @@
-
-.desk-folders img{
-    cursor: pointer;
-    width: 60px;
-
-    filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.3));
-    transition: all 0.2s ease-in-out;
+.desk-folders {
+  position: fixed;
+  top: 10%;
+  width: 100%;
+  max-height: 80vh;
+  margin-left: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: flex-start;
+  gap: 3rem;
 }
 
-.desk-folders img:hover{
-    scale: 1.1;
-}
-.resumepdf-icon, .folder-01, .folder-02, .folder-03, .folder-04, .folder-05, .folder-06{
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .5rem;
-  font-size: 14px;
-
-}
-.resumepdf-icon {
-    top: 10%;
-    right: 5%;
-  }
-  .folder-01 {
-    top: 30%;
-    right: 15%;
-  }
-  
-  .folder-02 {
-    bottom: 40%;
-    right: 3%;
-  }
-
-  .folder-03 {
-    bottom: 15%;
-    right: 10%;
-  }
-
-  .folder-04 {
-    bottom: 15%;
-    left: 8%;
-  }
-
-
-  .folder-05 {
-    top: 10%;
-    right: 25%;
-  }
-   .folder-06 {
-    top: 50%;
-    right: 25%;
-  }
-
-@media (max-width: 800px) {
-.desk-folders img{
-  width: 50px;
+.folder-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
 }
 
-.resumepdf-icon, .folder-01, .folder-02, .folder-03{
-font-size: 12px;
-
+.folder-item img {
+  cursor: pointer;
+  width: 60px;
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.3));
+  transition: all 0.2s ease-in-out;
 }
-    .resumepdf-icon {
-        top: 10%;
-      }
-      .folder-01 {
-        top: 62%;
-        right: 20%; 
 
-      }
+.folder-item img:hover {
+  scale: 1.1;
+}
 
-      .folder-03 {
-        right: 15%;
-      }
-      
-      .folder-02 {
-        bottom: 15%;
-        right: 58%;
-      }
+@media (max-width: 900px) {
+  .desk-folders {
+    gap: 2rem;
+    justify-content: space-around;
+    align-content: flex-start;
+  }
 
-      .folder-04 {
-        bottom: 58%;
-        left: 70%;
-      }
+  .desk-folders img {
+    width: 50px;
+  }
+}
 
-  .folder-05 {
-    top: 62%;
-    right: 58%;
+@media (max-width: 600px) {
+  .desk-folders {
+    max-height: 40vh;
+    top: 7%;
+    margin-left: 0;
+    gap: 1.5rem;
+    align-content: center;
   }
 }

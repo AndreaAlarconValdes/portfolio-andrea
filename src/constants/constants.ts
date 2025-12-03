@@ -75,7 +75,7 @@ export const skills = {
     ],
   },
 
-softSkills: {
+  softSkills: {
     "Leadership & Teamwork": [
       "Leading multicultural teams",
       "Mentoring and coaching",
@@ -135,46 +135,15 @@ export const contacts = [
   },
 ];
 
-
 export const deskFolders = [
-  {
-    className: "resumepdf-icon",
-    img: "paper",
-    title: "Resume.pdf",
-    link: "./CV_EN.pdf",
-  },
-  {
-    className: "folder-01",
-    title: "E-Commerce",
-    link: "https://github.com/AndreaAlarconValdes/shopping-app",
-  },
-  {
-    className: "folder-02",
-    title: "Notes Application",
-    link: "https://github.com/AndreaAlarconValdes/notes-app",
-  },
-  {
-    className: "folder-03",
-    title: "My Portfolio",
-    link: "https://github.com/AndreaAlarconValdes/portfolio-andrea",
-  },
-  {
-    className: "folder-04",
-    title: "School Projects",
-    link: "https://github.com/AndreaAlarconValdes/ironhack-labs",
-  },
-  {
-    className: "folder-05",
-    title: "Landing Page",
-    link: "https://github.com/AndreaAlarconValdes/landing-page-bakery",
-  },
-   {
-    className: "folder-06",
-    title: "Barber shop",
-    link: "https://github.com/AndreaAlarconValdes/barberia-41",
-  },
+  { img: "paper", title: "Resume.pdf", link: "./CV_EN.pdf" },
+  { title: "Bakery Landing Page", link: "https://github.com/AndreaAlarconValdes/landing-page-bakery" },
+  { title: "My Notes App", link: "https://github.com/AndreaAlarconValdes/notes-app" },
+  { title: "The Barber Shop", link: "https://github.com/AndreaAlarconValdes/barberia-41" },
+  { title: "E-Commerce", link: "https://github.com/AndreaAlarconValdes/shopping-app" },
+  { title: "School Labs", link: "https://github.com/AndreaAlarconValdes/ironhack-labs" },
+  { title: "My Portfolio", link: "https://github.com/AndreaAlarconValdes/portfolio-andrea" },
 ];
-
 
 export const experience = [
   {
