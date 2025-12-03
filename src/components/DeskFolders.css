@@ -10,7 +10,7 @@
 .desk-folders img:hover{
     scale: 1.1;
 }
-.resumepdf-icon, .folder-01, .folder-02, .folder-03, .folder-04, .folder-05{
+.resumepdf-icon, .folder-01, .folder-02, .folder-03, .folder-04, .folder-05, .folder-06{
     position: absolute;
     z-index: 1;
     display: flex;
@@ -47,6 +47,10 @@
 
   .folder-05 {
     top: 10%;
+    right: 25%;
+  }
+   .folder-06 {
+    top: 50%;
     right: 25%;
   }
 

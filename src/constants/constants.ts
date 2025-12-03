@@ -168,6 +168,11 @@ export const deskFolders = [
     title: "Landing Page",
     link: "https://github.com/AndreaAlarconValdes/landing-page-bakery",
   },
+   {
+    className: "folder-06",
+    title: "Barber shop",
+    link: "https://github.com/AndreaAlarconValdes/barberia-41",
+  },
 ];
 
 

@@ -1,4 +1,6 @@
 .window-frame {
+  position: relative;
+  z-index: 2;
   margin: 1rem;
   background: rgba(246, 246, 246, 0.8);
   backdrop-filter: blur(12px);
