@@ -45,7 +45,7 @@
 
 .skills-info {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: .5rem;
   overflow-y: scroll;
 }
@@ -105,9 +105,17 @@
   font-size: 15px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+  .skills-content{
+    width: min-content;
+    margin: 1rem;
+  }
+  .skills-info{
+  grid-template-columns:  1fr;
+
+  }
   .skill-list {
-    height: 400px;
+    display: flex;
     gap: 1em;
     padding: .5rem;
   }
