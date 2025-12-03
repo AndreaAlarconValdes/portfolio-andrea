@@ -37,7 +37,7 @@ const Skills = () => {
                 <ul className="skill-list">
                   {items.map((skill) => (
                     <li key={skill.name}>
-                      <img src={`./${skill.icon}.png`} alt={skill.name} width={45} />
+                      <img src={`./${skill.icon}.png`} alt={skill.name} />
                       <p>{skill.name}</p>
                     </li>
                   ))}
@@ -53,7 +53,7 @@ const Skills = () => {
                 <ul className="skill-list">
                   {items.map((skill) => (
                     <li key={skill.name}>
-                      <img src={`./${skill.icon}.png`} alt={skill.name} width={45} />
+                      <img src={`./${skill.icon}.png`} alt={skill.name} />
                       <p>{skill.name}</p>
                     </li>
                   ))}

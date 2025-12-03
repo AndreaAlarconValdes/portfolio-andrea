@@ -34,7 +34,6 @@
   padding: 4px 30px;
   border-radius: 8px;
   font-size: 14px;
-
 }
 
 
@@ -87,6 +86,9 @@
   text-transform: uppercase;
   margin: 0;
 }
+.skill-list li img {
+  width: 45px;
+}
 
 .soft-skill-list {
   display: flex;
@@ -106,6 +108,10 @@
 }
 
 @media (max-width: 800px) {
+  .skill-nav {
+  padding: 4px 15px;
+  font-size: 12px;
+}
   .skills-content{
     width: min-content;
     margin: 1rem;
@@ -114,9 +120,12 @@
   grid-template-columns:  1fr;
 
   }
+  .skill-category{
+    padding: .5rem;
+  }
   .skill-list {
     display: flex;
     gap: 1em;
-    padding: .5rem;
   }
+ 
 }
