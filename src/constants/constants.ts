@@ -4,6 +4,7 @@ export const navLinks = [
   { img: "icon-skills", title: "Skills", route: "/skills" },
   { img: "icon-contact", title: "Contact", route: "/contact" },
   { img: "icon-folder", title: "Projects", route: "/" },
+  { img: "icon-settings", title: "Settings", route: "/settings" },
 ];
 
 export const skills = {
@@ -150,19 +151,19 @@ export const experience = [
     title: "Manager at Jump Juice Bar - Dublin, Ireland ",
     date: "June 2025 - Nov 2025",
     description:
-      "Led daily store operations, ensuring an efficient workflow and maintaining high standards of service quality. Created and optimized staff schedules, coordinated a multicultural team, and implemented training programs to improve performance and consistency. Analyzed sales metrics to set weekly targets, monitored costs, and optimized resources to maximize profitability. Oversaw stock control and vendor ordering, ensuring product availability and minimizing waste. Strengthened customer satisfaction through active problem-solving, conflict resolution, and a focus on delivering a welcoming experience. This role enhanced my leadership, decision-making, and analytical abilities, while reinforcing a proactive and people-focused approach to management.",
+      "Managed daily operations of a high-traffic smoothie bar, leading a team to deliver exceptional customer service. Implemented workflow improvements and staff training programs, increasing operational efficiency by 20%. Oversaw inventory management and stock control, ensuring compliance with HACCP food safety standards and reducing waste by 15%. Consistently achieved sales targets while promoting healthy, natural products and enhancing overall customer satisfaction.",
   },
   {
     title: "Supervisor at Jump Juice Bar - Dublin, Ireland",
     date: "July 2024 - May 2025",
     description:
-      "Supervised daily store activities, supporting team coordination to maintain smooth and efficient operations. Ensured compliance with hygiene, health, and food-safety standards, and managed inventory levels to guarantee accurate stock control and timely replenishment. Contributed to onboarding and training new staff members, fostering a positive and collaborative work environment. Developed strong communication skills by supporting customers directly and resolving issues quickly. This position strengthened my ability to work under pressure, organize tasks effectively, and maintain high service standards in a fast-paced environment.",
+      "Assisted the Store Manager in daily operations, including staff supervision, inventory management, and workflow coordination. Supported training and onboarding of new team members, ensured compliance with HACCP food safety standards, and maintained high levels of customer satisfaction. Played a key role in optimizing store processes and implemented sales and upselling techniques to drive revenue and improve customer experience. These contributions helped facilitate a smooth transition when promoted to Manager.",
   },
   {
     title: "Full Stack Developer at Haddock - Barcelona, Spain",
     date: "Jan 2023 - Dec 2023",
     description:
-      "Designed, developed, and maintained full-stack web applications using React, TypeScript, and Tailwind CSS, ensuring clean, scalable, and modular code. Built and optimized backend services with Node.js and Express, improving performance and data flow between frontend and server layers. Designed and managed PostgreSQL databases, ensuring accuracy, efficiency, and data integrity. Implemented unit and integration testing with Jest, increasing code coverage by 35% and reducing production bugs by 10% :contentReference[oaicite:0]{index=0}. Collaborated with UX/UI teams to create responsive and accessible interfaces, enhancing overall user experience. Worked in agile environments, participating in sprint planning, daily standups, retrospectives, and contributing to architectural decision-making. Integrated RESTful APIs and improved communication between internal services and external platforms. This experience strengthened my technical expertise, problem-solving skills, and ability to collaborate within cross-functional teams.",
+      "As a Full Stack Developer at Haddock, an AI-driven SaaS platform designed to automate daily tasks for restaurants, I contributed to the development of scalable solutions that enhanced operational efficiency and user experience for hospitality businesses. I developed and maintained end-to-end web features using React, TypeScript, and CSS, improving component reusability and reducing frontend maintenance efforts. I implemented Storybook for UI components, standardizing design patterns, enhancing collaboration with UI/UX teams, and accelerating feature development. I built and optimized backend services with Node.js and Express, increasing API reliability and reducing response times across key endpoints. I designed and maintained PostgreSQL database models, ensuring data consistency, faster queries, and improved system performance. I implemented automated testing with Jest, increasing test coverage by 35% and significantly reducing production bugs. I collaborated with UI/UX teams to deliver responsive, intuitive interfaces that improved user engagement and reduced support tickets. I contributed to core product features that improved onboarding speed and streamlined daily workflows for restaurant teams. I integrated and consumed RESTful APIs, enabling seamless data exchange between microservices and external platforms. I actively participated in Agile ceremonies (standups, sprint planning, reviews, retrospectives) and contributed to architectural and technical decision-making. I improved code quality and consistency through regular peer code reviews and adherence to best practices.",
   },
   {
     title: "Administrative at Barcelona epidemiology service - Barcelona, Spain",
@@ -176,9 +177,7 @@ export const education = [
   {
     title: "Software Engineering Bootcamp – Full Stack Web Development",
     date: "Aug 2022 – Dec 2022",
-    description:
-      "Completing an intensive full stack development bootcamp strengthened my passion for technology and creativity. I studied modern web development tools and practices, including JavaScript, React, Node.js, databases, and agile methodologies. The program pushed me to think critically, solve complex problems, and collaborate in fast-paced project environments. This experience confirmed my interest in building digital products and marked the beginning of my professional journey in tech. Since graduating, I have continued learning independently through personal projects, online resources, and continuous practice to deepen my expertise and stay updated with new technologies.",
-  },
+    description: "The bootcamp covered JavaScript (ES6), Node.js, Express.js, MongoDB, React.js, HTML5, CSS3, responsive design, Git, Axios, and Postman. This comprehensive program equipped me with the skills to build dynamic web applications, create server-side logic and RESTful APIs, design efficient database structures, develop user-friendly interfaces, ensure seamless experiences across devices, and collaborate effectively using version control and API testing tools."},
   {
     title: "Veterinary Assistant – CIM Formación",
     date: "Oct 2020 – Jun 2021",

@@ -9,9 +9,11 @@ import Skills from "./pages/Skills/Skills";
 import Navbar from "./components/Navbar";
 import MenuBar from "./components/MenuBar";
 import DeskFolders from "./components/DeskFolders";
+import Settings from "./pages/Settings/Settings";
 
 
 function App() {
+
   return (
     <ColorProvider>
       <MenuBar />
@@ -21,6 +23,7 @@ function App() {
         <Route path="/experience" element={<Experience />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/settings" element={<Settings/>} />
       </Routes>
       <DeskFolders />
       <Navbar />

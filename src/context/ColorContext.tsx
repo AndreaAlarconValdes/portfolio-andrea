@@ -3,23 +3,19 @@ import { createContext, useContext, useState, ReactNode, useEffect } from "react
 interface ColorContextType {
   color: string;
   setColor: (color: string) => void;
-  filter: string;
-  setFilter: (filter: string) => void;
 }
 
 const ColorContext = createContext<ColorContextType | undefined>(undefined);
 
 export const ColorProvider = ({ children }: { children: ReactNode }) => {
   const [color, setColor] = useState<string>("#fafafa");
-  const [filter, setFilter] = useState<string>("none");
 
    useEffect(() => {
     document.body.style.backgroundColor = color;
-    document.body.style.filter = filter;
-  }, [color, filter]);
+  }, [color]);
 
   return (
-    <ColorContext.Provider value={{ color, setColor, filter, setFilter }}>
+    <ColorContext.Provider value={{ color, setColor }}>
       {children}
     </ColorContext.Provider>
   );

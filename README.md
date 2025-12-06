@@ -16,7 +16,6 @@ The idea behind this portfolio is to make the user feel like they're interacting
 - 🖱️ Drag and move windows anywhere on the screen
 - ❌ Close windows like on a real desktop
 - 🎨 Change the desktop background color
-- 🎛️ Apply visual screen filters (e.g. grayscale, negative, etc.)
 - 🧹 Reset the layout or customize your workspace however you like
 
 This concept blends creativity with functionality, offering a unique and playful way to explore my work and personality.

@@ -14,7 +14,7 @@ const About = () => {
             <div className="profile-text">
               <p className="name">Hi, I'm Andrea</p>
               <p className="description">
-                Full Stack Web Developer turning ideas into fully functional, responsive web applications, with a focus on performance, usability, and maintainable code.
+                Full Stack Developer (MERN) | Building Scalable Web Apps with React, TypeScript, Node.js, Express.js,  MongoDB & SQL
               </p>
             </div>
           </div>
@@ -31,10 +31,16 @@ const About = () => {
         <hr />
         <h2>My Story</h2>
         <p>
-         I’m a Web Developer originally from Barcelona, currently living in Dublin. I come from a background in administration, customer service roles, and management, but my curiosity and creativity led me to pursue web development. I moved to Dublin two years ago to improve my English and explore new career opportunities that would allow me to grow and challenge myself.
+          I’m a <strong>Full Stack Web Developer</strong> with 2+ years of experience building scalable, user-focused web applications. I’m passionate about creating clean, efficient, and intuitive digital solutions using modern JavaScript technologies such as <strong>React, Node.js, Express, TypeScript, MongoDB, and SQL</strong>.
         </p>
+        <br />
         <p>
-          I’ve worked as a developer in a startup, completed freelance projects, and continue learning independently. I enjoy working with modern technologies like React and Node.js, and I focus on building efficient, scalable, and user-friendly web applications. Today, I combine my organizational skills, problem-solving mindset, and creative approach to deliver high-quality solutions, driven by my passion for creating and exploring new possibilities in tech.
+          Originally from Barcelona, I moved to Dublin two years ago to improve my English and pursue new career opportunities that challenge me. Before transitioning into tech, I worked several years in administration and customer service roles, which helped me develop strong communication, problem-solving, and detail-oriented skills. This background allows me to bring a unique perspective to development, combining technical expertise with a deep understanding of user needs, processes, and business requirements.
+        </p>
+        <br />
+
+        <p>
+          I’ve worked as a developer in a startup, completed freelance projects, and continue learning independently. I enjoy working in collaborative environments, continuously learning new technologies, and turning complex ideas into real, functional products. My experience includes building <strong>full stack web applications, developing RESTful APIs, designing database models, implementing automated testing, and creating responsive, user-friendly interfaces</strong>.
         </p>
         <hr />
         <div className="contact-section">

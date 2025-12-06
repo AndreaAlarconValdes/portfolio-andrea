@@ -12,7 +12,6 @@
 
 body {
   margin: 0;
-  filter: var(--bg-filter);
   background-color: var(--bg-color);
   background-image: linear-gradient(to right, lightgray 1px, transparent 1px),
     linear-gradient(to bottom, lightgray 1px, transparent 1px);
