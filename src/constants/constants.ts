@@ -42,11 +42,6 @@ export const skills = {
       { icon: "jest", name: "Jest" },
     ],
 
-    cms: [
-      { icon: "wordpress", name: "WordPress" },
-      { icon: "shopify", name: "Shopify" },
-    ],
-
     versionControl: [
       { icon: "git", name: "Git" },
       { icon: "github", name: "GitHub" },
@@ -57,23 +52,18 @@ export const skills = {
   toolsAndPlatforms: {
     designAndPrototyping: [
       { icon: "figma", name: "Figma" },
-      { icon: "photoshop", name: "Photoshop" },
-      { icon: "lightroom", name: "Lightroom" },
       { icon: "krita", name: "Krita" },
+      { icon: "canva", name: "Canva" },
     ],
     development: [
       { icon: "vscode", name: "VS Code" },
       { icon: "postman", name: "Postman" },
       { icon: "docker", name: "Docker" },
     ],
-    deployAndHosting: [
+    deploy: [
       { icon: "vercel", name: "Vercel" },
-      { icon: "google-ads", name: "Google Cloud" },
     ],
-    analyticsAndMarketing: [
-      { icon: "google-ads", name: "Google Ads" },
-      { icon: "google-ads", name: "Google Analytics" },
-    ],
+ 
   },
 
   softSkills: {
