@@ -6,6 +6,7 @@ import "./Settings.css";
 export default function Settings() {
     const { setColor } = useColor();
     const presetColors = [
+        "#fafafa",
         "#f0aeae",
         "#54B9AD",
         "#F8D059",
@@ -22,10 +23,10 @@ export default function Settings() {
 
     return (
         <div className="settings" >
-            <Box>
+            <Box className="settings-content">
                 <div className="settings-header">
                     <h2>Wallpaper</h2>
-                    <p>Select your favorite background color or pattern.</p>
+                    <p>Select your favorite background color.</p>
                 </div>
                 <div className="color-setting">
                     <h3>Solid colors</h3>
@@ -42,6 +43,8 @@ export default function Settings() {
                         ))}
                     </div>
                 </div>
+
+            
             </Box>
         </div>
     );

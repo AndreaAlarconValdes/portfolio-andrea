@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
   return (
     <div className="contact" >
       <Box title="Contact" className="contact-content">
-        <div className="form-section">
+        {/* <div className="form-section">
           <div className="form-header">
             <h1>Get in touch</h1>
             <p>Send me a message and I'll reply as soon as possible.</p>
@@ -37,10 +37,10 @@ const Contact: React.FC = () => {
               <img src="./send.svg" alt="send" width={20} />
             </button>
           </form>
-        </div>
+        </div> */}
         <div className="social-section">
           <div className="social-header">
-            <h2>Other ways to connect</h2>
+            <h2>Get in touch</h2>
             <p>Find me on other platforms.</p>
           </div>
           <div className="social-links">
