@@ -33,6 +33,12 @@
   transition: background-color .18s ease;
   color: #374151;
   width: -webkit-fill-available;
+  border: transparent;
+  transition: .1s ease-in-out;
+}
+
+.experience-sidebar .nav-item:hover {
+  scale: 1.1;
 }
 
 .experience-sidebar .nav-item h4 {
@@ -155,4 +161,3 @@
 
   }
 }
-

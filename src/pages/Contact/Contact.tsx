@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
             {contacts.map((item) => (
               <a href={item.link} target="_blank" rel="noopener noreferrer" key={item.title}>
                 <div className="icon">
-                  <img src={`./${item.icon}.svg`} alt="LinkedIn" className="svg-icon" />
+                  <img src={`./${item.icon}.svg`}  alt={`${item.title} icon`}  className="svg-icon"  />
                 </div>
                 <div>
                   <p>{item.title}</p>

@@ -1,7 +1,7 @@
 import Clock from "./Clock";
 import "./MenuBar.css"
 
-const MenuBar = () => {
+const MenuBar: React.FC  = () => {
  
     return (
         <div className="menu-bar">
@@ -12,7 +12,7 @@ const MenuBar = () => {
                         Settings
                     </button>
                 
-                    <a href="./TechCV_Andrea_Alarcon.pdf" target="_blank">
+                    <a href="./TechCV_Andrea_Alarcon.pdf" target="_blank" rel="noopener noreferrer">
                         Resume
                     </a>
                 </div>

@@ -10,6 +10,7 @@ const About = () => {
             <img
               src="./photo(00).jpg"
               className="profile-image"
+              alt="Andrea Alarcón - Full Stack Developer"
             />
             <div className="profile-text">
               <p className="name">Hi, I'm Andrea</p>

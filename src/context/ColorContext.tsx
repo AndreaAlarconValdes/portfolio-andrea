@@ -5,13 +5,23 @@ interface ColorContextType {
   setColor: (color: string) => void;
 }
 
+const getStoredColor = (): string => {
+  try {
+    return localStorage.getItem('portfolio-bg-color') || "#fafafa";
+  } catch (error) {
+    console.warn('localStorage no disponible:', error);
+    return "#fafafa";
+  }
+};
+
 const ColorContext = createContext<ColorContextType | undefined>(undefined);
 
 export const ColorProvider = ({ children }: { children: ReactNode }) => {
-  const [color, setColor] = useState<string>("#fafafa");
+  const [color, setColor] = useState<string>(() => getStoredColor());
 
-   useEffect(() => {
+  useEffect(() => {
     document.body.style.backgroundColor = color;
+    localStorage.setItem('portfolio-bg-color', color);
   }, [color]);
 
   return (
@@ -28,3 +38,4 @@ export const useColor = () => {
   }
   return context;
 };
+

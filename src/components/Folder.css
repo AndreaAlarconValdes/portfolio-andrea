@@ -1,128 +1,154 @@
 .file {
   box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
-    position: relative;
-    width: 65px;
-    height: 50px;
-    cursor: pointer;
-    transform-origin: bottom;
-    perspective: 1500px;
-    z-index: 50;
+  position: relative;
+  width: 65px;
+  height: 50px;
+  cursor: pointer;
+  transform-origin: bottom;
+  perspective: 1500px;
+  z-index: 50;
+}
+
+.work-5 {
+  background-color: #0094e3;
+  width: 100%;
+  height: 100%;
+  transform-origin: top;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.work-5::after {
+  content: '';
+  position: absolute;
+  bottom: 98%;
+  left: 0;
+  width: 25px;
+  height: 5px;
+  background-color: #0094e3;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+
+.work-4,
+.work-3,
+.work-2 {
+  position: absolute;
+  inset: 2px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  transform-origin: bottom;
+}
+
+.work-4 {
+  background-color: #a1a1aa;
+}
+
+.work-3 {
+  background-color: #d4d4d8;
+}
+
+.work-2 {
+  background-color: #efefef;
+}
+
+.work-1 {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, #21a6ee, #64c5fa);
+  width: 100%;
+  height: 48px;
+  border-radius: 6px;
+  border-top-right-radius: 0;
+  transition: all 0.3s ease;
+  transform-origin: bottom;
+  display: flex;
+  align-items: flex-end;
+}
+
+.work-1::after {
+  content: '';
+  position: absolute;
+  bottom: 99%;
+  right: 0;
+  width: 36px;
+  height: 5px;
+  background-color: #64c5fa;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+
+
+
+.file:hover .work-5 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.file:hover .work-4 {
+  transform: rotateX(-20deg);
+}
+
+.file:hover .work-3 {
+  transform: rotateX(-30deg);
+}
+
+.file:hover .work-2 {
+  transform: rotateX(-38deg);
+}
+
+.file:hover .work-1 {
+  box-shadow: inset 0 10px 20px #a2cffe, inset 0 -10px 20px #5b9bd5;
+  transform: rotateX(-46deg) translateY(1px);
+}
+
+.hover-text {
+  font-size: 0.875rem;
+  padding-top: 0.5rem;
+  opacity: 0.2;
+}
+
+.folders-name {
+  color: black;
+}
+
+.folder-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (max-width: 700px) {
+  .file {
+    width: 55px;
+    height: 40px;
   }
-  
-  .work-5 {
-    background-color: #0094e3;
-    width: 100%;
-    height: 100%;
-    transform-origin: top;
-    border-radius: 6px;
-    border-top-left-radius: 0;
-    position: relative;
-    transition: all 0.3s ease;
-  }
-  
+
   .work-5::after {
-    content: '';
-    position: absolute;
-    bottom: 98%;
-    left: 0;
-    width: 25px;
-    height: 5px;
-    background-color: #0094e3;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    width: 22px;
+    height: 4px;
   }
-  
-  
-  .work-4,
-  .work-3,
-  .work-2 {
-    position: absolute;
-    inset: 2px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    transform-origin: bottom;
-  }
-  
-  .work-4 { background-color: #a1a1aa; }
-  .work-3 { background-color: #d4d4d8; }
-  .work-2 { background-color: #efefef; }
-  
+
   .work-1 {
-    position: absolute;
-    bottom: 0;
-    background: linear-gradient(to top, #21a6ee, #64c5fa);
-    width: 100%;
-    height: 48px;
-    border-radius: 6px;
-    border-top-right-radius: 0;
-    transition: all 0.3s ease;
-    transform-origin: bottom;
-    display: flex;
-    align-items: flex-end;
+    height: 38px;
   }
-  
+
   .work-1::after {
-    content: '';
-    position: absolute;
-    bottom: 99%;
-    right: 0;
-    width: 36px;
+    width: 33px;
     height: 5px;
-    background-color: #64c5fa;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
   }
-  
 
-
-  
-  .file:hover .work-5 {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  .file:hover .work-4 { transform: rotateX(-20deg); }
-  .file:hover .work-3 { transform: rotateX(-30deg); }
-  .file:hover .work-2 { transform: rotateX(-38deg); }
-  .file:hover .work-1 {
-    box-shadow: inset 0 10px 20px #a2cffe, inset 0 -10px 20px #5b9bd5;
-    transform: rotateX(-46deg) translateY(1px);
-  }
-  
   .hover-text {
-    font-size: 0.875rem;
-    padding-top: 0.5rem;
-    opacity: 0.2;
+    font-size: 0.75rem;
+    padding-top: 0.25rem;
   }
-  
-  @media (max-width: 700px) {
-    .file {
-      width: 55px;
-      height: 40px;
-    }
-  
-    .work-5::after {
-      width: 22px;
-      height: 4px;
-    }
-  
-    .work-1 {
-      height: 38px;
-    }
-  
-    .work-1::after {
-      width: 33px;
-      height: 5px;
-    }
-  
-    .hover-text {
-      font-size: 0.75rem;
-      padding-top: 0.25rem;
-    }
 
-    .folders-name{
-      font-size: 12px;
-    }
+  .folders-name {
+    font-size: 12px;
   }
-  
-  
-  
+}

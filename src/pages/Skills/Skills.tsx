@@ -1,10 +1,26 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Box from "../../components/Box";
 import { skills } from "../../constants/constants";
 import "./Skills.css";
+import React from "react";
 
 const Skills = () => {
   const [activeSection, setActiveSection] = useState("technical");
+
+  const technicalEntries = useMemo(
+  () => Object.entries(skills.technicalSkills),
+  [] 
+);
+
+const toolsEntries = useMemo(
+  () => Object.entries(skills.toolsAndPlatforms),
+  []
+);
+
+const softEntries = useMemo(
+  () => Object.entries(skills.softSkills),
+  []
+);
 
   return (
     <div className="skills">
@@ -31,7 +47,7 @@ const Skills = () => {
         </header>
         <main className="skills-info">
           {activeSection === "technical" && (
-            Object.entries(skills.technicalSkills).map(([category, items]) => (
+            technicalEntries.map(([category, items]) => (
               <div key={category} className="skill-category">
                 <h3>{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
                 <ul className="skill-list">
@@ -47,12 +63,12 @@ const Skills = () => {
           )}
 
           {activeSection === "tools" && (
-            Object.entries(skills.toolsAndPlatforms).map(([category, items]) => (
+           toolsEntries.map(([category, items]) => (
               <div key={category} className="skill-category">
                 <h3>{category.charAt(0).toUpperCase() + category.slice(1).replace(/([A-Z])/g, ' $1')}</h3>
                 <ul className="skill-list">
-                  {items.map((skill) => (
-                    <li key={skill.name}>
+                  {items.map((skill, index) => (
+                    <li key={`${category}-${skill}-${index}`}>
                       <img src={`./${skill.icon}.png`} alt={skill.name} />
                       <p>{skill.name}</p>
                     </li>
@@ -62,7 +78,7 @@ const Skills = () => {
             ))
           )}
           {activeSection === "soft" && (
-            Object.entries(skills.softSkills).map(([category, items]) => (
+            softEntries.map(([category, items]) => (
               <div key={category} className="skill-category">
                 <h3>{category}</h3>
                 <ul className="soft-skill-list">
@@ -80,4 +96,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default React.memo(Skills);

@@ -7,6 +7,18 @@ export const navLinks = [
   { img: "icon-settings", title: "Settings", route: "/settings" },
 ];
 
+export const presetColors = [
+     "#fafafa",
+     "#f0aeae",
+     "#54B9AD",
+     "#F8D059",
+     "#50C1EC",
+     "#d496ec",
+     "#a9c75d",
+     "#f8b659",
+     "#ec5850",
+ ];
+
 export const skills = {
   technicalSkills: {
     languages: [
@@ -128,13 +140,12 @@ export const contacts = [
 
 export const deskFolders = [
   { img: "paper", title: "Resume.pdf", link: "./TechCV_Andrea_Alarcon.pdf" },
-  { title: "Bakery Landing Page", link: "https://github.com/AndreaAlarconValdes/landing-page-bakery" },
-  { title: "My Notes App", link: "https://github.com/AndreaAlarconValdes/notes-app" },
-  { title: "The Barber Shop", link: "https://github.com/AndreaAlarconValdes/barberia-41" },
+  { title: "Portfolio", link: "https://github.com/AndreaAlarconValdes/portfolio-andrea" },
   { title: "E-Commerce", link: "https://github.com/AndreaAlarconValdes/shopping-app" },
-  { title: "School Labs", link: "https://github.com/AndreaAlarconValdes/ironhack-labs" },
-  { title: "My Portfolio", link: "https://github.com/AndreaAlarconValdes/portfolio-andrea" },
   { title: "JobMatch", link: "https://github.com/AndreaAlarconValdes/jobmatch" },
+  { title: "Notes App", link: "https://github.com/AndreaAlarconValdes/notes-app" },
+  { title: "Landing Page 01", link: "https://github.com/AndreaAlarconValdes/landing-page-bakery" },
+  { title: "Landing Page 02", link: "https://github.com/AndreaAlarconValdes/barberia-41" },
 ];
 
 export const experience = [

@@ -1,8 +1,9 @@
 import Folder from "./Folder";
 import "./DeskFolders.css";
 import { deskFolders } from "../constants/constants";
+import React from "react";
 
-const DeskFolders = () => {
+const DeskFolders: React.FC = () => {
   return (
     <div className="desk-folders">
       {deskFolders.map((item) => (
@@ -12,4 +13,4 @@ const DeskFolders = () => {
   );
 };
 
-export default DeskFolders;
+export default React.memo(DeskFolders);

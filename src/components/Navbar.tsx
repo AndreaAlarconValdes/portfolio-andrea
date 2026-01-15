@@ -1,12 +1,16 @@
 import { navLinks } from "../constants/constants";
-import { Link } from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
 import "./Navbar.css"
+import React from "react";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
+    const location = useLocation();
+
     return (
         <div className="navbar">
             {navLinks.map((item) => (
-                <Link key={item.title} to={item.route} className="nav-link">
+                <Link key={item.title} to={item.route} className="nav-link"
+                 aria-current={location.pathname === item.route ? "page" : undefined}>
                     <img
                         src={`./${item.img}.png`}
                         alt={`${item.title} image`}
@@ -19,4 +23,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default React.memo(Navbar);

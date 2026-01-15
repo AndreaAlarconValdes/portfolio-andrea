@@ -6,8 +6,8 @@ const Clock: React.FC = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
   const updateTime = (): void => {
+    
     const now = new Date();
-
     const hours = now.getHours().toString().padStart(2, "0");
     const minutes = now.getMinutes().toString().padStart(2, "0");
 
@@ -23,6 +23,7 @@ const Clock: React.FC = () => {
     setDate(currentDate);
   };
 
+  
   useEffect(() => {
     const checkIsMobile = () => {
       setIsMobile(window.matchMedia("(max-width: 900px)").matches);
@@ -37,7 +38,7 @@ const Clock: React.FC = () => {
       clearInterval(interval);
       window.removeEventListener("resize", checkIsMobile);
     };
-  }, [isMobile]); 
+  }, []); 
 
   return (
     <div style={{ display: "flex", gap: ".5rem" }}>

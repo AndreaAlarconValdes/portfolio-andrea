@@ -11,19 +11,19 @@ const Experience = () => {
         <div className="experience">
             <Box title="Education and Experience" className="experience-content">
                 <aside className="experience-sidebar" aria-label="Navegación">
-                    <div
+                    <button
                         className={`nav-item ${activeSection === "work" ? "active" : ""}`}
                         onClick={() => setActiveSection("work")}
                     >
                         <WorkIcon />
                         <h4>Work Experience</h4>
-                    </div>
-                    <div
+                    </button>
+                    <button
                         className={`nav-item ${activeSection === "education" ? "active" : ""}`}
                         onClick={() => setActiveSection("education")}>
                         <EducationIcon />
                         <h4>Education</h4>
-                    </div>
+                    </button>
                 </aside>
                 <main className="experience-info" role="main">
 
