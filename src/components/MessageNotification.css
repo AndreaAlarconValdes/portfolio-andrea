@@ -1,0 +1,93 @@
+.message-notification {
+    position: fixed;
+    top: 50px;
+    right: 24px;
+
+    width: 320px;
+    background: rgba(242, 242, 247, 0.9);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    border-radius: 16px;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.25);
+
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+    color: #1c1c1e;
+
+    overflow: hidden;
+
+    opacity: 0;
+    animation: slideUp 0.6s ease-out forwards;
+    animation-delay: 1.7s;
+
+    z-index: 1000;
+}
+
+
+.message-notification__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.6);
+
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+}
+
+.message-notification__app {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.message-icon {
+    width: 18px;
+    height: 18px;
+    padding: 1.5px;
+    border-radius: 5px;
+    fill: white;
+    background: linear-gradient(180deg, #4cd964, #34c759);
+    position: relative;
+}
+
+
+.message-notification__title {
+    font-weight: 500;
+    font-size: 12px;
+    color: #3a3a3c;
+}
+
+.message-notification__close {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #6e6e73;
+    cursor: pointer;
+    padding: 0;
+}
+
+.message-notification__close:hover {
+    color: #000;
+}
+
+.message-notification__body {
+    padding: 14px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    background: #f3f3f3;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(500px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
