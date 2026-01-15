@@ -12,7 +12,7 @@ const MenuBar = () => {
                         Settings
                     </button>
                 
-                    <a href="./CV_EN.pdf" target="_blank">
+                    <a href="./TechCV_Andrea_Alarcon.pdf" target="_blank">
                         Resume
                     </a>
                 </div>

@@ -127,7 +127,7 @@ export const contacts = [
 ];
 
 export const deskFolders = [
-  { img: "paper", title: "Resume.pdf", link: "./CV_EN.pdf" },
+  { img: "paper", title: "Resume.pdf", link: "./TechCV_Andrea_Alarcon.pdf" },
   { title: "Bakery Landing Page", link: "https://github.com/AndreaAlarconValdes/landing-page-bakery" },
   { title: "My Notes App", link: "https://github.com/AndreaAlarconValdes/notes-app" },
   { title: "The Barber Shop", link: "https://github.com/AndreaAlarconValdes/barberia-41" },

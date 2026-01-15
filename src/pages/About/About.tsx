@@ -14,7 +14,7 @@ const About = () => {
             <div className="profile-text">
               <p className="name">Hi, I'm Andrea</p>
               <p className="description">
-                Full Stack Developer (MERN) | Building Scalable Web Apps with React, TypeScript, Node.js, Express.js,  MongoDB & SQL
+                Full Stack Developer | Building Scalable Web Apps with React, TypeScript, Node.js, Express.js,  MongoDB & MySQL
               </p>
             </div>
           </div>
