@@ -1,4 +1,4 @@
-.message-notification {
+.msg {
     position: fixed;
     top: 50px;
     right: 24px;
@@ -17,15 +17,22 @@
 
     overflow: hidden;
 
-    opacity: 0;
-    animation: slideUp 0.6s ease-out forwards;
-    animation-delay: 1.7s;
-
     z-index: 1000;
 }
 
+.msg-animate {
+    opacity: 0;
+    animation: slideUp 0.6s ease-out forwards;
+    animation-delay: 1.7s;
+}
 
-.message-notification__header {
+.msg-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.msg-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,13 +44,13 @@
     letter-spacing: 0.04em;
 }
 
-.message-notification__app {
+.msg-app {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.message-icon {
+.msg-icon {
     width: 18px;
     height: 18px;
     padding: 1.5px;
@@ -54,13 +61,13 @@
 }
 
 
-.message-notification__title {
+.msg-title {
     font-weight: 500;
     font-size: 12px;
     color: #3a3a3c;
 }
 
-.message-notification__close {
+.msg-close {
     background: none;
     border: none;
     font-size: 1rem;
@@ -69,11 +76,11 @@
     padding: 0;
 }
 
-.message-notification__close:hover {
+.msg-close:hover {
     color: #000;
 }
 
-.message-notification__body {
+.msg-body {
     padding: 14px;
     font-size: 0.95rem;
     line-height: 1.4;

@@ -11,6 +11,7 @@ const About = () => {
               src="./photo(00).jpg"
               className="profile-image"
               alt="Andrea Alarcón - Full Stack Developer"
+              loading="lazy"
             />
             <div className="profile-text">
               <p className="name">Hi, I'm Andrea</p>

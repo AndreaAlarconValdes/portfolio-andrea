@@ -1,4 +1,3 @@
-import React from "react";
 import "./Contact.css";
 import Box from "../../components/Box";
 import { contacts } from "../../constants/constants";
@@ -45,9 +44,9 @@ const Contact: React.FC = () => {
           </div>
           <div className="social-links">
             {contacts.map((item) => (
-              <a href={item.link} target="_blank" rel="noopener noreferrer" key={item.title}>
+              <a href={item.link} target="_blank" rel="noopener noreferrer" key={item.title} aria-label={`${item.title} link`}>
                 <div className="icon">
-                  <img src={`./${item.icon}.svg`}  alt={`${item.title} icon`}  className="svg-icon"  />
+                  <img src={`./${item.icon}.svg`}  alt={`${item.title} icon`}  className="svg-icon" loading="lazy"/>
                 </div>
                 <div>
                   <p>{item.title}</p>

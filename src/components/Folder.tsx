@@ -2,7 +2,7 @@ import "./Folder.css";
 
 interface FolderProps {
   img?: string;
-  title: string;
+  title: string | undefined;
   to: string;
   className?: string;
 }
@@ -12,7 +12,7 @@ const Folder = ({ img, title, to, className }: FolderProps) => {
   const content = (
     <>
       {img ? (
-        <img src={`./${img}.png`} alt={`${title} image`} />
+        <img src={`./${img}.png`} alt={`${title} image`} loading="lazy"/>
       ) : (
         <div className="file">
           <div className="work-5"></div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./MessageNotification.css";
 import { MessageIcon } from "./Icons";
 
@@ -7,13 +7,35 @@ interface MessageNotificationProps {
   onClose?: () => void;
 }
 
+const STORAGE_KEY = "message-notification-closed";
+const ANIMATION_KEY = "message-notification-animated";
+
 const MessageNotification: React.FC<MessageNotificationProps> = ({
   message,
   onClose,
 }) => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(() => {
+    const wasClosed = localStorage.getItem(STORAGE_KEY);
+    return wasClosed !== "true";
+  });
+
+  const [shouldAnimate, setShouldAnimate] = useState(() => {
+    const hasAnimated = localStorage.getItem(ANIMATION_KEY);
+    return hasAnimated !== "true";
+  });
+
+  useEffect(() => {
+    if (visible && shouldAnimate) {
+      const timer = setTimeout(() => {
+        localStorage.setItem(ANIMATION_KEY, "true");
+        setShouldAnimate(false);
+      }, 2300); 
+      return () => clearTimeout(timer);
+    }
+  }, [visible, shouldAnimate]);
 
   const handleClose = () => {
+    localStorage.setItem(STORAGE_KEY, "true");
     setVisible(false);
     onClose?.();
   };
@@ -21,22 +43,22 @@ const MessageNotification: React.FC<MessageNotificationProps> = ({
   if (!visible) return null;
 
   return (
-    <div className="message-notification">
-      <div className="message-notification__header">
-        <div className="message-notification__app">
-          <MessageIcon className="message-icon" />
-          <span className="message-notification__title">MESSAGES</span>
+    <div className={`msg ${shouldAnimate ? "msg-animate" : "msg-visible"}`}>
+      <div className="msg-header">
+        <div className="msg-app">
+          <MessageIcon className="msg-icon" />
+          <span className="msg-title">MESSAGES</span>
         </div>
 
         <button
-          className="message-notification__close"
+          className="msg-close"
           onClick={handleClose}
           aria-label="Close notification"
         >
           ×
         </button>
       </div>
-      <div className="message-notification__body">
+      <div className="msg-body">
         {message}
       </div>
     </div>

@@ -22,6 +22,15 @@
     blink 0.8s step-end infinite;
 }
 
+.title-typewriter-complete {
+  font-size: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 7.3ch;
+  font-weight: 700;
+  border-right: 3px solid transparent;
+}
+
 @keyframes typing {
   to {
     width: 7.3ch;
@@ -42,6 +51,13 @@
 
   animation: fadeIn 0.8s ease-out forwards;
   animation-delay: 1.3s;
+}
+
+.title-fadein-complete {
+  font-size: 1.5rem;
+  opacity: 1;
+  transform: translateY(0);
+  font-weight: 400;
 }
 
 @keyframes fadeIn {

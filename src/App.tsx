@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import MenuBar from "./components/MenuBar";
 import DeskFolders from "./components/DeskFolders";
+import MessageNotification from "./components/MessageNotification";
 
 import { lazy, Suspense } from "react";
 const Home = lazy(() => import("./pages/Home/Home"));
@@ -30,6 +31,7 @@ function App() {
       </Suspense>
       <DeskFolders />
       <Navbar />
+      <MessageNotification message="Have a look inside the folders to see my projects." />
     </ColorProvider>
   );
 }

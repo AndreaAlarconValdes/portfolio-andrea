@@ -5,7 +5,7 @@ import "./Skills.css";
 import React from "react";
 
 const Skills = () => {
-  const [activeSection, setActiveSection] = useState("technical");
+  const [activeSkillsSection, setActiveSkillsSection] = useState("technical");
 
   const technicalEntries = useMemo(
   () => Object.entries(skills.technicalSkills),
@@ -27,33 +27,33 @@ const softEntries = useMemo(
       <Box title="skills" className="skills-content">
         <header className="skills-header">
           <button
-            onClick={() => setActiveSection("technical")}
-            className={`skill-nav ${activeSection === "technical" ? "active" : ""}`}
+            onClick={() => setActiveSkillsSection("technical")}
+            className={`skill-nav ${activeSkillsSection === "technical" ? "active" : ""}`}
           >
             Technical Skills
           </button>
           <button
-            onClick={() => setActiveSection("tools")}
-            className={`skill-nav ${activeSection === "tools" ? "active" : ""}`}
+            onClick={() => setActiveSkillsSection("tools")}
+            className={`skill-nav ${activeSkillsSection === "tools" ? "active" : ""}`}
           >
             Tools & Platforms
           </button>
           <button
-            onClick={() => setActiveSection("soft")}
-            className={`skill-nav ${activeSection === "soft" ? "active" : ""}`}
+            onClick={() => setActiveSkillsSection("soft")}
+            className={`skill-nav ${activeSkillsSection === "soft" ? "active" : ""}`}
           >
             Soft Skills
           </button>
         </header>
         <main className="skills-info">
-          {activeSection === "technical" && (
+          {activeSkillsSection === "technical" && (
             technicalEntries.map(([category, items]) => (
               <div key={category} className="skill-category">
                 <h3>{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
                 <ul className="skill-list">
                   {items.map((skill) => (
                     <li key={skill.name}>
-                      <img src={`./${skill.icon}.png`} alt={skill.name} />
+                      <img src={`./${skill.icon}.png`} alt={skill.name} loading="lazy"/>
                       <p>{skill.name}</p>
                     </li>
                   ))}
@@ -62,14 +62,14 @@ const softEntries = useMemo(
             ))
           )}
 
-          {activeSection === "tools" && (
+          {activeSkillsSection === "tools" && (
            toolsEntries.map(([category, items]) => (
               <div key={category} className="skill-category">
                 <h3>{category.charAt(0).toUpperCase() + category.slice(1).replace(/([A-Z])/g, ' $1')}</h3>
                 <ul className="skill-list">
                   {items.map((skill, index) => (
                     <li key={`${category}-${skill}-${index}`}>
-                      <img src={`./${skill.icon}.png`} alt={skill.name} />
+                      <img src={`./${skill.icon}.png`} alt={skill.name} loading="lazy"/>
                       <p>{skill.name}</p>
                     </li>
                   ))}
@@ -77,7 +77,7 @@ const softEntries = useMemo(
               </div>
             ))
           )}
-          {activeSection === "soft" && (
+          {activeSkillsSection === "soft" && (
             softEntries.map(([category, items]) => (
               <div key={category} className="skill-category">
                 <h3>{category}</h3>

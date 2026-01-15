@@ -1,18 +1,34 @@
-import MessageNotification from "../../components/MessageNotification";
+import { useEffect, useState } from "react";
 import "./Home.css";
 
-const Home = () => {
+const ANIMATION_PLAYED_KEY = "home-animations-played";
 
+const Home = () => {
+  const [animationsPlayed, setAnimationsPlayed] = useState(false);
+
+  useEffect(() => {
+    const hasPlayed = localStorage.getItem(ANIMATION_PLAYED_KEY) === "true";
+    setAnimationsPlayed(hasPlayed);
+
+    if (!hasPlayed) {
+      const timer = setTimeout(() => {
+        localStorage.setItem(ANIMATION_PLAYED_KEY, "true");
+        setAnimationsPlayed(true);
+      }, 2100);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   return (
     <div className="home">
-      <MessageNotification message="Have a look inside the folders to see my projects." />
-      <h1 className="title-typewriter">
+      <h1 className={animationsPlayed ? "title-typewriter-complete" : "title-typewriter"}>
         Welcome!
       </h1>
-      <h2 className="title-fadein">This is Andrea's desktop</h2>
+      <h2 className={animationsPlayed ? "title-fadein-complete" : "title-fadein"}>
+        This is Andrea's desktop
+      </h2>
     </div>
-
   );
 };
 

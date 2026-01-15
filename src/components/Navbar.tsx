@@ -14,6 +14,7 @@ const Navbar: React.FC = () => {
                     <img
                         src={`./${item.img}.png`}
                         alt={`${item.title} image`}
+                        loading="lazy"
                     />
                     <span className="nav-tooltip">{item.title}</span>
                 </Link>

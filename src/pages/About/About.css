@@ -35,7 +35,7 @@
 }
 
 .profile-text .name {
-  size: 22px;
+  font-size: 22px;
   font-weight: 700;
   color: #111827;
 }
@@ -128,7 +128,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  gap: 1rem;
+    gap: 1rem;
 
   }
 

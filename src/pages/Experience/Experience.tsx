@@ -5,29 +5,29 @@ import { EducationIcon, ExpandIcon, WorkIcon } from "../../components/Icons";
 import { useState } from "react";
 
 const Experience = () => {
-    const [activeSection, setActiveSection] = useState("work");
+    const [activeExperienceSection, setActiveExperienceSection] = useState("work");
 
     return (
         <div className="experience">
             <Box title="Education and Experience" className="experience-content">
                 <aside className="experience-sidebar" aria-label="Navegación">
                     <button
-                        className={`nav-item ${activeSection === "work" ? "active" : ""}`}
-                        onClick={() => setActiveSection("work")}
+                        className={`nav-item ${activeExperienceSection === "work" ? "active" : ""}`}
+                        onClick={() => setActiveExperienceSection("work")}
                     >
                         <WorkIcon />
                         <h4>Work Experience</h4>
                     </button>
                     <button
-                        className={`nav-item ${activeSection === "education" ? "active" : ""}`}
-                        onClick={() => setActiveSection("education")}>
+                        className={`nav-item ${activeExperienceSection === "education" ? "active" : ""}`}
+                        onClick={() => setActiveExperienceSection("education")}>
                         <EducationIcon />
                         <h4>Education</h4>
                     </button>
                 </aside>
                 <main className="experience-info" role="main">
 
-                    {activeSection === "work" && (
+                    {activeExperienceSection === "work" && (
                         <section>
                             <h2>Work Experience</h2>
                             <div className="list">
@@ -48,7 +48,7 @@ const Experience = () => {
                             </div>
                         </section>
                     )}
-                    {activeSection === "education" && (
+                    {activeExperienceSection === "education" && (
                         <section>
                             <h2>Education</h2>
                             <div className="list">
