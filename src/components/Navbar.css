@@ -1,6 +1,6 @@
 .navbar {
   position: fixed;
-  bottom: 2%;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
@@ -9,13 +9,15 @@
   list-style: none;
   flex-direction: row;
   align-items: flex-end;
-  gap: 1rem;
-  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+  padding: 0.5rem;
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 20px;
+  border-radius: 1.25rem;
+  max-width: calc(100vw - 2rem);
 }
 
 .nav-link {
@@ -23,19 +25,22 @@
   border: none;
   position: relative;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   transition: all 0.2s ease-in-out;
-  width: 50px;
+  width: 2.75rem;
+  height: 2.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  flex-shrink: 0;
 }
 
 .nav-link img {
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
-  width: 45px;
-  border-radius: 8px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  object-fit: contain;
 }
 
 .nav-link:last-child img {
@@ -44,12 +49,16 @@
 }
 
 .nav-link:hover {
-  transform: translateY(-10px) scale(1.1);
+  transform: translateY(-0.625rem) scale(1.1);
+}
+
+.nav-link:active {
+  transform: translateY(-0.5rem) scale(1.05);
 }
 
 .nav-tooltip {
   visibility: hidden;
-  font-size: 12px;
+  font-size: 0.75rem;
   top: -70%;
   left: 50%;
   transform: translateX(-50%);
@@ -58,9 +67,11 @@
   background-color: rgba(0, 0, 0, 0.482);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   color: white;
-  padding: 4px 12px;
-  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
   transition: opacity 0.3s ease;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .nav-tooltip::after {
@@ -68,8 +79,8 @@
   position: absolute;
   top: 100%;
   left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
+  margin-left: -0.3125rem;
+  border-width: 0.3125rem;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.482) transparent transparent transparent;
 }
@@ -79,12 +90,50 @@
   opacity: 1;
 }
 
-@media (min-width: 600px) {
+/* Tablet: 768px and up */
+@media (min-width: 768px) {
   .navbar {
-    padding: 0.5rem 2rem;
+    bottom: 1.5rem;
+    gap: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .nav-link {
+    width: 3rem;
+    height: 3rem;
   }
 
   .nav-link img {
-    width: 50px;
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .nav-tooltip {
+    font-size: 0.8125rem;
+    padding: 0.25rem 0.875rem;
+  }
+}
+
+/* Desktop: 1024px and up */
+@media (min-width: 1024px) {
+  .navbar {
+    bottom: 2%;
+    padding: 0.5rem 2rem;
+  }
+
+  .nav-link {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+
+  .nav-link img {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+
+  .nav-tooltip {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
   }
 }
