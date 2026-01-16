@@ -1,100 +1,147 @@
 .msg {
-    position: fixed;
-    top: 50px;
-    right: 24px;
-
-    width: 320px;
-    background: rgba(242, 242, 247, 0.9);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-
-    border-radius: 16px;
-    box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.25);
-
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-    color: #1c1c1e;
-
-    overflow: hidden;
-
-    z-index: 1000;
+  position: fixed;
+  top: 3.5rem;
+  right: 0.75rem;
+  left: 0.75rem;
+  width: calc(100% - 1.5rem);
+  max-width: 20rem;
+  background: rgba(242, 242, 247, 0.9);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+  color: #1c1c1e;
+  overflow: hidden;
+  z-index: 1000;
 }
 
 .msg-animate {
-    opacity: 0;
-    animation: slideUp 0.6s ease-out forwards;
-    animation-delay: 1.7s;
+  opacity: 0;
+  animation: slideUp 0.6s ease-out forwards;
+  animation-delay: 1.7s;
 }
 
 .msg-visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
-
 .msg-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 8px 14px;
-    background: rgba(255, 255, 255, 0.6);
-
-    font-size: 0.7rem;
-    letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.875rem;
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
 }
 
 .msg-app {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
 }
 
 .msg-icon {
-    width: 18px;
-    height: 18px;
-    padding: 1.5px;
-    border-radius: 5px;
-    fill: white;
-    background: linear-gradient(180deg, #4cd964, #34c759);
-    position: relative;
+  width: 1.125rem;
+  height: 1.125rem;
+  padding: 0.09375rem;
+  border-radius: 0.3125rem;
+  fill: white;
+  background: linear-gradient(180deg, #4cd964, #34c759);
+  position: relative;
+  flex-shrink: 0;
 }
 
-
 .msg-title {
-    font-weight: 500;
-    font-size: 12px;
-    color: #3a3a3c;
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #3a3a3c;
+  white-space: nowrap;
 }
 
 .msg-close {
-    background: none;
-    border: none;
-    font-size: 1rem;
-    color: #6e6e73;
-    cursor: pointer;
-    padding: 0;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #6e6e73;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+  transition: color 0.2s ease;
+  flex-shrink: 0;
 }
 
 .msg-close:hover {
-    color: #000;
+  color: #000;
+}
+
+.msg-close:active {
+  opacity: 0.7;
 }
 
 .msg-body {
-    padding: 14px;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    background: #f3f3f3;
+  padding: 0.875rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  background: #f3f3f3;
+  word-wrap: break-word;
 }
 
 @keyframes slideUp {
-    from {
-        transform: translateY(500px);
-        opacity: 0;
-    }
+  from {
+    transform: translateY(31.25rem);
+    opacity: 0;
+  }
 
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .msg {
+    top: 3.5rem;
+    right: 1.5rem;
+    left: auto;
+    width: 20rem;
+    max-width: 20rem;
+    border-radius: 1.125rem;
+  }
+
+  .msg-header {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.6875rem;
+  }
+
+  .msg-body {
+    padding: 0.875rem;
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .msg {
+    top: 3.125rem;
+    right: 1.5rem;
+    width: 20rem;
+    border-radius: 1rem;
+  }
+
+  .msg-header {
+    padding: 0.5rem 0.875rem;
+  }
+
+  .msg-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+
+  .msg-title {
+    font-size: 0.75rem;
+  }
 }
