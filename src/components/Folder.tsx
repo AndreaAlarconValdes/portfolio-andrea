@@ -5,9 +5,11 @@ interface FolderProps {
   title: string | undefined;
   to: string;
   className?: string;
+  onClick?: () => void;
+  isProject?: boolean;
 }
 
-const Folder = ({ img, title, to, className }: FolderProps) => {
+const Folder = ({ img, title, to, className, onClick, isProject }: FolderProps) => {
 
   const content = (
     <>
@@ -26,15 +28,27 @@ const Folder = ({ img, title, to, className }: FolderProps) => {
     </>
   );
 
+  const handleClick = (e: React.MouseEvent) => {
+    if (isProject && onClick) {
+      e.preventDefault();
+      onClick();
+    }
+  };
 
   return (
    <div className={className}>
-      {to ? (
+      {to && !isProject ? (
         <a href={to} target="_blank" rel="noopener noreferrer" className="folder-info">
           {content}
         </a>
       ) : (
-        content
+        <div 
+          className={isProject ? "folder-info folder-clickable" : ""} 
+          onClick={handleClick}
+          style={{ cursor: isProject ? 'pointer' : 'default' }}
+        >
+          {content}
+        </div>
       )}
     </div>
   );

@@ -5,8 +5,10 @@ import Navbar from "./components/Navbar";
 import MenuBar from "./components/MenuBar";
 import DeskFolders from "./components/DeskFolders";
 import MessageNotification from "./components/MessageNotification";
+import ProjectBox from "./components/ProjectBox";
+import { projects } from "./constants/constants";
 
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState } from "react";
 const Home = lazy(() => import("./pages/Home/Home"));
 const About = lazy(() => import("./pages/About/About"));
 const Contact = lazy(() => import("./pages/Contact/Contact"));
@@ -16,6 +18,18 @@ const Settings = lazy(() => import("./pages/Settings/Settings"));
 
 
 function App() {
+  const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null);
+
+  const handleProjectClick = (projectId: string) => {
+    setSelectedProjectId(projectId);
+  };
+
+  const handleCloseProject = () => {
+    setSelectedProjectId(null);
+  };
+
+  const selectedProject = selectedProjectId ? projects[selectedProjectId] : null;
+
   return (
     <ColorProvider>
       <MenuBar />
@@ -29,9 +43,12 @@ function App() {
           <Route path="/settings" element={<Settings />} />
         </Routes>
       </Suspense>
-      <DeskFolders />
+      <DeskFolders onProjectClick={handleProjectClick} />
       <Navbar />
       <MessageNotification message="Have a look inside the folders to see my projects." />
+      {selectedProject && (
+        <ProjectBox project={selectedProject} onClose={handleCloseProject} />
+      )}
     </ColorProvider>
   );
 }
