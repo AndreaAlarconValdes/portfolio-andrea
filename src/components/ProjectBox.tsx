@@ -42,14 +42,7 @@ const ProjectBox = ({ project, onClose }: ProjectBoxProps) => {
               <p className="project-description">{project.description}</p>
             )}
           </div>
-          {project.concept && (
-            <div className="project-concept">
-              <h3>🎨 Concept</h3>
-              <p className="project-description">{project.concept}</p>
-            </div>
-          )}
-
-          {project.images && project.images.length > 0 && (
+               {project.images && project.images.length > 0 && (
             <div className="project-images">
               {project.images.map((image, index) => (
                 <img
@@ -60,6 +53,12 @@ const ProjectBox = ({ project, onClose }: ProjectBoxProps) => {
                   loading="lazy"
                 />
               ))}
+            </div>
+          )}
+          {project.concept && (
+            <div className="project-concept">
+              <h3>🎨 Concept</h3>
+              <p className="project-description">{project.concept}</p>
             </div>
           )}
 
