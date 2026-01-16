@@ -8,7 +8,7 @@
   border-radius: 0.75rem;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  width: calc(100% - 1.5rem);
+  width: fit-content;
   max-width: 100%;
   overflow: hidden;
 }
@@ -63,7 +63,6 @@
 @media (min-width: 768px) {
   .window-frame {
     margin: 1rem;
-    width: calc(100% - 2rem);
     border-radius: 0.875rem;
   }
 
@@ -84,11 +83,6 @@
 }
 
 @media (min-width: 1024px) {
-  .window-frame {
-    width: fit-content;
-    max-width: 90vw;
-  }
-
   .window-buttons span {
     width: 0.7rem;
     height: 0.7rem;
