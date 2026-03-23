@@ -8,16 +8,16 @@ export const navLinks = [
 ];
 
 export const presetColors = [
-     "#fafafa",
-     "#f0aeae",
-     "#54B9AD",
-     "#F8D059",
-     "#50C1EC",
-     "#d496ec",
-     "#a9c75d",
-     "#f8b659",
-     "#ec5850",
- ];
+  "#fafafa",
+  "#f0aeae",
+  "#54B9AD",
+  "#F8D059",
+  "#50C1EC",
+  "#d496ec",
+  "#a9c75d",
+  "#f8b659",
+  "#ec5850",
+];
 
 export const skills = {
   technicalSkills: {
@@ -75,7 +75,7 @@ export const skills = {
     deploy: [
       { icon: "vercel", name: "Vercel" },
     ],
- 
+
   },
 
   softSkills: {
@@ -178,55 +178,55 @@ export const projects: Record<string, Project> = {
     githubLink: "https://github.com/AndreaAlarconValdes/portfolio-andrea",
     technologies: ["React", "TypeScript", "CSS3", "Vite"],
   },
-ecommerce: {
-  id: "ecommerce",
-  title: "Brillia — Jewelry E-Commerce Project",
-  description: "This is a personal full-stack e-commerce application currently under development. It includes shopping cart functionality, user authentication, and product management, and is being built with modern web technologies to provide a seamless and scalable shopping experience. The project is still in progress and not yet finalized.",
-  concept: "Brillia is conceived as a modern and elegant jewelry e-commerce platform focused on delivering a clean user experience, intuitive navigation, and a strong visual identity. The project explores best practices in full-stack development, performance optimization, and responsive, mobile-first design, while simulating real-world e-commerce features such as authentication, product management, and shopping workflows.",
-  images: ["./ecommerce-mockup.png"],
-  githubLink: "https://github.com/AndreaAlarconValdes/shopping-app",
-  technologies: ["React", "TypeScript", "Node.js", "Express.js", "MongoDB"],
-},
- jobmatch: {
-  id: "jobmatch",
-  title: "JobMatch - Find Your Next Tech Job 💼",
-  description: "JobMatch is a fictitious full-stack job portal project developed as part of the Midudev Bootcamp and intended for educational purposes only. The platform aims to connect job seekers with job opportunities through user profiles, job listings, search functionality, and application management. The project is currently in progress: the frontend is implemented using React, while the backend and database are still under development. All data, companies, and job postings are completely fictional.",
-  concept: "The concept behind JobMatch is to simulate a real-world job portal while applying best practices in full-stack web development. The project focuses on building a scalable frontend architecture, preparing backend integration, and planning future enhancements such as database connectivity and AI-powered features to improve job matching and user experience. As an educational project, its primary goal is learning and experimentation rather than production use.",
-  images: ["./jobmatch-mockup.png"],
-  githubLink: "https://github.com/AndreaAlarconValdes/jobmatch",
-  technologies: ["React", "Node.js", "Express.js", "MongoDB"],
-},
+  ecommerce: {
+    id: "ecommerce",
+    title: "Brillia — Jewelry E-Commerce Project",
+    description: "This is a personal full-stack e-commerce application currently under development. It includes shopping cart functionality, user authentication, and product management, and is being built with modern web technologies to provide a seamless and scalable shopping experience. The project is still in progress and not yet finalized.",
+    concept: "Brillia is conceived as a modern and elegant jewelry e-commerce platform focused on delivering a clean user experience, intuitive navigation, and a strong visual identity. The project explores best practices in full-stack development, performance optimization, and responsive, mobile-first design, while simulating real-world e-commerce features such as authentication, product management, and shopping workflows.",
+    images: ["./ecommerce-mockup.png"],
+    githubLink: "https://github.com/AndreaAlarconValdes/shopping-app",
+    technologies: ["React", "TypeScript", "Node.js", "Express.js", "MongoDB"],
+  },
+  jobmatch: {
+    id: "jobmatch",
+    title: "JobMatch - Find Your Next Tech Job 💼",
+    description: "JobMatch is a fictitious full-stack job portal project developed as part of the Midudev Bootcamp and intended for educational purposes only. The platform aims to connect job seekers with job opportunities through user profiles, job listings, search functionality, and application management. The project is currently in progress: the frontend is implemented using React, while the backend and database are still under development. All data, companies, and job postings are completely fictional.",
+    concept: "The concept behind JobMatch is to simulate a real-world job portal while applying best practices in full-stack web development. The project focuses on building a scalable frontend architecture, preparing backend integration, and planning future enhancements such as database connectivity and AI-powered features to improve job matching and user experience. As an educational project, its primary goal is learning and experimentation rather than production use.",
+    images: ["./jobmatch-mockup.png"],
+    githubLink: "https://github.com/AndreaAlarconValdes/jobmatch",
+    technologies: ["React", "Node.js", "Express.js", "MongoDB"],
+  },
   "notes-app": {
     id: "notes-app",
- title: "Notes App — Personal Notes Manager",
-  description: "A modern and intuitive notes application designed to help users organize ideas, tasks, and reminders in one place. The app allows users to create, edit, and delete notes, keeping everything clear, accessible, and easy to manage with persistent storage so nothing important slips through the cracks.",
-  concept: "The concept behind Notes App is to provide a simple yet fully-featured personal note-taking tool focused on clarity and usability. It emphasizes an intuitive user experience, clean interface design, and efficient organization through a category-based system, making it ideal for managing daily thoughts, priorities, and reminders.",
+    title: "Notes App — Personal Notes Manager",
+    description: "A modern and intuitive notes application designed to help users organize ideas, tasks, and reminders in one place. The app allows users to create, edit, and delete notes, keeping everything clear, accessible, and easy to manage with persistent storage so nothing important slips through the cracks.",
+    concept: "The concept behind Notes App is to provide a simple yet fully-featured personal note-taking tool focused on clarity and usability. It emphasizes an intuitive user experience, clean interface design, and efficient organization through a category-based system, making it ideal for managing daily thoughts, priorities, and reminders.",
     images: ["./notes-app-mockup.png"],
-    demoLink:"https://andreaalarconvaldes.github.io/notes-app/",
+    demoLink: "https://andreaalarconvaldes.github.io/notes-app/",
     githubLink: "https://github.com/AndreaAlarconValdes/notes-app",
     technologies: ["React", "JavaScript", "CSS3"],
   },
-"landing-page-01": {
-  id: "landing-page-01",
-  title: "Landing Page — Artisan Bakery",
-  description: "A modern, visually appealing, and fully responsive landing page designed for an artisan bakery. The project focuses on clean aesthetics, smooth animations, and a mobile-first approach to deliver an engaging user experience across all devices.",
-  concept: "The concept of this landing page is to showcase an artisan bakery’s brand identity through a warm, handcrafted visual style and clear content hierarchy. The design emphasizes accessibility, performance, and responsiveness, using modern frontend techniques to create an inviting and user-friendly experience that works seamlessly on mobile, tablet, and desktop devices.",
-  images: ["./bakery-mockup.png"],
-  demoLink: "https://andreaalarconvaldes.github.io/landing-page-bakery/",
-  githubLink: "https://github.com/AndreaAlarconValdes/landing-page-bakery",
-  technologies: ["React", "CSS3", "JavaScript"],
-},
-"landing-page-02": {
-  id: "landing-page-02",
-  title: "Landing Page — Barbershop",
-  description: "A sleek single-page landing page for a barbershop, inspired by an existing design found online. This project was created primarily to practice CSS, layout, and responsive design. Features include a service showcase, booking section, and modern UI/UX elements to provide a clean and engaging user experience.",
-  concept: "The concept behind this project is to recreate and learn from a professional landing page design while honing frontend skills. The focus is on practicing responsive layouts, CSS styling, animations, and modern UI/UX practices, creating a visually appealing and functional single-page application.",
-  images: ["./barbershop-mockup.png"],
-  demoLink: "https://andreaalarconvaldes.github.io/barberia-41/",
-  githubLink: "https://github.com/AndreaAlarconValdes/barberia-41",
-  technologies: ["React", "CSS3", "JavaScript"],
-}
-,
+  "landing-page-01": {
+    id: "landing-page-01",
+    title: "Landing Page — Artisan Bakery",
+    description: "A modern, visually appealing, and fully responsive landing page designed for an artisan bakery. The project focuses on clean aesthetics, smooth animations, and a mobile-first approach to deliver an engaging user experience across all devices.",
+    concept: "The concept of this landing page is to showcase an artisan bakery’s brand identity through a warm, handcrafted visual style and clear content hierarchy. The design emphasizes accessibility, performance, and responsiveness, using modern frontend techniques to create an inviting and user-friendly experience that works seamlessly on mobile, tablet, and desktop devices.",
+    images: ["./bakery-mockup.png"],
+    demoLink: "https://andreaalarconvaldes.github.io/landing-page-bakery/",
+    githubLink: "https://github.com/AndreaAlarconValdes/landing-page-bakery",
+    technologies: ["React", "CSS3", "JavaScript"],
+  },
+  "landing-page-02": {
+    id: "landing-page-02",
+    title: "Landing Page — Barbershop",
+    description: "A sleek single-page landing page for a barbershop, inspired by an existing design found online. This project was created primarily to practice CSS, layout, and responsive design. Features include a service showcase, booking section, and modern UI/UX elements to provide a clean and engaging user experience.",
+    concept: "The concept behind this project is to recreate and learn from a professional landing page design while honing frontend skills. The focus is on practicing responsive layouts, CSS styling, animations, and modern UI/UX practices, creating a visually appealing and functional single-page application.",
+    images: ["./barbershop-mockup.png"],
+    demoLink: "https://andreaalarconvaldes.github.io/barberia-41/",
+    githubLink: "https://github.com/AndreaAlarconValdes/barberia-41",
+    technologies: ["React", "CSS3", "JavaScript"],
+  }
+  ,
 };
 
 export const experience = [
@@ -258,17 +258,18 @@ export const experience = [
 
 export const education = [
   {
-    title: "Software Engineering Bootcamp – Full Stack Web Development",
-    date: "Aug 2022 – Dec 2022",
-    description: "The bootcamp covered JavaScript (ES6), Node.js, Express.js, MongoDB, React.js, HTML5, CSS3, responsive design, Git, Axios, and Postman. This comprehensive program equipped me with the skills to build dynamic web applications, create server-side logic and RESTful APIs, design efficient database structures, develop user-friendly interfaces, ensure seamless experiences across devices, and collaborate effectively using version control and API testing tools."},
-  {
-    title: "Veterinary Assistant – CIM Formación",
-    date: "Oct 2020 – Jun 2021",
-    description:
-      "Studying to become a Veterinary Technician allowed me to pursue my love for animals while expanding my scientific and practical knowledge. I learned about animal anatomy, clinical procedures, handling techniques, and basic laboratory tasks. This experience strengthened my empathy, attention to detail, and ability to stay calm in high-pressure environments. Although I later transitioned to the tech field, this training contributed to my discipline, resilience, and commitment to continuous learning.",
+    title: "Self-Directed Learning – Web Development & Personal Projects",
+    date: "Jan 2024 – Present",
+    description: "Continuously expanding my full-stack skills through self-study, building personal projects, and exploring new technologies. Focus areas include improving TypeScript and JavaScript expertise, experimenting with frontend and backend architectures, and practicing best coding and design patterns."
   },
   {
-    title: "Leaving Certificate, Higher Level Science & Maths",
+    title: "Software Engineering Bootcamp – Full Stack Web Development",
+    date: "Aug 2022 – Dec 2022",
+    description: "The bootcamp covered JavaScript (ES6), Node.js, Express.js, MongoDB, React.js, HTML5, CSS3, responsive design, Git, Axios, and Postman. This comprehensive program equipped me with the skills to build dynamic web applications, create server-side logic and RESTful APIs, design efficient database structures, develop user-friendly interfaces, ensure seamless experiences across devices, and collaborate effectively using version control and API testing tools."
+  },
+
+  {
+    title: "Scientific Baccalaureate",
     date: "2015 – 2017",
     description:
       "Completed Spanish Baccalaureate (Scientific Track) – equivalent to Leaving Certificate, Higher Level Science & Maths.",
